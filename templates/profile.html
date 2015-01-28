@@ -14,10 +14,10 @@
 			</div>
 			<div class="bar background-title">
 				<div class="margin-alignment-subheader">
-				  	<div class="font-principal left-alignment">{{pageTitle}}</div>
+				  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
 				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 5%;">
 						<div class="font-secondary">
-							<span style="margin-right: 12px;">{{user}}</span>
+							<span style="margin-right: 12px;">{{beginAngularBracket}}{{'user' | translate}}</span>
 							<div ng-class="iconHeader"></div>{{endAngularBracket}}
 						</div> 
 				  	</div>
@@ -29,14 +29,16 @@
 				<img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />	
 			</div>
 			<div class="user-information">
-				<div style="height: 30%;">
+				<div style="height: 20%;">
 					<label class="item-input item-input-size">
-					  	<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 23px;"/>
+						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 23px;" placeholder="{{'name' | translate}}"/>
 					</label>
 				</div>
-				<div class="display-flex" style="height: 15%; margin-top: -4%;" >
-					<label class="font-country">Pais</label>
-					<div class="country-flag" ng-class="usuario.flag"></div>
+				<div class="display-flex" style="height: 15%;" >
+					<label class="item-input item-input-size">
+						<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>
+						<div class="country-flag" ng-class="usuario.flag"></div>
+					</label>
 				</div>
 				<div class="horizontal-red-line"></div>
 				<div style="height: 35%;">
@@ -76,7 +78,7 @@
 		</div>
 		<div class="footer-profile">
 			<label ng-click="show('/statistics')" class="green-button-background">
-				<span class="statistics-font">Ver estadísticas</span>
+				<span class="statistics-font">{{'showStadistics' | translate}}</span>
 				<div class="statistics-green-background"></div>
 			</label>
 		</div>

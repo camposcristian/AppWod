@@ -33,23 +33,14 @@
 	vertical-align: middle;
 }
 
-.language-select{
-	width: 100%;
-	text-align: center;
-}
-
-.language-options {
-	text-align: center;
-}
-
 .font-principal {
 	color: #FFFFFF;
-	margin-top: 2%;
-	font-size: 2em;
+	font-size: 1.8em;
 	font-family: Roboto-bold;
 	margin-left: 2%;
 	text-transform: uppercase;
 	text-align: left;
+	vertical-align: middle;
 }
 
 .font-secondary {
@@ -184,7 +175,7 @@
 	text-transform: uppercase;
 	font-family: Roboto-medium;
 	text-align: left;
-	font-size: 2.1em;
+	font-size: 1em;
 	color: rgb(67,67,67);
 	white-space: nowrap;
 }
@@ -274,6 +265,15 @@
 	text-align: center;
 }
 
+.warning {
+	text-align: center;
+	margin-top: 1%;
+	font-family: Roboto-bold;
+	font-size: 4.5pt;
+	color: rgb(230,0,0);
+	white-space: nowrap;
+}
+
 .align-text-left {
 	text-align: left;
 }
@@ -291,13 +291,19 @@
 }
 
 .font-website-configuration{
-	font-family: Roboto-regular;
-	font-size: 200%;
+	font-family: Roboto-medium;
+	font-size: 10pt;
 	font-weight: bold;
+	width: 60%;
+	color: rgb(67,67,67);
+	white-space: nowrap;
 }
 
-.font-warning{
-	font-size: 60%;
+.font-warning {
+	font-size: 4.5pt;
+	color: rgb(67,67,67);
+	font-family: Roboto-regular;
+	text-align: justify;
 }
 
 .font-measure {

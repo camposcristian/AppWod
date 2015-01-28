@@ -382,6 +382,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background-size: 100% 100%;
     width: 25px;
     height: 25px;
+    padding: 0 0 0 0;
 }
 
 .config-red {
@@ -728,16 +729,16 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/icons/facebook-icon.png");
     background-repeat: no-repeat;
     background-size: 50% 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .twitter-icon {
     background: url("../img/icons/twitter-icon.png");
     background-repeat: no-repeat;
     background-size: 50% 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -745,8 +746,8 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/icons/AppWod-icon.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 40%;
-    height: 60px;
+    width: 60%;
+    height: 40px;
     border: 0;
     outline: none;
 }
@@ -756,7 +757,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 20%;
-    height: 60px;
+    height: 40px;
     border: 0;
     outline: none;
 }

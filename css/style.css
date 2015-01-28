@@ -17,6 +17,12 @@
     margin-right: auto;
 }
 
+.language-select{
+    text-align: center;
+    width: 50%;
+    float: right;
+}
+
 .left-alignment {
     float: left !important;
     text-align: left !important;
@@ -299,7 +305,7 @@
     width: 84%;
     margin-right: 8%;
     margin-left: 8%;
-    margin-top: 2%;
+    margin-top: 14%;
     margin-bottom: 0%;
     overflow-y: scroll;
 }
@@ -410,6 +416,6 @@ ion-item.item-menu.background-img.item:active {
     background: rgb(230,0,0);
 }
 
-    ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
-        color: white !important;
-    }
+ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
+    color: white !important;
+}
