@@ -428,8 +428,15 @@ ion-item.item-menu.background-img.item:active {
 
 .bottom-line {
     border-bottom: 1px solid black;
+    padding-left: 57%;
+    margin-top: 18px;
 }
 
 .item-training .row {
     display: block;
+}
+
+.item-training.item.active .row .bottom-line {
+    padding-left: 30%;
+    margin-top: -20px;
 }
