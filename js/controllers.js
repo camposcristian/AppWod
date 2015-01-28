@@ -94,13 +94,17 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
     };
 }]);
 
-app.controller('configurationController', ['$scope', '$location', function($scope, $location) {
-    $scope.pageTitle = 'configuración';
+app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
+    $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
-
+    $scope.language = "es";
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
-    };    
+    };
+
+    $scope.changeLanguage = function(){
+        $translate.use($scope.language);
+    }
 }]);
 
 app.controller('statisticsController', ['$scope', 'stadistics', '$location', function($scope, stadistics, $location) {

@@ -23,7 +23,14 @@ var translations = {
 	    "showStadistics": "Show stadistics",
 	    "contacts": "Contacts",
 	    "nameAndSurname": "Name Surname",
-	    "friends": "Friends"
+	    "friends": "Friends",
+	    "monday": "Monday",
+	    "tuesday": "Tuesday",
+	    "wednesday": "Wednesday",
+	    "thursday": "Thursday",
+	    "friday": "Friday",
+	    "saturday": "Saturday",
+	    "sunday": "Sunday"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -49,6 +56,13 @@ var translations = {
 	    "showStadistics": "Ver estadísticas",
 	    "contacts": "Contactos",
 	    "nameAndSurname": "Nombre Apellido",
-		"friends": "Amigos"
+		"friends": "Amigos",
+		"monday": "Lunes",
+	    "tuesday": "Martes",
+	    "wednesday": "Miércoles",
+	    "thursday": "Jueves",
+	    "friday": "Viernes",
+	    "saturday": "Sábado",
+	    "sunday": "Domingo"
 	}
 }

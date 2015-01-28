@@ -7,7 +7,7 @@
 		</div>
 		<div class="bar bar-subheader background-title row">
 		  	<div class="col col-50">
-		  		<label class="font-title font-principal">{{pageTitle}}</label>
+		  		<label class="font-title font-principal">{{pageTitle | translate}}</label>
 		  	</div>
 		  	<div class="col col-50">
 				<div class=" center-img" ng-class="iconHeader"></div>
@@ -19,23 +19,23 @@
 			<div class="row">
 				<!-- <div class="col col-33 col-center"> -->
 				<div class="col col-50">
-					<label class="font-fields-configuration-label">Idioma:</label>
+					<label class="font-fields-configuration-label">{{'language' | translate}}:</label>
 				</div>
 				<div class="col col-50">
 				<!-- <select class="col col-67 col-center"> -->
-					 <select class="language-select">
-						<option>Español</option>
-						<option>Inglés</option>
-						<option>Alemán</option>
-						<option>Francés</option>
-					    <option>Italiano</option>
-					    <option>Portugués</option>
+					 <select class="language-select" ng-model="language" ng-change="changeLanguage()">
+						<option value="es">{{'spanish' | translate}}</option>
+						<option value="en">{{'english' | translate}}</option>
+						<option value="ge">{{'german' | translate}}</option>
+						<option value="fr">{{'french' | translate}}</option>
+					    <option value="it">{{'italian' | translate}}</option>
+					    <option value="po">{{'portuguese' | translate}}</option>
 					</select>
-			</div>
+				</div>
 			</div>
 			<hr class="horizontal-line"></hr>
 			<div class="row">
-				<label class="col col-67 font-fields-configuration-label">Unidad de medida:</label>
+				<label class="col col-67 font-fields-configuration-label">{{'unitOfMeasurement' | translate}}:</label>
 				<div class="col col-33">
 					<div class="row no-row">
 						<div class="kg-img"></div>
@@ -45,7 +45,7 @@
 			</div>
 			<hr class="horizontal-line"></hr>
 			<button type="button" ng-click="" class="button button-block grey-button-background">
-				<label class="enable-help-font">Activar ayuda 
+				<label class="enable-help-font">{{'helpsActivate' | translate}} 
 					<div class="question-green"></div> 
 				</label>
 			</button>
@@ -66,15 +66,11 @@
 				<div class="col facebook-icon"></div>
 				<div class="col twitter-icon"></div>
 			</div>
-			
 				<div class="warning-configuration">
-					<div class="red-font-normal center-title-text"><strong>ADVERTENCIA</strong></div>
-					<p class="font-warning align-text-justify">AppWod no se hace responsable ante cualquier lesión 
-					ocasionada. Consulte a un entrenador y realice examenes 
-					de apta médico antes de usar la aplicación</p>
+					<div class="red-font-normal center-title-text"><strong>{{'warning' | translate}}</strong></div>
+					<p class="font-warning align-text-justify">{{'responsibilities' | translate}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-

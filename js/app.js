@@ -17,12 +17,9 @@ app.run(function($ionicPlatform) {
 });
 
 app.config(function($stateProvider, $urlRouterProvider, $translateProvider, $sceProvider) {
-
-
     for(lang in translations){
         $translateProvider.translations(lang, translations[lang]);
     }
-
     $translateProvider.preferredLanguage('es');
 
     $stateProvider
