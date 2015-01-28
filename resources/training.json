@@ -1,29 +1,149 @@
-{
-    "exercises": [
-        {   
-            "name": "Overhead squat",
-            "image": "green-overhead-squat", 
-            "count": "10"
-        },
-        {
-            "name": "Ring dip",
-            "image": "whiteblue-ring-dip", 
-            "count": "10"
-        },
-        {
-            "name": "Toes to bar",
-            "image": "blue-toes-to-bar", 
-            "count": "20"
-        },
-        {
-            "name": "Ring dip",
-            "image": "whiteblue-ring-dip", 
-            "count": "10"
-        },
-        {
-            "name": "Toes to bar",
-            "image": "blue-toes-to-bar", 
-            "count": "20"
-        }
-    ]
-}
+[
+    {
+        "day": "monday",
+        "type": "21-15-9",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "tuesday",
+        "type": "AMRAP",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "wednesday",
+        "type": "EMOM",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "thrusday",
+        "type": "TABATA",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "friday",
+        "type": "POR VUELTAS",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "saturday",
+        "type": "AMRAP",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    },
+    {
+        "day": "sunday",
+        "type": "AMRAP",
+        "exercises": [
+            {
+                "name": "Overhead squat",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "icon-training-green",
+                "count": "20"
+            }
+        ]
+    }
+]

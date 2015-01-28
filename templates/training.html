@@ -28,61 +28,42 @@
     </div>
     <div class="container-margins">
 
-        <div class="row horizontal-red-line"></div>
-        <div>
-            <ion-list>
-                <div ng-repeat="group in groups">
+        <ion-list>
+            <div ng-repeat="sport in training">
 
-                    <ion-item class="item-training"
-                              ng-click="toggleGroup(group)"
-                              ng-class="{active: isGroupShown(group)}">
-                        &nbsp;
-                        <div class="row">
-                            LUNES
-                        </div>
-                        <div class="row">
-                            <div class="left-alignment">
-                                <div class="button button-icon icon center-img green-overhead-squat" ng-class="sport.image"></div>
-                            </div>
-                            <div class="right-alignment bottom-line">
-                                Group {{group.name}}
-                                <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
-                            </div>
-                        </div>
-                    </ion-item>
-
-
-                    <ion-item class="item-accordion"
-                              ng-repeat="item in group.items"
-                              ng-show="isGroupShown(group)">
-                        {{item}}
-                    </ion-item>
-                </div>
-            </ion-list>
-
-            <ion-list>
-                <ion-item ng-repeat="sport in training.exercises" class="no-border">
+                <ion-item class="item-training"
+                          ng-click="toggleGroup(sport)"
+                          ng-class="{active: isGroupShown(sport)}">
                     <div class="row">
-                        <div class="col-10">
-                            <div class="button button-icon icon center-img" ng-class="sport.image"></div>
+                        {{sport.day}}
+                    </div>
+                    <div class="row">
+                        <div class="left-alignment">
+                            <div ng-repeat="exercise in sport.exercises" class="button button-icon icon center-img" ng-class="exercise.image"></div>
                         </div>
-                        <div class="col-10">
-                            <div class="grey-border">{{sport.count}}</div>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <label class="font-grey-small col align-text-right">{{sport.name}}</label>
-                            </div>
-                            <div class="row horizontal-green-line"></div>
-                        </div>
-                        <div class="col-10">
-                            <div class="whiteblue-eye center-img"></div>
+                        <div class="right-alignment bottom-line">
+                            {{sport.type}}
+                            <i class="icon" ng-class="isGroupShown(sport) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                         </div>
                     </div>
                 </ion-item>
-            </ion-list>
-        </div>
 
+                <div class="accordion-training" ng-show="isGroupShown(sport)">
+                    <div>
+                        <label ng-click="" class="green-button-background">
+                            <span class="statistics-font">Compartir</span>
+                            <div class="statistics-green-background"></div>
+                        </label>
+                    </div>
+
+                    <div>
+                        <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
+                            <span>{{exercise.count}}</span>
+                            {{exercise.name}}
+                        </ion-item>
+                    </div>
+                </div>
+        </ion-list>
         <div class="row horizontal-black-line"></div>
         <div class="footer-profile background-img">
 

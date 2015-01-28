@@ -402,9 +402,11 @@ ion-item.item-menu.background-img.item:active {
 
 .list .item.item-accordion {
     line-height: 38px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     transition: 0.09s all linear;
+    border: none;
+    background-color: rgb(210,210,210);
+    text-align: right;
 }
 
     .list .item.item-accordion.ng-hide {
@@ -417,26 +419,48 @@ ion-item.item-menu.background-img.item:active {
     }
 
 .item-training {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: none;
+    margin-bottom: 5px;
+}
+
+.accordion-training {
+    /*width: 50%;
+    float: right;
+    margin-top: -45px;*/
 }
 
 
-    .item-training.item.active {
-        color: #E60000;
-        background-color: rgb(210,210,210);
-        border-color: rgb(210,210,210);
-    }
+.item-training.item.active {
+    color: #E60000;
+    background-color: rgb(210,210,210);
+    border-color: rgb(210,210,210);
+    margin: 0;
+}
 
 .bottom-line {
     border-bottom: 1px solid black;
-    padding-left: 57%;
+    padding-left: 28%;
     margin-top: 18px;
 }
 
 .item-training .row {
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .item-training.item.active .row .bottom-line {
     padding-left: 30%;
     margin-top: -20px;
+}
+
+.item-training .row .left-alignment .button {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    background-repeat: no-repeat;
+    margin:0;
 }
