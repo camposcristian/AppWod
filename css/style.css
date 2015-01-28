@@ -17,16 +17,6 @@
     margin-right: auto;
 }
 
-.language-select {
-    width: 100%;
-    min-height: 20px;
-    margin-top: -5px;
-    float: right;
-    font-size: 1.5em;
-    font-family: Roboto-regular;
-    padding-left: 25px;
-}
-
 .left-alignment {
     float: left !important;
     text-align: left !important;
@@ -75,41 +65,28 @@
 .rectangle {
     margin-left: -1%;
     padding-left: 1%;
-    line-height: 1;
+    display: flex;
 }
 
 .grey-rectangle {
-    border: 1px solid #434343;
+    border: 2px solid #434343;
+    margin-top: -5.62%;
+    display: flex;
     text-align: center;
-    width: 99%;
-    display: inline-block;
-    padding: 5px;
-    margin-top: 11px;
+    width: 100%;
 }
 
 .green-button-background {
     background-color: rgb(91,128,33);
     border-color: rgb(91,128,33);
+    bottom: 0;
     border-radius: 5px;
+    width: 100% !important;
     display: flex;
     font-size: 16px;
+    line-height: 36px;
     cursor: pointer;
-    margin-top: 4%;
-    margin-bottom: 4%;
     padding: 0 12px;
-    color: #FFFFFF;
-}
-
-.grey-button-background {
-    background-color: rgb(210,208,208);
-    border-color: rgb(210,208,208);
-    border-radius: 5px;
-    display: flex;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 4%;
-    padding: 0 12px;
-    color: rgb(127,130,124);
 }
 
 .home-menues-margin {
@@ -136,13 +113,9 @@
     border-color: rgb(67,67,67) !important;
 }
 /*-----------------------------------------------------------Para Iphone------------------------------------------------------------------------*/
-@media screen and (max-height: 570px) and (max-width: 320px) {
+@media screen and (max-height: 570px) {
     .item-menu {
         padding: 0 0 0 0;
-    }
-
-    ul {
-        letter-spacing: -2px;
     }
 }
 
@@ -253,12 +226,16 @@
 
 .footer-menu {
     width: 100%;
+    height: 36%;
     bottom: 0;
     position: absolute;
-    margin-bottom: 3%;
 }
 
 .footer-profile {
+    position: absolute;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 2%;
@@ -306,8 +283,6 @@
 .margin-alignment-subheader {
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2%;
-    line-height: 150%;
     height: 100%;
     width: 84%;
     height: 100%;
@@ -329,13 +304,6 @@
     overflow-y: scroll;
 }
 
-.content-page-share-profile {
-    width: 84%;
-    margin-right: 8%;
-    margin-left: 8%;
-    margin-top: 2%;
-}
-
 .content-page-wod {
     margin-right: 4.76%;
     margin-left: 4.76%;
@@ -345,33 +313,23 @@
 }
 
 .picture-space {
-    width: 45%;
-    height: 138px;
-    margin-right: 5%;
-}
-
-.contacts-picture-space {
-    width: 25%;
-    height: 128.5px;
-    margin-top: -8%;
+    width: 45.41%;
+    height: 202px;
 }
 
 .user-information {
-    width: 50%;
-    float: right;
+    margin-left: 50.18%;
+    width: 49.82%;
     height: 26.19%;
-}
-
-.user-information-share-profile {
-    width: 70%;
-    float: right;
 }
 
 .circle-row {
     background-color: rgb(230,0,0);
     width: 100%;
+    height: 14%;
     border-radius: 5px;
-    margin-bottom: 5px;
+    display: flex;
+    float: right;
 }
 
 .sports-list-profile {
@@ -405,7 +363,6 @@
     margin-bottom: 4.16%;
     width: 100%;
     height: 100%;
-    cursor: pointer;
 }
 
 .item-space-wod {
@@ -431,8 +388,7 @@
 }
 
 .item-input-size {
-    padding: 0px 0 0px 0px !important;
-    line-height: 1;
+    padding: 0px 0 0px 3px !important;
 }
 
 ion-item.item-menu.background-img.item:active {
@@ -443,68 +399,37 @@ ion-item.item-menu.background-img.item:active {
         color: white !important;
     }
 
-#language {
+
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+}
+
+    .list .item.item-accordion.ng-hide {
+        line-height: 0px;
+    }
+
+    .list .item.item-accordion.ng-hide-add,
+    .list .item.item-accordion.ng-hide-remove {
+        display: block !important;
+    }
+
+.item-training {
 }
 
 
-.country-select {
-    border: none;
-    -webkit-appearance: none;
-    font-size: 20px;
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    white-space: nowrap;
-    padding-bottom: 5px;
-    line-height: 1;
-    margin-top: 10px;
+    .item-training.item.active {
+        color: #E60000;
+        background-color: rgb(210,210,210);
+        border-color: rgb(210,210,210);
+    }
+
+.bottom-line {
+    border-bottom: 1px solid black;
 }
 
-.level-select {
-    border: none;
-    -webkit-appearance: none;
-    font-size: 18px;
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    padding-bottom: 5px;
-    line-height: 1;
-    color: rgb(230,0,0);
-}
-
-.label-space {
-    border-bottom: 1px solid rgb(1, 84, 30);
-}
-
-
-ul {
-    display: inline;
-}
-
-input {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.input-names {
-    height: 20px;
-}
-
-.fc-bg {
-    height: 30px;
-}
-
-.fc-basic-view tbody .fc-row {
-    height: 30px !important;
-    min-height: 30px !important;
-}
-
-.calendar-down {
-    margin-top: 10px !important;
-}
-
-.user-contacts {
-    position: absolute; 
-    right: 5%; top:0; 
-    cursor: pointer;
+.item-training .row {
+    display: block;
 }
