@@ -304,7 +304,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-training {
     background: url("../img/iconsSVG/Calendario.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar{
+ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar {
     background: url("../img/iconsSVG/Calendario blanco.svg");
 }
 
@@ -313,7 +313,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar{
 }
 
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config{
+ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/iconsSVG/Configuracion blanco.svg");
 }
 
@@ -326,29 +326,50 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config{
 
 .icon-top-menu-pesa {
     background: url("../img/iconsSVG/Wod libre rojo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
 }
 
 .icon-top-menu-viaje {
     background: url("../img/iconsSVG/Wod viaje rojo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
 }
 
 .icon-top-menu-training {
     background: url("../img/iconsSVG/Entrenamiento rojo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
 }
 
 .icon-top-menu-calendar {
     background: url("../img/iconsSVG/Calendario rojo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
 }
 
 .icon-top-menu-profile {
     background: url("../img/iconsSVG/Perfil rojo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
 }
 
 .vertical-red-line {
-    border-left: 2px rgb(230,0,0);
-    border-style: solid;
-    height: 100%;
+    background: url("../img/icons/vertical-red-line.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     width: 2px;
+    height: 25px;
 }
 
 .icon-free-wod-white {
