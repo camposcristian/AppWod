@@ -280,10 +280,17 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
 }]);
 
 app.controller('friendsController', ['$scope', '$location', function($scope, $location) {
-    $scope.pageTitle = 'Perfil',
-    $scope.user = '< amigos ';
-    $scope.endAngularBracket = '>';
+    $scope.pageTitle = 'profile'; 
+    $scope.beginAngularBracket = '> ';
+    $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
+    $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
+    
+    $scope.usuario = [];
+    
+    $scope.usuario.flag = "arg-flag";
+    $scope.usuario.nivel = "Crossfitter Nivel Intermedio";
+    $scope.usuario.club = "Crossfit Argos";
 
     $scope.show = function ( path ) {
         $location.path( '/app' + path );

@@ -304,6 +304,16 @@
     overflow-y: scroll;
 }
 
+.content-page-friends {
+    height: 83%;
+    width: 84%;
+    margin-right: 8%;
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    overflow-y: scroll;
+}
+
 .content-page-wod {
     margin-right: 4.76%;
     margin-left: 4.76%;
@@ -315,6 +325,11 @@
 .picture-space {
     width: 45.41%;
     height: 202px;
+}
+
+.contacts-picture-space {
+    width: 28.9%;
+    height: 128.5px;
 }
 
 .user-information {
