@@ -1,0 +1,58 @@
+{
+    "exercises": [
+        {   
+            "name": "Clean & Jerk",
+            "image": "green-clean-jerk", 
+            "weight": "50",
+            "measure": "kg",
+            "video": "_Jw6Pe7_OvU",
+            "separator": "green-separator",
+            "font": "green-sport-font"
+        },
+        {
+            "name": "Deadlift",
+            "image": "green-deadlift", 
+            "weight": "100",
+            "measure": "kg",
+            "video": "green-deadlift",
+            "separator": "green-separator",
+            "font": "green-sport-font"
+        },
+        {
+            "name": "Back Squat",
+            "image": "green-back-squat", 
+            "weight": "80",
+            "measure": "kg",
+            "video": "green-back-squat",
+            "separator": "green-separator",
+            "font": "green-sport-font"
+        },
+        {
+            "name": "Kettlebel swing",
+            "image": "whiteblue-swing", 
+            "weight": "32",
+            "measure": "kg",
+            "video": "whiteblue-swing",
+            "separator": "white-blue-separator",
+            "font": "white-blue-sport-font"
+        },
+        {
+            "name": "Push press",
+            "image": "whiteblue-push-press", 
+            "weight": "50",
+            "measure": "kg",
+            "video": "whiteblue-push-press",
+            "separator": "white-blue-separator",
+            "font": "white-blue-sport-font"
+        },
+                {
+            "name": "Deadlift",
+            "image": "green-deadlift", 
+            "weight": "100",
+            "measure": "kg",
+            "video": "green-deadlift",
+            "separator": "green-separator",
+            "font": "green-sport-font"
+        }
+    ]
+}

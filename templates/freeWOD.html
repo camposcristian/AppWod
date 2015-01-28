@@ -1,0 +1,140 @@
+<div ng-controller="freeWODController" class="background-img">
+	<div class="full-space">
+		<div class="header">
+			<div class="bar bar-header menu-title-page">
+				<div class="content-title-bar">
+					<div class="icon-top icon-top-menu-profile left-alignment" ng-click="show('/profile')"></div>
+					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+					<div class="icon-top icon-top-menu-training" ng-click="show('/training')"></div>
+					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+					<div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
+					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+					<div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
+				</div>
+			</div>
+			<div class="bar background-title">
+				<div class="margin-alignment-subheader">
+				  	<div class="font-principal left-alignment">{{pageTitle}}</div>
+				  	<div class="icon-top icon-free-wod-white right-alignment"></div>
+			  	</div>
+			</div>
+		</div>
+		<div class="extended-margins">
+			<div class="content-page-wod">
+				<div style="height: 7.14%; padding-top:1%; padding-bottom: 1%;">
+					<label class="font-fields-configuration-label" style="width: 50% !important; line-height: 2">Tipo de WOD</label>
+					<select class="select-option-font right-alignment" style="height: 100%; width: 50%; border: 2px solid rgb(67,67,67); margin-top: 2%;">
+						<option>EMOM</option>
+						<option>TABATA</option>
+						<option>POR VUELTAS</option>
+						<option>AMRAP</option>
+						<option>21-15-9</option>
+					</select>
+				</div>
+				<div style="margin-top: 2.38%; margin-bottom: 2.38%;" class="display-flex">
+					<div class="green-muscle-full"></div>
+					<div style="width: 71%; margin-left: 4.67%;">
+						<input type="range" name="volume" min="0" max="100" value="0" style="width: 94%;">
+						<div style="width: 94%; margin-top: -3%;" class="display-flex">
+							<div class="min-green-line"></div>
+							<div class="min-white-blue-line"></div>
+							<div class="letra-g"></div>
+							<div class="min-orange-line"></div>
+							<div class="min-red-line"></div>
+						</div>
+					</div>
+					<div class="red-muscle-empty"></div>
+				</div>
+			</div>
+			<div class="horizontal-red-line"></div>
+			<div class="sports-list-wod">
+				<ion-list>
+					<ion-item ng-repeat="sport in training.exercises" class="without-margins item-list">
+						<div class="item-space-wod">
+							<div class="sport-image" ng-class="sport.image"></div>
+							<div class="count-excercise">{{sport.count}}</div>
+							<div style="margin-top: 5%;">
+								<div style="margin-bottom: 2%;">
+									<label class="club-location-font"><{{sport.name}}></label>
+								</div>
+								<div style="margin-top: 2%;">
+									<hr class="separator" ng-class="sport.separator">
+								</div>
+							</div>
+							<div class="whiteblue-eye sport-image" style="float: right !important"></div>
+						</div>
+					</ion-item>
+				</ion-list>
+			</div>
+		</div>
+						<div class="row">
+							<div class="col-10">
+								<div class="button button-icon icon center-img" ng-class="sport.image"></div>
+							</div>
+							<div class="col-10">
+								<div class="grey-border">{{sport.count}}</div>
+							</div>
+							<div class="col">
+								<div class="row">
+									<label class="font-grey-small col align-text-right"><{{sport.name}}></label>
+								</div>
+								<div class="row horizontal-green-line"></div>
+							</div>
+							<div class="col-10">
+								<div class="whiteblue-eye center-img"></div>
+							</div>
+						</div>
+					</ion-item>
+				</ion-list>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col col-10">
+				<div class="button button-icon icon pesa-roja-fondo-rojo"></div>
+			</diV>
+			<label class="col col-90 green-state-wod align-text-right"><strong>WOD GUARDADO</strong></label>
+		</div>
+		<div class="row horizontal-black-line"></div>
+		<div class="margin-top footer-config">
+			<div class="row">
+				<div class="col col-20">
+					<div class="row button button-icon icon clock"></div>
+					</br>
+					<div class="row sound"></div>
+				</div>
+				<div class="col">
+					<label class="col clock-label-timer center-title-text">00:00</label>
+				</div>
+				<div class="col col-20 col-center grey-border">
+					<div class="col-center">
+						<div class="row without-margins row-center">
+							<label class="col red-font-bold-big center-title-text without-margins">0</label>
+						</div>
+						<div class="row without-margins row-center">
+							<label class="col red-font-bold center-title-text without-margins">vueltas</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-20 col-center">
+					<center>
+						<label class="angular-brackets-clock center-title-text">>></label>
+					</center>
+				</div>
+				<div class="col">
+					<button type="button" ng-click="" class="button button-block green-button-background">
+						<label class="statistics-font">Iniciar cronómetro</label>
+					</button>
+				</div>
+				<div class="col col-20 col-center">
+					<center>
+						<label class="angular-brackets-clock center-title-text"><<</label>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

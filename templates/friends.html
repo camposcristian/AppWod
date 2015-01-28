@@ -1,0 +1,178 @@
+<div ng-controller="friendsController" class="background-img">
+	<div class="header">
+		<div class="bar bar-header menu-title-page row">
+		  	<div class="col">
+				<button class="button button-icon icon icon-top-menu-pesa center-img" ng-click="show('/freeWOD')"></button>
+			</div>
+			<div class="col">
+				<div class="vertical-red-line center-img"></div>
+			</div>
+			<div class="col">
+				<button class="button button-icon icon icon-top-menu-training center-img" ng-click="show('/training')"></button>
+			</div>
+			<div class="col">
+				<div class="vertical-red-line center-img"></div>
+			</div>
+			<div class="col">
+				<button class="button button-icon icon icon-top-menu-viaje center-img" ng-click="show('/tripWOD')"></button>
+			</div>
+			<div class="col">
+				<div class="vertical-red-line center-img"></div>
+			</div>
+			<div class="col">
+				<button class="button button-icon icon icon-top-menu-calendar center-img" ng-click="show('/calendar')"></button>
+			</div>
+		</div>
+		<div class="bar bar-subheader background-title row">
+		  	<div class="font-title font-principal col">{{pageTitle}}</div>
+		  	<div class="col">
+		  		<div class="row no-row" ng-click="show('/profile')">
+					<div class="col col-70">
+	  					<div class="font-title font-secondary">{{user}}</div>
+	  				</div>
+	  				<div class="col col-20">
+		  				<button ng-class="iconHeader"></button>
+	  				</div>
+	  				<div class="col col-10">
+	  					<div class="font-title font-secondary">{{endAngularBracket}}</div>
+	  				</div>
+			  	</div>
+		  	</div>
+		</div>
+	</div>
+	<div class="container-margins">
+		<div class="row">
+			<div class="col center-title-text">
+				<div class="user-photo center-img"></div>
+			</div>
+			<div class="col center-title-text">
+				<div class="row">
+					<label class="col font-user-name">Juan Cruz</label>
+				</div>
+				<div class="row">
+					<label class="col col-80 red-font-bold">Crossfit Argos</label>
+					<div class="col col-10 arg-flag"></div>
+				</div>
+				<hr class="horizontal-line">
+				<label class="row font-user-name">Crossfitter Pro</label>
+			</div>
+		</div>
+	</div>
+	<div class="row no-row background-friends-wods">
+		<div class="row no-row">
+			<div class="col col-20 center-title-text">
+				<label class="red-font-normal">wods </label>
+			</div>
+			<div class="col col-30">
+				<div class="row">
+					<div class="red-full-circle"></div>
+					<div class="red-full-circle"></div>
+					<div class="red-full-circle"></div>
+					<div class="red-full-circle"></div>
+					<div class="red-full-circle"></div>
+				</div>
+			</div>
+			<div class="col col-20 col-offset-30">
+				<label class="font-friends">AMIGOS </label>
+			</div>
+		</div>
+	</div>
+	<hr class="red-line">
+	<div class="background-carrousel-friends row">
+		<div class="col col-10 col-center">
+			<div class="left-angular-bracket" ng-click="previous()"></div>
+		</div>
+		<ion-nav-page class="col" id="wods-friends">
+			<ion-slide-box on-slide-changed="slideChanged(index)">
+				<ion-slide>
+		        	<label class="row font-grey-small">Martes 4-1-2014</label>
+		        	<div class="row">
+		        		<div class="col col-50">
+		        			<label class="row red-state-wod"><strong>5 vueltas</strong></label>
+		        			<hr class="black-line">
+		        			<div class="row">
+		        				<label class="font-grey-small col">5</label>
+		        				<label class="font-grey-small col col-75">Clean & Jerk</label>
+		        			</div>
+		        			<div class="row">
+	        					<label class="font-grey-small col">10</label>
+	        					<label class="font-grey-small col col-75">Pull-Ups</label>
+		        			</div>
+		        			<div class="row">
+		        				<label class="font-grey-small col">20</label>
+		        				<label class="font-grey-small col col-75">Squat</label>
+		        			</div>
+		        			<div class="row">
+		        				<label class="font-grey-small col">15</label>
+		        				<label class="font-grey-small col col-75">Box Jump</label>
+		        			</div>
+		        			<div class="row">
+		        				<label class="font-grey-small col col-offset-20">Run x 400</label>
+		        			</div>
+						</div>
+						<div class="col col-50">
+							<div class="row">
+								<div class="col">
+									<div class="button button-icon icon green-muscle"></div>
+								</div>
+								<div class="col">
+									<div class="button button-icon icon blue-hand"></div>
+								</div>
+								<div class="col">
+									<div class="button button-icon icon red-muscle"></div>
+								</div>
+							</div>
+							</br>
+							</br>
+							<div class="row">
+								<div class="col button button-icon icon clock center-img"></div>
+								<label class="col clock-label">12:15</label>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="item item-text-wrap">
+    						Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ubore.
+  						</div>
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<label class="font-grey-small">Miércoles 5-1-2014</label>
+				</ion-slide>
+			</ion-slide-box>
+		</ion-nav-page>
+		<div class="col col-10 col-center">
+			<div class="right-angular-bracket" ng-click="next()" ng-if="slideIndex != 2"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<hr class="row black-line">
+		<div class="row">
+			<div class="col col-50 col-offset-10">
+				<div class="row">
+					<div class="green-clean-jerk col col-20"></div>
+					<label class="green-sport-font col">160 Kg</label>
+				</div>
+				<div class="row">
+					<div class="green-deadlift col col-20"></div>
+					<label class="green-sport-font col">250 Kg</label>
+				</div>
+			</div>
+			<div class="col col-50">
+				<div class="row">
+					<div class="green-front-squat col col-20"></div>
+					<label class="green-sport-font col">200 Kg</label>
+				</div>
+				<div class="row">
+					<div class="green-power-clean col col-20"></div>
+					<label class="green-sport-font col">70 Kg</label>
+				</div>
+			</div>
+		</div>
+		<div class="button-bar">
+		  	<a class="button">Amigos</a>
+		  	<a class="button">Todos</a>
+		  	<a class="button">Buscar</a>
+		</div>
+	</div>
+</div>

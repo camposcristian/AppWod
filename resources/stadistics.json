@@ -1,0 +1,154 @@
+{
+    "exercises": [
+        {   
+            "image": "green-clean-jerk", 
+            "work": [
+                {
+                    "year": 2014,
+                    "month": "enero",
+                    "weight": 60,
+                    "measure": "kg"
+                }, 
+                {
+                    "year": 2014,
+                    "month": "febrero",
+                    "weight": 50,
+                    "measure": "kg" 
+                },
+                {
+                    "year": 2014,
+                    "month": "marzo",
+                    "weight": 80,
+                    "measure": "kg"
+                },
+                {
+                    "year": 2014,
+                    "month": "abril",
+                    "weight": 90,
+                    "measure": "kg"
+                }
+            ],
+            "color": "green-circle"
+        },
+        {   
+            "image": "green-deadlift", 
+            "work": [
+                {
+                    "year": 2014,
+                    "month": "enero",
+                    "weight": 100,
+                    "measure": "kg"
+                }, 
+                {
+                    "year": 2014,
+                    "month": "febrero",
+                    "weight": 120,
+                    "measure": "kg" 
+                },
+                {
+                    "year": 2014,
+                    "month": "marzo",
+                    "weight": 140,
+                    "measure": "kg"
+                },
+                {
+                    "year": 2014,
+                    "month": "abril",
+                    "weight": 150,
+                    "measure": "kg"
+                }
+            ],
+            "color": "green-circle"
+        },
+        {   
+            "image": "green-front-squat", 
+            "work": [
+                {
+                    "year": 2014,
+                    "month": "enero",
+                    "weight": 80,
+                    "measure": "kg"
+                }, 
+                {
+                    "year": 2014,
+                    "month": "febrero",
+                    "weight": 90,
+                    "measure": "kg" 
+                },
+                {
+                    "year": 2014,
+                    "month": "marzo",
+                    "weight": 100,
+                    "measure": "kg"
+                },
+                {
+                    "year": 2014,
+                    "month": "abril",
+                    "weight": 120,
+                    "measure": "kg"
+                }
+            ],
+            "color": "green-circle"
+        },
+        {   
+            "image": "whiteblue-swing", 
+            "work": [
+                {
+                    "year": 2014,
+                    "month": "enero",
+                    "weight": 32,
+                    "measure": "kg"
+                }, 
+                {
+                    "year": 2014,
+                    "month": "febrero",
+                    "weight": 32,
+                    "measure": "kg" 
+                },
+                {
+                    "year": 2014,
+                    "month": "marzo",
+                    "weight": 36,
+                    "measure": "kg"
+                },
+                {
+                    "year": 2014,
+                    "month": "abril",
+                    "weight": 42,
+                    "measure": "kg"
+                }
+            ],
+            "color": "whiteblue-circle"
+        },
+        {   
+            "image": "whiteblue-push-press", 
+            "work": [
+                {
+                    "year": 2014,
+                    "month": "enero",
+                    "weight": 40,
+                    "measure": "kg"
+                }, 
+                {
+                    "year": 2014,
+                    "month": "febrero",
+                    "weight": 50,
+                    "measure": "kg" 
+                },
+                {
+                    "year": 2014,
+                    "month": "marzo",
+                    "weight": 60,
+                    "measure": "kg"
+                },
+                {
+                    "year": 2014,
+                    "month": "abril",
+                    "weight": 70,
+                    "measure": "kg"
+                }
+            ],
+            "color": "whiteblue-circle"
+        }
+    ]
+}

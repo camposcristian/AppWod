@@ -1,0 +1,80 @@
+<div ng-controller="configurationController" class="background-img">
+	<div class="header">	
+		<div class="bar bar-header menu-title-page">
+			<div class="col col-50 col-offset-50">
+				<button class="button button-icon icon left-arrow-red center-img" ng-click="show('/home')"></button>
+			</div>
+		</div>
+		<div class="bar bar-subheader background-title row">
+		  	<div class="col col-50">
+		  		<label class="font-title font-principal">{{pageTitle}}</label>
+		  	</div>
+		  	<div class="col col-50">
+				<div class=" center-img" ng-class="iconHeader"></div>
+		  	</div>
+		</div>
+	</div>
+	<div>
+		<div class="container-margins">
+			<div class="row">
+				<!-- <div class="col col-33 col-center"> -->
+				<div class="col col-50">
+					<label class="font-fields-configuration-label">Idioma:</label>
+				</div>
+				<div class="col col-50">
+				<!-- <select class="col col-67 col-center"> -->
+					 <select class="language-select">
+						<option>Español</option>
+						<option>Inglés</option>
+						<option>Alemán</option>
+						<option>Francés</option>
+					    <option>Italiano</option>
+					    <option>Portugués</option>
+					</select>
+			</div>
+			</div>
+			<hr class="horizontal-line"></hr>
+			<div class="row">
+				<label class="col col-67 font-fields-configuration-label">Unidad de medida:</label>
+				<div class="col col-33">
+					<div class="row no-row">
+						<div class="kg-img"></div>
+						<div class="lb-img"></div>
+					</div>
+				</div>
+			</div>
+			<hr class="horizontal-line"></hr>
+			<button type="button" ng-click="" class="button button-block grey-button-background">
+				<label class="enable-help-font">Activar ayuda 
+					<div class="question-green"></div> 
+				</label>
+			</button>
+		</div>
+		<div class="container-margins">
+			<!-- 
+			<div class="row row-bottom">
+				<div class="advertencia-configuracion"></div>
+			</div> 
+			-->
+			<!-- <div class="row">
+				<div class="appWod-icon"></div>
+				<div class="separator-icon"></div>
+				<div class="designer-icon"></div>
+			</div> -->
+			<div class="row">
+				<div class="col col-75 font-website-configuration">www.appwod.com</div>
+				<div class="col facebook-icon"></div>
+				<div class="col twitter-icon"></div>
+			</div>
+			
+				<div class="warning-configuration">
+					<div class="red-font-normal center-title-text"><strong>ADVERTENCIA</strong></div>
+					<p class="font-warning align-text-justify">AppWod no se hace responsable ante cualquier lesión 
+					ocasionada. Consulte a un entrenador y realice examenes 
+					de apta médico antes de usar la aplicación</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

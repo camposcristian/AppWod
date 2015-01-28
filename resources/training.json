@@ -1,0 +1,29 @@
+{
+    "exercises": [
+        {   
+            "name": "Overhead squat",
+            "image": "green-overhead-squat", 
+            "count": "10"
+        },
+        {
+            "name": "Ring dip",
+            "image": "whiteblue-ring-dip", 
+            "count": "10"
+        },
+        {
+            "name": "Toes to bar",
+            "image": "blue-toes-to-bar", 
+            "count": "20"
+        },
+        {
+            "name": "Ring dip",
+            "image": "whiteblue-ring-dip", 
+            "count": "10"
+        },
+        {
+            "name": "Toes to bar",
+            "image": "blue-toes-to-bar", 
+            "count": "20"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+<div ng-controller="statisticsController" class="background-img">
+	<div class="header">
+		<div class="bar bar-header menu-title-page">
+			<div class="col col-67 col-offset-33" ng-click="show('/profile')">
+				<div class="left-arrow-red center-img"></div>
+			</div>
+		</div>
+		<div class="bar bar-subheader background-title row">
+		  	<div class="col font-title font-principal">{{pageTitle}}</div>
+		  	<div class="col">
+  				<div class="row no-row">
+	  				<div class="col col-70">
+	  					<div class="font-title font-secondary">{{user}}</div>
+	  				</div>
+	  				<div class="col col-20">
+		  				<button ng-class="iconHeader"></button>
+	  				</div>
+	  				<div class="col col-10">
+	  					<div class="font-title font-secondary">{{endAngularBracket}}</div>
+	  				</div>
+	  			</div>
+		  	</div>
+		</div>
+	</div>
+	<div>
+		<ion-list>
+			<ion-item ng-repeat="sport in sports.exercises" class="no-border">
+				<div class="row container-margins">
+					<div class="col col-90">
+						<div class="row">
+							<div class="col col-10">
+								<div class="button button-icon icon" ng-class="sport.image"></div>
+							</div>
+							<div class="col col-80">
+								<div class="row">
+									<ion-item ng-repeat="work in sport.work" class="display-inline no-border transparent-background col col-20">
+										<label>{{work.weight}}</label>
+									</ion-item>
+								</div>
+							</div>
+							<div class="col col-10">
+								<div class="right-angular-bracket center-img"></div>
+							</div>
+						</div>
+						<div class="row horizontal-green-line"></div>
+						<div class="row">
+							<div class="col col-80 col-offset-10">
+								<div class="row">
+									<ion-item ng-repeat="work in sport.work" class="display-inline no-border transparent-background col col-20">
+										<label>{{work.month}}</label>
+									</ion-item>
+								</div>
+							</div>
+							<div class="col col-10"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row horizontal-black-line"></div>
+			</ion-item>
+		</ion-list>
+	</div>
+</div>

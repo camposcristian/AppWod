@@ -1,0 +1,20 @@
+<div>
+	<ion-list>
+		<ion-item ng-repeat="sport in exercises.exercises" class="without-margins no-border">
+			<div class="row" ng-click="show('/videoExplanation/' + sport.video)">
+				<div class="col-10">
+					<div ng-class="sport.image"/>
+				</div>
+				<div class="col without-margins">
+					<div class="row">
+						<label class="green-sport-font col">{{sport.name}}</label>
+						<label class="font-measure right-alignment col">{{sport.weight + sport.measure}}</label>
+					</div>
+					<div class="row">
+						<div class="horizontal-green-line without-margins no-border"/>
+					</div>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+</div>
