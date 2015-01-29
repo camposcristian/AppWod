@@ -91,7 +91,7 @@
 
 .red-button-background {
     background-color: rgb(230,0,0);
-    border-color:  rgb(230,0,0);
+    border-color: rgb(230,0,0);
     bottom: 0;
     border-radius: 5px;
     width: 100% !important;
@@ -129,6 +129,14 @@
 @media screen and (max-height: 570px) {
     .item-menu {
         padding: 0 0 0 0;
+    }
+
+    .home-img {
+        background: url("../img/photos/Home.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -224,7 +232,7 @@
 
 .red-line-home {
     border: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-color: #E60000;
     margin: 0;
     width: 100%;
@@ -404,17 +412,17 @@
     padding: 0px 0 0px 3px !important;
 }
 
-ion-item.item-menu.background-img.item:active {
+a.item-menu.background-img.item:active {
     background: rgb(230,0,0);
 }
 
-    ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
+    a.item-menu.background-img.item:active .font-menu .item-menu-name {
         color: white !important;
     }
 
 
 .list .item.item-accordion {
-    line-height: 38px;
+    line-height: 29px;
     padding: 0;
     transition: 0.09s all linear;
     border: none;
@@ -453,9 +461,14 @@ ion-item.item-menu.background-img.item:active {
     margin: 0;
 }
 
+.item-training.item.activated {
+    background-color: rgb(210,210,210);
+    border-color: rgb(210,210,210);
+    color: rgb(230,0,0);
+}
+
 .bottom-line {
     border-bottom: 1px solid black;
-    padding-left: 28%;
     margin-top: 18px;
 }
 
@@ -463,11 +476,13 @@ ion-item.item-menu.background-img.item:active {
     display: block;
     margin: 0;
     padding: 0;
+    margin-left: 8%;
 }
 
 .item-training.item.active .row .bottom-line {
     padding-left: 55px;
     margin-top: 15px;
+    margin-right: 8%
 }
 
 .item-training .row .left-alignment .button {
@@ -476,4 +491,10 @@ ion-item.item-menu.background-img.item:active {
     height: 57px;
     background-repeat: no-repeat;
     margin: 0;
+}
+
+.overflow-right {
+    overflow:hidden;
+    text-align: right;
+    margin-right: 8%;
 }

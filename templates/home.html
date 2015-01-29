@@ -6,12 +6,12 @@
 	</div>
 	<div class="footer-menu">
 		<ion-list class="full-space">
-			<ion-item ng-repeat="item in mainmenu" class="item-menu background-img">
-				<a href="#/app/{{item.id}}" class="font-menu">
-					<label class="item-menu-name">{{item.id | translate}}</label>
-					<div class="icon-home-menu" ng-class="item.icon"></div>
-				</a>
-			</ion-item>
+            <a href="#/app/{{item.id}}" ng-repeat="item in mainmenu" class="item-menu background-img item">
+                <div class="font-menu">
+                    <label class="item-menu-name">{{item.id | translate}}</label>
+                    <div class="icon-home-menu" ng-class="item.icon"></div>
+                </div>
+            </a>
 		</ion-list>	
 		<div class="red-line-home"></div>
 	</div>
