@@ -89,6 +89,19 @@
     padding: 0 12px;
 }
 
+.red-button-background {
+    background-color: rgb(230,0,0);
+    border-color:  rgb(230,0,0);
+    bottom: 0;
+    border-radius: 5px;
+    width: 100% !important;
+    display: flex;
+    font-size: 16px;
+    line-height: 36px;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
 .home-menues-margin {
     margin-right: 5%;
     margin-left: 5%;
@@ -453,14 +466,14 @@ ion-item.item-menu.background-img.item:active {
 }
 
 .item-training.item.active .row .bottom-line {
-    padding-left: 30%;
-    margin-top: -20px;
+    padding-left: 55px;
+    margin-top: 15px;
 }
 
 .item-training .row .left-alignment .button {
     display: inline-block;
-    width: 57px;
+    width: 46px;
     height: 57px;
     background-repeat: no-repeat;
-    margin:0;
+    margin: 0;
 }

@@ -49,16 +49,20 @@
                 </ion-item>
 
                 <div class="accordion-training" ng-show="isGroupShown(sport)">
-                    <div>
-                        <label ng-click="" class="green-button-background">
-                            <span class="statistics-font">Compartir</span>
-                            <div class="statistics-green-background"></div>
+                    <div style="position: relative;
+width: 50%;
+top: 50px;
+display: inline-block;
+z-index: 10">
+                        <label ng-click="" class="red-button-background">
+                            <i class="icon ion-chevron-right" style="color:white"></i>
+                            <span class="statistics-font">Iniciar WOD</span>
                         </label>
                     </div>
 
-                    <div>
+                    <div style="margin-top: -52px;">
                         <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
-                            <span>{{exercise.count}}</span>
+                            <!--<span>{{exercise.count}}</span>-->
                             {{exercise.name}}
                         </ion-item>
                     </div>
