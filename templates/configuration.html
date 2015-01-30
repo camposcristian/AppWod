@@ -3,10 +3,8 @@
 		<div class="header">	
 			<div class="bar bar-header menu-title-page">
 				<div class="right-alignment" style="position: absolute; right: 8%;">
-					<div class="right-alignment left-arrow-red" ng-click="show('/home')"></div>
+					<i class="ion-arrow-left-a right-alignment" style="color: rgb(230,0,0); font-size: 37px; margin-top: 20%;" ng-click="show('/home')"></i>
 			  	</div>
-				
-				</div>
 			</div>
 			<div class="bar background-title">
 				<div class="margin-alignment-subheader">
@@ -18,33 +16,32 @@
 			</div>
 		</div>
 		<div class="content-page">
-			<div class="display-flex">
-				<label class="font-fields-configuration-label">{{'language' | translate}}:</label>
-				<select class="language-select" ng-model="language" ng-change="changeLanguage()">
-					<option value="es">{{'spanish' | translate}}</option>
-					<option value="en">{{'english' | translate}}</option>
-					<option value="ge">{{'german' | translate}}</option>
-					<option value="fr">{{'french' | translate}}</option>
-				    <option value="it">{{'italian' | translate}}</option>
-				    <option value="po">{{'portuguese' | translate}}</option>
-				</select>
-			</div>
-			<hr class="horizontal-line"></hr>
-			<div class="display-flex">
-				<label class="font-fields-configuration-label left-alignment">{{'unitOfMeasurement' | translate}}:</label>
-				<div class="right-alignment" style="position: absolute">
-					<div class="display-flex">
-						<div class="kg-img"></div>
-						<div class="lb-img"></div>
-					</div>
+			<div class="row" style="margin-bottom: 2%;">
+				<div class="font-fields-configuration-label col col-50">{{'language' | translate}}:</div>
+				<div class="col col-50">
+					<select class="language-select" ng-model="language" ng-change="changeLanguage()" style="text-align: center">
+						<option value="es"><center>{{'spanish' | translate}}</center></option>
+						<option value="en"><center>{{'english' | translate}}</center></option>
+						<option value="ge"><center>{{'german' | translate}}</center></option>
+						<option value="fr"><center>{{'french' | translate}}</center></option>
+					    <option value="it"><center>{{'italian' | translate}}</center></option>
+					    <option value="po"><center>{{'portuguese' | translate}}</center></option>
+					</select>
 				</div>
 			</div>
 			<hr class="horizontal-line"></hr>
-			<button type="button" ng-click="" class="button button-block grey-button-background">
-				<label class="enable-help-font">{{'helpsActivate' | translate}} 
-					<div class="question-green"></div> 
-				</label>
-			</button>
+			<div class="row" style="margin-bottom: 2%; margin-top: 2%">
+				<label class="font-fields-configuration-label col col-67">{{'unitOfMeasurement' | translate}}:</label>
+				<div class="col col-33" style="position: absolute">
+					<div class="kg-img right-alignment"></div>
+					<div class="lb-img right-alignment"></div>
+				</div>
+			</div>
+			<hr class="horizontal-line"></hr>
+			<label ng-click="!help" class="green-button-background" style="margin-top: 4%;">
+				<span class="statistics-font">{{'helpsActivate' | translate}}</span>
+				<div class="question-green"></div>
+			</label>
 		</div>
 	</div>
 	<div class="footer-menu">
@@ -54,13 +51,13 @@
 				<div class="separator-icon"></div>
 				<div class="designer-icon"></div>
 			</div>
-			<div class="row">
+			<div class="row" style="margin-top: 2%; margin-bottom: 2%">
 				<div class="font-website-configuration">www.appwod.com</div>
 				<div class="facebook-icon"></div>
 				<div class="twitter-icon"></div>
 			</div>
 				<div class="warning-configuration">
-					<div class="warning "><strong>{{'warning' | translate}}</strong></div>
+					<div class="warning"><strong>{{'warning' | translate}}</strong></div>
 					<p class="font-warning">{{'responsibilities' | translate}}</p>
 				</div>
 			</div>

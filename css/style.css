@@ -18,9 +18,12 @@
 }
 
 .language-select{
-    text-align: center;
-    width: 50%;
+    width: 100%;
+    min-height: 40px;
+    margin-top: -10px;
     float: right;
+    font-size: 1.5em;
+    font-family: Roboto-regular;
 }
 
 .left-alignment {
@@ -232,9 +235,9 @@
 
 .footer-menu {
     width: 100%;
-    height: 36%;
     bottom: 0;
     position: absolute;
+    margin-bottom: 3%;
 }
 
 .footer-profile {
@@ -289,6 +292,8 @@
 .margin-alignment-subheader {
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 2%;
+    line-height: 150%;
     height: 100%;
     width: 84%;
     height: 100%;
@@ -305,7 +310,7 @@
     width: 84%;
     margin-right: 8%;
     margin-left: 8%;
-    margin-top: 14%;
+    margin-top: 2%;
     margin-bottom: 0%;
     overflow-y: scroll;
 }
@@ -418,4 +423,8 @@ ion-item.item-menu.background-img.item:active {
 
 ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
     color: white !important;
+}
+
+#language {
+
 }
