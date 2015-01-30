@@ -38,33 +38,30 @@
                             {{sport.day}}
                         </div>
                         <div class="row">
-                            <div style="margin-top: -17px;"class="left-alignment">
+                            <div class="left-alignment">
                                 <div ng-repeat="exercise in sport.exercises" class="button button-icon icon center-img" ng-class="exercise.image"></div>
                             </div>
                             <div class="overflow-right bottom-line">
-                                {{sport.type}}
+                                {{sport.type || "Crear WOD"}}
                                 <i class="icon" ng-class="isGroupShown(sport) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                             </div>
                         </div>
                     </ion-item>
 
                     <div class="accordion-training" ng-show="isGroupShown(sport)">
-                        <div style="position: relative;
-width: 50%;
-top: 25px;
-margin-left: 8%;
-display: inline-block;
-z-index: 10">
+                        <div class="training-wod-button">
                             <label ng-click="show('/freeWOD')" class="red-button-background">
                                 <i class="icon ion-chevron-right" style="color:white"></i>
-                                <span class="statistics-font">Iniciar WOD</span>
+                                <span class="training-wod-font">Iniciar WOD</span>
                             </label>
                         </div>
 
                         <div style="margin-top: -52px;">
                             <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
                                 <!--<span>{{exercise.count}}</span>-->
-                                {{exercise.name}}
+                                <div class="training-exercises">
+                                    {{exercise.name}}
+                                </div>
                             </ion-item>
                         </div>
                     </div>

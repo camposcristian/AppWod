@@ -4,40 +4,25 @@
         "type": "21-15-9",
         "exercises": [
             {
-                "name": "Overhead squat",
+                "name": "Toes to bar",
                 "image": "icon-training-red",
                 "count": "10"
-            },
-            {
-                "name": "Ring dip",
-                "image": "icon-training-blue",
-                "count": "10"
-            },
-            {
-                "name": "Toes to bar",
-                "image": "icon-training-green",
-                "count": "20"
             }
         ]
     },
     {
         "day": "tuesday",
-        "type": "AMRAP",
+        "type": "",
         "exercises": [
             {
-                "name": "Overhead squat",
-                "image": "icon-training-red",
+                "name": "",
+                "image": "icon-training-green",
                 "count": "10"
             },
             {
-                "name": "Ring dip",
+                "name": "",
                 "image": "icon-training-blue",
                 "count": "10"
-            },
-            {
-                "name": "Toes to bar",
-                "image": "icon-training-green",
-                "count": "20"
             }
         ]
     },
@@ -51,35 +36,25 @@
                 "count": "10"
             },
             {
-                "name": "Ring dip",
-                "image": "icon-training-blue",
-                "count": "10"
-            },
-            {
                 "name": "Toes to bar",
                 "image": "icon-training-green",
                 "count": "20"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-blue",
+                "count": "10"
             }
         ]
     },
     {
         "day": "thrusday",
-        "type": "TABATA",
+        "type": "DIA LIBRE",
         "exercises": [
             {
                 "name": "Overhead squat",
-                "image": "icon-training-red",
+                "image": "icon-training-orange-free",
                 "count": "10"
-            },
-            {
-                "name": "Ring dip",
-                "image": "icon-training-blue",
-                "count": "10"
-            },
-            {
-                "name": "Toes to bar",
-                "image": "icon-training-green",
-                "count": "20"
             }
         ]
     },

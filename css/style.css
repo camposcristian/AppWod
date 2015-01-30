@@ -469,7 +469,6 @@ a.item-menu.background-img.item:active {
 
 .bottom-line {
     border-bottom: 1px solid black;
-    margin-top: 18px;
 }
 
 .item-training .row {
@@ -477,12 +476,16 @@ a.item-menu.background-img.item:active {
     margin: 0;
     padding: 0;
     margin-left: 8%;
+    text-transform: uppercase;
 }
 
 .item-training.item.active .row .bottom-line {
-    padding-left: 55px;
-    margin-top: 15px;
-    margin-right: 8%
+    margin-top: -13px;
+    margin-right: 23%;
+    float: right;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
 .item-training .row .left-alignment .button {
@@ -494,7 +497,50 @@ a.item-menu.background-img.item:active {
 }
 
 .overflow-right {
-    overflow:hidden;
+    overflow: hidden;
     text-align: right;
+    margin-right: 16%;
+    padding-bottom: 17px;
+}
+
+.training-exercises {
     margin-right: 8%;
+    margin-top: -7px;
+}
+
+.item-training .icon {
+    margin-left: 10px;
+}
+
+.item-training.active .overflow-right .icon {
+    position: absolute;
+    right: 28px;
+}
+
+.item-training.active .row {
+    margin-top: 5px;
+}
+
+.training-wod-button {
+    position: relative;
+    width: 42%;
+    margin-left: 8%;
+    display: inline-block;
+    z-index: 10;
+}
+
+.training-wod-font {
+    text-transform: uppercase;
+    font-family: Roboto-medium;
+    text-align: left;
+    font-size: 17px;
+    color: #FFFFFF;
+    float: left;
+    margin-left: 2%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.image-repeated {
+    display: none !important;
 }
