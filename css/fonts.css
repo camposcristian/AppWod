@@ -76,7 +76,7 @@
 
 .red-font-bold {
 	font-family: Roboto-regular;
-	font-size: 1.3em;
+	font-size: 1.5em;
 	color: #E60000;		
 	text-align: left;
 	display: flex;
@@ -98,7 +98,7 @@
 .red-font-club {
 	font-family: Roboto-medium;
 	text-align: left;
-	font-size: 1.5em;
+	font-size: 1.7em;
 	color: rgb(230, 0, 0);
 	white-space: nowrap;
 	line-height: inherit;
@@ -110,7 +110,7 @@
 .club-location-font {
 	font-family: Roboto-light;
 	text-align: right;
-	font-size: 1.5em;
+	font-size: 1.7em;
 	color: rgb(67, 67, 67);
 	white-space: nowrap;
 	line-height: inherit;
@@ -160,6 +160,17 @@
 	margin-left: 2%;
 	width: 100%;
 	white-space: nowrap;
+}
+
+.help-font {
+	text-transform: uppercase;
+    font-family: Roboto-medium;
+    text-align: left;
+    font-size: 1.3em;   
+    float: left;
+    margin-left: 2%;
+    width: 100%;
+    white-space: nowrap;
 }
 
 .enable-help-font{

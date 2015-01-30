@@ -44,9 +44,9 @@ app.controller('homeController', ['$scope', function($scope) {
 }]);
 
 app.controller('profileController', ['$scope', '$location', 'profileExercises', '$cordovaCamera', function($scope, $location, profileExercises, $cordovaCamera) {
-    $scope.pageTitle = 'perfil'; 
-    $scope.user = '> usuario ';
-    $scope.endAngularBracket = '<';
+    $scope.pageTitle = 'profile'; 
+    $scope.beginAngularBracket = '< '
+    $scope.endAngularBracket = ' >';
     $scope.iconHeader = 'user-human-title';
     $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
     
@@ -98,9 +98,19 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
     $scope.language = "es";
+    $scope.measurement = true; /* True significa que es kg, false significa que es lb */
+    $scope.help = true;
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
     };
+
+    $scope.changeMeasurement = function() {
+        $scope.measurement = !$scope.measurement;
+    }
+
+    $scope.changeHelp = function() {
+        $scope.help = !$scope.help;
+    }
 
     $scope.changeLanguage = function(){
         $translate.use($scope.language);

@@ -32,15 +32,17 @@
 			<hr class="horizontal-line"></hr>
 			<div class="row" style="margin-bottom: 2%; margin-top: 2%">
 				<label class="font-fields-configuration-label col col-67">{{'unitOfMeasurement' | translate}}:</label>
-				<div class="col col-33" style="position: absolute">
-					<div class="kg-img right-alignment"></div>
-					<div class="lb-img right-alignment"></div>
+				<div class="col col-33" style="position: absolute" ng-click="changeMeasurement()">
+					<div class="kg-img right-alignment" ng-show="measurement"></div>
+					<div class="light-kg-img right-alignment" ng-hide="measurement"></div>
+					<div class="lb-img right-alignment" ng-hide="measurement"></div>
+					<div class="light-lb-img right-alignment" ng-show="measurement"></div>
 				</div>
 			</div>
 			<hr class="horizontal-line"></hr>
-			<label ng-click="!help" class="green-button-background" style="margin-top: 4%;">
-				<span class="statistics-font">{{'helpsActivate' | translate}}</span>
-				<div class="question-green"></div>
+			<label ng-click="changeHelp()" ng-class="help ? 'green-button-background' : 'grey-button-background'" style="margin-top: 4%;">
+				<span class="help-font">{{'helpsActivate' | translate}}</span>
+				<div ng-class="help ? 'question-green' : 'question-grey'"></div>
 			</label>
 		</div>
 	</div>

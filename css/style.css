@@ -74,13 +74,11 @@
 .rectangle {
     margin-left: -1%;
     padding-left: 1%;
-    display: flex;
+    line-height: 1.5;
 }
 
 .grey-rectangle {
     border: 2px solid #434343;
-    margin-top: -5.62%;
-    display: flex;
     text-align: center;
     width: 100%;
 }
@@ -93,9 +91,24 @@
     width: 100% !important;
     display: flex;
     font-size: 16px;
-    line-height: 36px;
+    line-height: 2;
     cursor: pointer;
     padding: 0 12px;
+    color: #FFFFFF;
+}
+
+.grey-button-background {
+    background-color: rgb(210,208,208);
+    border-color: rgb(210,208,208);
+    bottom: 0;
+    border-radius: 5px;
+    width: 100% !important;
+    display: flex;
+    font-size: 16px;
+    line-height: 2;
+    cursor: pointer;
+    padding: 0 12px;
+    color: rgb(127,130,124);
 }
 
 .home-menues-margin {

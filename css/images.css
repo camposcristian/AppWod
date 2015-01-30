@@ -393,6 +393,25 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 25px;
 }
 
+.lb-img {
+    background: url("../img/iconsSVG/Libra gris.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    margin-right: 15%;
+}
+
+.light-lb-img {
+    background: url("../img/iconsSVG/Libra gris.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    margin-right: 15%;
+    opacity: 0.5;
+}
+
 .kg-img {
     background: url("../img/iconsSVG/Kilo gris.svg");
     background-repeat: no-repeat;
@@ -402,13 +421,14 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     margin-right: 15%;
 }
 
-.lb-img {
-    background: url("../img/iconsSVG/Libra gris.svg");
+.light-kg-img {
+    background: url("../img/iconsSVG/Kilo gris.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 35px;
     height: 35px;
     margin-right: 15%;
+    opacity: 0.5;
 }
 
 .question-green {
@@ -419,7 +439,18 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 30px;
     float: right;
     margin-right: 2%;
-    margin-top: 0.5%;
+    margin-top: 1%;
+}
+
+.question-grey {
+    background: url("../img/iconsSVG/Ayuda gris.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-right: 2%;
+    margin-top: 1%;
 }
 
 .advertencia-configuracion {
