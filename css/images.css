@@ -1,18 +1,333 @@
-.background-img {
-    background: url('../img/photos/fondo.jpg');
-    background-repeat: repeat;
-    background-size: cover;
-    overflow: hidden;
-    background-position: center center;
-    height: 100vh;
+/* ICONS */
+.appWod-icon {
+    background: url("../img/icons/AppWod-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 65%;
+    height: 60px;
 }
 
-.home-img {
-    background: url("../img/photos/Home.jpg");
+.arg-flag {
+    background: url("../img/icons/Arg-flag.png");
+}
+
+.designer-icon {
+    background: url("../img/icons/designer-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 25%;
+    height: 60px;
+}
+
+.facebook-icon {
+    background: url("../img/icons/facebook-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    margin-right: 5%;
+}
+
+.left-angular-bracket {
+    background: url("../img/icons/left-angular-bracket.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 10px;
+    height: 40px;
+    float: left;
+}
+
+.right-angular-bracket {
+    background: url("../img/icons/right-angular-bracket.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 10px;
+    height: 40px;
+    float: right;
+}
+
+.separator-icon {
+    background: url("../img/icons/separator-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 5px;
+    height: 60px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.twitter-icon {
+    background: url("../img/icons/twitter-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+}
+
+/* SPORTS */
+.sport-image {
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+    width: 12.8%;
+    height: 100%;
+    float: left;
+    margin-right: 4.76%;
+}
+
+/* GREEN */
+.green-back-squat {
+    background: url("../img/ejercicios/Green/Back squat.svg");
+}
+
+.green-bench-press {
+    background: url("../img/ejercicios/Green/Bench press.svg");
+}
+
+.green-clean-jerk {
+    background: url("../img/ejercicios/Green/Clean & jerk.svg");
+}
+
+.green-deadlift {
+    background: url("../img/ejercicios/Green/Deadlift.svg");
+}
+
+.green-front-squat {
+    background: url("../img/ejercicios/Green/Front squat.svg");
+}
+
+.green-overhead-squat {
+    background: url("../img/ejercicios/Green/Overhead squat.svg");
+}
+
+.green-power-clean {
+    background: url("../img/ejercicios/Green/Power clean.svg");
+}
+
+.green-sled-push {
+    background: url("../img/ejercicios/Green/Sled push.svg");
+}
+
+.green-snatch {
+    background: url("../img/ejercicios/Green/Snatch.svg");
+}
+
+/* WHITEBLUE */
+.whiteblue-farmer-walk {
+    background: url("../img/ejercicios/Whiteblue/Farmer walk.svg");
+}
+
+.whiteblue-hang-clean {
+    background: url("../img/ejercicios/Whiteblue/Hang clean.svg");
+}
+
+.whiteblue-lunges {
+    background: url("../img/ejercicios/Whiteblue/Lunges.svg");
+}
+
+.whiteblue-one-arm-snatch {
+    background: url("../img/ejercicios/Whiteblue/One arm snatch.svg");
+}
+
+.whiteblue-push-press {
+    background: url("../img/ejercicios/Whiteblue/Push press.svg");
+}
+
+.whiteblue-ring-dip {
+    background: url("../img/ejercicios/Whiteblue/Ring dip.svg");
+}
+
+.whiteblue-sumo-deadlift {
+    background: url("../img/ejercicios/Whiteblue/Sumo deadlift.svg");
+}
+
+.whiteblue-swing {
+    background: url("../img/ejercicios/Whiteblue/Swing.svg");
+}
+
+.whiteblue-thrusters {
+    background: url("../img/ejercicios/Whiteblue/Thrusters.svg");
+}
+
+.whiteblue-turkish {
+    background: url("../img/img/ejercicios/Whiteblue/Turkish.svg");
+}
+
+/* BLUE */
+.blue-chess-to-bar {
+    background: url("../img/ejercicios/Blue/Chest to bar.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-handstand-push-up {
+    background: url("../img/ejercicios/Blue/Handstand push up.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-handstand-walk {
+    background: url("../img/ejercicios/Blue/Handstand walk.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-muscle-up {
+    background: url("../img/ejercicios/Blue/Muscle up.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-pistols {
+    background: url("../img/ejercicios/Blue/Pistols.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-pull-up {
+    background: url("../img/ejercicios/Blue/Pull up.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.blue-toes-to-bar {
+    background: url("../img/ejercicios/Blue/Toes to bar.svg");
+}
+
+/* ORANGE */
+.orange-air-squat {
+    background: url("../img/ejercicios/Orange/Air squat.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-box-jump {
+    background: url("../img/ejercicios/Orange/Box jump.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-burpees {
+    background: url("../img/ejercicios/Orange/Burpees.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-lunges {
+    background: url("../img/ejercicios/Orange/Lunges 02.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-push-up {
+    background: url("../img/ejercicios/Orange/Push up.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-rest-day {
+    background: url("../img/ejercicios/Orange/Rest day.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-sit-ups {
+    background: url("../img/ejercicios/Orange/Sit ups.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.orange-wall-ball {
+    background: url("../img/ejercicios/Orange/Wall ball.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+/* RED */
+.red-double-unders {
+    background: url("../img/ejercicios/Red/Double unders.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.red-row {
+    background: url("../img/ejercicios/Red/Row.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.red-run {
+    background: url("../img/ejercicios/Red/Run.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+.red-sprint {
+    background: url("../img/ejercicios/Red/Sprint.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+
+/* PHOTOS */
+.advertencia-configuracion {
+    background: url("../img/photos/advertenciaConfiguracion.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 100%;
+    height: 150px;
 }
 
 .app-wod-img {
@@ -28,14 +343,49 @@
     z-index: 1500;
 }
 
-.user-photo {
-    background: url("../img/iconsSVG/Perfil gris.svg");
+.background-img {
+    background: url('../img/photos/fondo.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center center;
+    height: 100vh;
+}
+
+.barra-deporte {
+    background: url("../img/photos/barra-deporte.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 20px;
     border: 0;
-    outline: none;
+}
+
+.home-img {
+    background: url("../img/photos/Home.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Iconos SVG */
+.green-muscle-empty {
+    background: url("../img/iconsSVG/Fuerza max.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+    width: 12.4%;
+    height: 67px;
+    float: left;
+}
+
+.green-muscle-full {
+    background: url("../img/iconsSVG/Fuerza color.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+    width: 11.9%;
+    height: 67px;
+    float: left;
 }
 
 .user-human-title {
@@ -48,17 +398,14 @@
     position: relative;
 }
 
-.country-flag {
-    background-repeat: no-repeat !important;
-    background-size: 100% 100% !important;
-    width: 15%;
-    height: 35px;
-    margin-left: 5%;
-    position: relative;
-}
-
-.arg-flag {
-    background: url("../img/icons/Arg-flag.png");
+.user-photo {
+    background: url("../img/iconsSVG/Perfil gris.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    border: 0;
+    outline: none;
 }
 
 .statistics-green-background {
@@ -80,182 +427,8 @@
     float: right;
 }
 
-.horizontal-line {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #434343;
-}
-
-.horizontal-red-line {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(230,0,0);
-}
-
-.horizontal-green-line {
-    background: #0A5926 !important;
-    height: 2px;
-}
-
-hr .black-line {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #000000;
-}
-
-hr .red-line {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #E60000;
-}
-
-.red-empty-circle {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    margin-top: 1%;
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
-.red-full-circle {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(230, 0, 0);
-    border-radius: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    margin-top: 1%;
-    margin-right: 2%;
-    margin-left: 2%;
-}
-
-/* SPORTS */
-.sport-image {
-    background-repeat: no-repeat;
-    background-size: 100% 100% !important;
-    width: 12.8%;
-    height: 100%;
-    float: left;
-    margin-right: 4.76%;
-}
-
-.green-back-squat {
-    background: url("../img/ejercicios/Back squat.svg");
-}
-
-.green-bench-press {
-    background: url("../img/ejercicios/Bench press.svg");
-}
-
-.green-clean-jerk {
-    background: url("../img/ejercicios/Clean & jerk.svg");
-}
-
-.green-deadlift {
-    background: url("../img/ejercicios/Deadlift.svg");
-}
-
-.green-front-squat {
-    background: url("../img/ejercicios/Front squat.svg");
-}
-
-.green-muscle-empty {
-    background: url("../img/iconsSVG/Fuerza max.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100% !important;
-    width: 12.4%;
-    height: 67px;
-    float: left;
-}
-
-.green-muscle-full {
-    background: url("../img/iconsSVG/Fuerza color.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100% !important;
-    width: 11.9%;
-    height: 67px;
-    float: left;
-}
-
-.green-overhead-squat {
-    background: url("../img/ejercicios/Overhead squat.svg");
-}
-
-.green-power-clean {
-    background: url("../img/ejercicios/Power clean.svg");
-}
-
-.green-sled-push {
-    background: url("../img/ejercicios/Sled push.svg");
-}
-
-.green-snatch {
-    background: url("../img/ejercicios/Snatch.svg");
-}
-
-.whiteblue-farmer-walk {
-    background: url("../img/ejercicios/Farmer walk.svg");
-}
-
-.whiteblue-hang-clean {
-    background: url("../img/ejercicios/Hang clean.svg");
-}
-
-.whiteblue-lunges {
-    background: url("../img/ejercicios/Lunges.svg");
-}
-
 .whiteblue-muscle {
     background: url("../img/iconsSVG/Fuerza.svg");
-}
-
-.whiteblue-one-arm-snatch {
-    background: url("../img/ejercicios/One arm snatch.svg");
-}
-
-.whiteblue-push-press {
-    background: url("../img/ejercicios/Push press.svg");
-}
-
-.whiteblue-ring-dip {
-    background: url("../img/ejercicios/Ring dip.svg");
-}
-
-.whiteblue-sumo-deadlift {
-    background: url("../img/ejercicios/Sumo deadlift.svg");
-}
-
-.whiteblue-swing {
-    background: url("../img/ejercicios/Swing.svg");
-}
-
-.whiteblue-thrusters {
-    background: url("../img/ejercicios/Thrusters.svg");
-}
-
-.whiteblue-turkish {
-    background: url("../img/img/ejercicios/Turkish.svg");
 }
 
 .icon-home-menu {
@@ -312,7 +485,6 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar {
     background: url("../img/iconsSVG/Configuracion.svg");
 }
 
-
 ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/iconsSVG/Configuracion blanco.svg");
 }
@@ -364,18 +536,11 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 25px;
 }
 
-.vertical-red-line {
-    background: url("../img/icons/vertical-red-line.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 2px;
-    height: 25px;
-}
-
 .icon-free-wod-white {
     background: url("../img/iconsSVG/Wod libre blanco.svg");
 }
 
+/*
 .left-arrow-red {
     background: url("../img/iconsSVG/left-arrow-red.svg");
     background-repeat: no-repeat;
@@ -384,6 +549,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 25px;
     padding: 0 0 0 0;
 }
+*/
 
 .config-red {
     background: url("../img/iconsSVG/Configuracion rojo.svg");
@@ -453,50 +619,6 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     margin-top: 1%;
 }
 
-.advertencia-configuracion {
-    background: url("../img/photos/advertenciaConfiguracion.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 150px;
-}
-
-.green-circle {
-    background: url("../img/sports/green/green-circle.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.whiteblue-circle {
-    background: url("../img/sports/whiteblue/whiteblue-circle.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.right-angular-bracket {
-    background: url("../img/icons/right-angular-bracket.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 10px;
-    height: 40px;
-    float: right;
-}
-
-.left-angular-bracket {
-    background: url("../img/icons/left-angular-bracket.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 10px;
-    height: 40px;
-    float: left;
-}
-
 .calendar-white {
     background: url("../img/iconsSVG/Calendario blanco.svg");
     background-repeat: no-repeat;
@@ -525,138 +647,8 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     border: 0;
 }
 
-.blue-chess-to-bar {
-    background: url("../img/ejercicios/Chest to bar.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-handstand-push-up {
-    background: url("../img/ejercicios/Handstand push up.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-handstand-walk {
-    background: url("../img/ejercicios/Handstand walk.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-muscle-up {
-    background: url("../img/ejercicios/Muscle up.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-pistols {
-    background: url("../img/ejercicios/Pistols.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-pull-up {
-    background: url("../img/ejercicios/Pull up.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.blue-toes-to-bar {
-    background: url("../img/ejercicios/Toes to bar.svg");
-}
-
 .orange-hand {
     background: url("../img/iconsSVG/Funcional.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-air-squat {
-    background: url("../img/ejercicios/Air squat.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-box-jump {
-    background: url("../img/ejercicios/Box jump.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-burpees {
-    background: url("../img/ejercicios/Burpees.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-lunges {
-    background: url("../img/ejercicios/Lunges 02.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-push-up {
-    background: url("../img/ejercicios/Pull up.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-rest-day {
-    background: url("../img/ejercicios/Rest day.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-sit-ups {
-    background: url("../img/ejercicios/Sit ups.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.orange-wall-ball {
-    background: url("../img/ejercicios/Wall ball.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 20px;
@@ -671,51 +663,6 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     width: 11.9%;
     height: 67px;
     float: right;
-}
-
-.red-double-unders {
-    background: url("../img/ejercicios/Double unders.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.red-row {
-    background: url("../img/ejercicios/Row.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.red-run {
-    background: url("../img/ejercicios/Run.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.red-sprint {
-    background: url("../img/ejercicios/Sprint.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 20px;
-    border: 0;
-}
-
-.barra-deporte {
-    background: url("../img/photos/barra-deporte.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 20px;
-    border: 0;
 }
 
 .grey-eye {
@@ -757,49 +704,148 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     border: 0;
 }
 
-
-.facebook-icon {
-    background: url("../img/icons/facebook-icon.png");
+.letra-g {
+    background: url("../img/iconsSVG/Letra G.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 35px;
+    width: 21px;
+    height: 18px;
+    margin-left: 16%;
+}
+
+/* ARMADO CON CSS */
+.country-flag {
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 15%;
     height: 35px;
-    margin-right: 5%;
-}
-
-.twitter-icon {
-    background: url("../img/icons/twitter-icon.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 35px;
-    height: 35px;
-}
-
-
-.appWod-icon {
-    background: url("../img/icons/AppWod-icon.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 65%;
-    height: 60px;
-}
-
-.designer-icon {
-    background: url("../img/icons/designer-icon.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 25%;
-    height: 60px;
-}
-
-.separator-icon {
-    background: url("../img/icons/separator-icon.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 5px;
-    height: 60px;
-    margin-right: 5%;
     margin-left: 5%;
+    position: relative;
+}
+
+.horizontal-line {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #434343;
+}
+
+.horizontal-red-line {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(230,0,0);
+}
+
+.horizontal-green-line {
+    background: #0A5926 !important;
+    height: 2px;
+}
+
+hr .black-line {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #000000;
+}
+
+.vertical-red-line {
+    width: 1px;
+    height: 28px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(230,0,0);
+    background-color: rgb(230,0,0);
+}
+
+.red-empty-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.red-full-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(230, 0, 0);
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.blue-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(84, 122, 237);
+    border-radius: 50%;
+    border: 2px solid rgb(84, 122, 237);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.green-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(1, 84, 30);
+    border-radius: 50%;
+    border: 2px solid rgb(1, 84, 30);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.orange-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(228, 119, 3);
+    border-radius: 50%;
+    border: 2px solid rgb(228, 119, 3);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.red-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(219, 1, 12);
+    border-radius: 50%;
+    border: 2px solid rgb(219, 1, 12);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.whiteblue-circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(26, 148, 132);
+    border-radius: 50%;
+    border: 2px solid rgb(26, 148, 132);
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .background-page {
@@ -848,15 +894,6 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 10px;
     width: 4px;
     margin-left: 20%;
-}
-
-.letra-g {
-    background: url("../img/iconsSVG/Letra G.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 21px;
-    height: 18px;
-    margin-left: 16%;
 }
 
 .min-orange-line {

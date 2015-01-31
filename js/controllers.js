@@ -97,23 +97,32 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
 app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
-    $scope.language = "es";
-    $scope.measurement = true; /* True significa que es kg, false significa que es lb */
-    $scope.help = true;
+    
+    window.localStorage['language'] = "es";
+    window.localStorage['measurement'] = "true";
+    window.localStorage['help'] = "true";
+    
+    $scope.language = window.localStorage['language'];
+    $scope.measurement = Boolean(window.localStorage['measurement']); /* True significa que es kg, false significa que es lb */
+    $scope.help = Boolean(window.localStorage['help']);
+    
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
     };
 
     $scope.changeMeasurement = function() {
         $scope.measurement = !$scope.measurement;
+        window.localStorage['measurement'] = $scope.measurement;
     }
 
     $scope.changeHelp = function() {
         $scope.help = !$scope.help;
+        window.localStorage['help'] = $scope.help;
     }
 
     $scope.changeLanguage = function(){
         $translate.use($scope.language);
+        window.localStorage['language'] = $scope.language;
     }
 }]);
 
