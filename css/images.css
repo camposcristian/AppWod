@@ -4,7 +4,8 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 65%;
-    height: 60px;
+    height: 52px;
+    margin-top: 10px;
 }
 
 .arg-flag {
@@ -16,7 +17,8 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 25%;
-    height: 60px;
+    height: 52px;
+    margin-top: 10px;
 }
 
 .facebook-icon {
@@ -562,26 +564,26 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
 .lb-img {
     background: url("../img/iconsSVG/Libra gris.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 90% 90%;
     width: 35px;
     height: 35px;
-    margin-right: 15%;
+    margin-right: 5px;
 }
 
 .light-lb-img {
     background: url("../img/iconsSVG/Libra gris.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 90% 90%;
     width: 35px;
     height: 35px;
-    margin-right: 15%;
+    margin-right: 5px;
     opacity: 0.5;
 }
 
 .kg-img {
     background: url("../img/iconsSVG/Kilo gris.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 90% 90%;
     width: 35px;
     height: 35px;
     margin-right: 15%;
@@ -590,11 +592,18 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
 .light-kg-img {
     background: url("../img/iconsSVG/Kilo gris.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 90% 90%;
     width: 35px;
     height: 35px;
     margin-right: 15%;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 320px) {
+
+    .kg-img, .light-kg-img, .light-lb-img, .lb-img {
+        height: 28px;
+    }
 }
 
 .question-green {
@@ -605,7 +614,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 30px;
     float: right;
     margin-right: 2%;
-    margin-top: 1%;
+    margin-top: 1px;
 }
 
 .question-grey {
@@ -616,7 +625,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     height: 30px;
     float: right;
     margin-right: 2%;
-    margin-top: 1%;
+    margin-top: 1px;
 }
 
 .calendar-white {
@@ -635,6 +644,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background-size: 100% 100%;
     width: 25px;
     height: 25px;
+    margin-top: -5px;
     padding: 0 0 0 0;
 }
 
@@ -914,7 +924,16 @@ hr .black-line {
 }
 
 .red-left-arrow {
-    position: absolute; 
+    position: absolute;
     right: 8%;
     color: red;
+}
+
+.red-back-arrow {
+    background-image: url('../img/iconsSVG/Flecha rojo.svg');
+    color: rgb(230,0,0);
+    font-size: 37px;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
 }

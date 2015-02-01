@@ -17,13 +17,14 @@
     margin-right: auto;
 }
 
-.language-select{
+.language-select {
     width: 100%;
-    min-height: 40px;
-    margin-top: -10px;
+    min-height: 20px;
+    margin-top: -5px;
     float: right;
     font-size: 1.5em;
     font-family: Roboto-regular;
+    padding-left: 25px;
 }
 
 .left-alignment {
@@ -86,13 +87,11 @@
 .green-button-background {
     background-color: rgb(91,128,33);
     border-color: rgb(91,128,33);
-    bottom: 0;
     border-radius: 5px;
-    width: 100% !important;
     display: flex;
     font-size: 16px;
-    line-height: 2;
     cursor: pointer;
+    margin-top: 4%;
     padding: 0 12px;
     color: #FFFFFF;
 }
@@ -100,13 +99,11 @@
 .grey-button-background {
     background-color: rgb(210,208,208);
     border-color: rgb(210,208,208);
-    bottom: 0;
     border-radius: 5px;
-    width: 100% !important;
     display: flex;
     font-size: 16px;
-    line-height: 2;
     cursor: pointer;
+    margin-top: 4%;
     padding: 0 12px;
     color: rgb(127,130,124);
 }
@@ -434,10 +431,9 @@ ion-item.item-menu.background-img.item:active {
     background: rgb(230,0,0);
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
-    color: white !important;
-}
+    ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
+        color: white !important;
+    }
 
 #language {
-
 }
