@@ -140,7 +140,7 @@
     font-weight: normal;
     font-family: Roboto-regular;
     text-align: left;
-    font-size: 2.1em;
+    font-size: 22px;
 }
 
 .green-sport-font {
@@ -316,9 +316,11 @@
     .language-select {
         font-size: 17px;
     }
+
     .font-website-configuration {
         font-size: 21px;
     }
+
     .font-fields-configuration-label {
         font-size: 19px;
     }
@@ -338,7 +340,7 @@
     text-transform: lowercase;
     font-weight: normal;
     font-family: Roboto-regular;
-    font-size: 2.1em;
+    font-size: 22px;
     color: #434343;
 }
 

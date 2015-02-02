@@ -345,7 +345,7 @@
 
 .picture-space {
     width: 45.41%;
-    height: 202px;
+    height: 138px;
 }
 
 .contacts-picture-space {
@@ -436,4 +436,19 @@ ion-item.item-menu.background-img.item:active {
     }
 
 #language {
+}
+
+.country-select {
+    border: none;
+    -webkit-appearance: none;
+    font-size: 23px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    white-space: nowrap;;
+    padding-bottom: 5px;
+}
+
+.label-space {
+    border-bottom: 1px solid rgb(1, 84, 30);
 }

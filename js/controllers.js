@@ -51,10 +51,10 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
     
     $scope.usuario = [];
-    $scope.usuario.nombre = "Nombre";
-    $scope.usuario.pais = "País";
-    $scope.usuario.flag = "arg-flag";
-    $scope.usuario.nivel = "Crossfitter Nivel Intermedio";
+    $scope.usuario.nombre = "";
+    $scope.usuario.pais = "arg";
+    $scope.usuario.flag = "country-arg";
+    $scope.usuario.nivel = "";
     $scope.usuario.club = "Crossfit Argos";
     $scope.usuario.localizacionClub = "Buenos Aires";
 

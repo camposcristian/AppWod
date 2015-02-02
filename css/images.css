@@ -395,9 +395,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100% !important;
     width: 38px;
-    height: 58px;
-    top: -20px;
-    position: relative;
+    height: 27px;
 }
 
 .user-photo {
@@ -721,6 +719,14 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     width: 21px;
     height: 18px;
     margin-left: 16%;
+}
+
+.country-arg {
+    background: url("../img/icons/Arg-flag.png");
+    background: url("../img/icons/Arg-flag.png");
+    background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
 }
 
 /* ARMADO CON CSS */

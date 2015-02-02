@@ -15,7 +15,7 @@
 			<div class="bar background-title">
 				<div class="margin-alignment-subheader">
 				  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
-				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 5%;">
+				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 5%; top:0;">
 						<div class="font-secondary">
 							<span style="margin-right: 12px;">{{beginAngularBracket}}{{'user' | translate}}</span>
 							<div ng-class="iconHeader"></div>{{endAngularBracket}}
@@ -31,17 +31,37 @@
 			<div class="user-information">
 				<div style="height: 20%;">
 					<label class="item-input item-input-size">
-						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 23px;" placeholder="{{'name' | translate}}"/>
+						<input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 23px;" placeholder="{{'name' | translate}}"/>
 					</label>
 				</div>
+                <div style="height: 20%;">
+                    <label class="item-input item-input-size">
+                        <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 23px;" placeholder="{{'lastname' | translate}}" />
+                    </label>
+                </div>
 				<div class="display-flex" style="height: 15%;" >
 					<label class="item-input item-input-size">
-						<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>
-						<div class="country-flag" ng-class="usuario.flag"></div>
+						<!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
+                        <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
+                            <option value="" selected><center>Pais</center></option>
+                            <option value="arg"><center>Argentina</center></option>
+                            <option value="usa"><center>Estados Unidos</center></option>
+                        </select>
+                        <span ng-class="usuario.flag"></span>
 					</label>
 				</div>
 				<div class="horizontal-red-line"></div>
 				<div style="height: 35%;">
+                    <label class="item-input item-input-size">
+                        <!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
+                        <select class="country-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
+                            <option value=""><center>Nivel</center></option>
+                            <option value="beg"><center>Nivel Principiante</center></option>
+                            <option value="int"><center>Nivel Intermedio</center></option>
+                            <option value="adv"><center>Nivel Avanzado</center></option>
+                            <option value="pro"><center>Nivel Pro</center></option>
+                        </select>
+                    </label>
 					<label class="align-text-left red-font-bold">{{usuario.nivel}}</label>
 				</div>
 				<div class="circle-row" style="height:15%;">
@@ -69,7 +89,6 @@
 									<label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
 									<label class="font-measure right-alignment col without-margins">{{sport.weight + sport.measure}}</label>
 								</div>
-								<hr class="separator" ng-class="sport.separator">
 							</div>
 						</div>
 					</ion-item>
