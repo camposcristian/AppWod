@@ -80,7 +80,7 @@
     font-size: 1.5em;
     color: #E60000;
     text-align: left;
-    display: flex;
+    display: inline-block;
     width: 100%;
     line-height: 100%;
 }
@@ -90,10 +90,9 @@
     font-size: 1.5em;
     color: #FFFFFF;
     text-align: left;
-    display: flex;
     width: 100%;
     margin-left: 2%;
-    margin-top: -2%;
+    margin-right: 8px;
 }
 
 .red-font-club {
@@ -376,4 +375,9 @@
     height: 100%;
     margin-left: 2.38%;
     margin-right: 2.38%;
+}
+
+.item-input ::-webkit-input-placeholder {
+   color: #434343 !important;
+   font-weight: bold;
 }

@@ -45,8 +45,8 @@ app.controller('homeController', ['$scope', function($scope) {
 
 app.controller('profileController', ['$scope', '$location', 'profileExercises', '$cordovaCamera', function($scope, $location, profileExercises, $cordovaCamera) {
     $scope.pageTitle = 'profile'; 
-    $scope.beginAngularBracket = '< '
-    $scope.endAngularBracket = ' >';
+    $scope.beginAngularBracket = '> '
+    $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
     $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
     
