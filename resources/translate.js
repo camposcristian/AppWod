@@ -19,7 +19,7 @@ var translations = {
 	    "portuguese": "Portuguese",
 	    "user": "user",
 	    "name": "Name",
-	    "lastname": "LastName",
+	    "lastname": "Last name",
 	    "country": "Country",
 	    "showStadistics": "Show stadistics",
 	    "contacts": "Contacts",
@@ -31,7 +31,13 @@ var translations = {
 	    "thursday": "Thursday",
 	    "friday": "Friday",
 	    "saturday": "Saturday",
-	    "sunday": "Sunday"
+	    "sunday": "Sunday",
+	    "argentina": "Argentina",
+	    "usa": "United States",
+	    "crossfitterBeginner": "Crossfitter Beginner Level",
+        "crossfitterIntermediate": "Crossfitter Intermediate Level",
+        "crossfitterAdvanced": "Crossfitter Advanced Level",
+        "crossfitterPro": "Crossfitter Pro Level"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -65,6 +71,12 @@ var translations = {
 	    "thursday": "Jueves",
 	    "friday": "Viernes",
 	    "saturday": "Sábado",
-	    "sunday": "Domingo"
+	    "sunday": "Domingo",
+	    "argentina": "Argentina",
+	    "usa": "Estados Unidos",
+	    "crossfitterBeginner": "Crossfitter Nivel Principiante",
+        "crossfitterIntermediate": "Crossfitter Nivel Intermedio",
+        "crossfitterAdvanced": "Crossfitter Nivel Avanzado",
+        "crossfitterPro": "Crossfitter Nivel Pro"
 	}
 }

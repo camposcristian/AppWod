@@ -6,41 +6,31 @@ var app = angular.module('starter.controllers', [
 
 app.controller('homeController', ['$scope', function($scope) {
     $scope.mainmenu = [
-        {   
-            title: 'PERFIL', 
+        {
             id: 'profile', 
             icon: 'icon-menu-profile'
         },
-        {   
-            title: 'WOD LIBRE', 
+        {
             id: 'freeWOD', 
             icon: 'icon-menu-free-wod'
         },
         {   
-            title: 'ENTRENAMIENTO', 
             id: 'training', 
             icon: 'icon-menu-training'
         },
         {   
-            title: 'WOD DE VIAJE', 
             id: 'travelWOD', 
             icon: 'icon-menu-travel-wod'
         },
         {   
-            title: 'CALENDARIO', 
             id: 'calendar', 
             icon: 'icon-menu-calendar'
         },
         {   
-            title: 'CONFIGURACIÓN', 
             id: 'configuration', 
             icon: 'icon-menu-config'
         }
     ];
-
-    $scope.getItemHeight = function(item, index) {
-        return (index % 2) === 0 ? 50 : 60;
-    };
 }]);
 
 app.controller('profileController', ['$scope', '$location', 'profileExercises', '$cordovaCamera', function($scope, $location, profileExercises, $cordovaCamera) {
@@ -48,8 +38,17 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.beginAngularBracket = '> '
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
-    $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
     
+    if (!window.localStorage['imageURI']) {
+        window.localStorage['imageURI'] = './img/iconsSVG/Perfil gris.svg';
+        $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
+    } else {
+        $scope.imageURI = window.localStorage['imageURI'];
+    }
+    window.localStorage['measurement'] === 'true' ? $scope.measurementProfile = 'kg' : $scope.measurementProfile = 'lb'; /* True significa que es kg, false significa que es lb */
+    console.log(window.localStorage['measurement']);
+    
+
     $scope.usuario = [];
     $scope.usuario.nombre = "";
     $scope.usuario.pais = "arg";
@@ -57,6 +56,7 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.usuario.nivel = "";
     $scope.usuario.club = "Crossfit Argos";
     $scope.usuario.localizacionClub = "Buenos Aires";
+
 
     $scope.isNombreApellidoCompleted = function() {
         return angular.isDefined($scope.usuario.nombre) && $scope.usuario.nombre !== "";
@@ -78,6 +78,7 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
         };
         $cordovaCamera.getPicture(options).then(function (imageURI) {
             $scope.ImageURI = "data:image/jpeg;base64," + imageURI;
+            window.localStorage['imageURI'] = "data:image/jpeg;base64," + imageURI;
         });
     }
 }]);
@@ -98,13 +99,24 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
     
-    window.localStorage['language'] = "es";
-    window.localStorage['measurement'] = "true";
-    window.localStorage['help'] = "true";
-    
-    $scope.language = window.localStorage['language'];
-    $scope.measurement = Boolean(window.localStorage['measurement']); /* True significa que es kg, false significa que es lb */
-    $scope.help = Boolean(window.localStorage['help']);
+    if (!window.localStorage['language']) {
+        window.localStorage['language'] = "es";  
+        $scope.language = "es";
+    } else {
+        $scope.language = window.localStorage['language'];
+    }
+    if (!window.localStorage['measurement']) {
+        window.localStorage['measurement'] = "true";
+        $scope.measurement = true; /* True significa que es kg, false significa que es lb */
+    } else {
+        $scope.measurement = Boolean(window.localStorage['measurement']); /* True significa que es kg, false significa que es lb */
+    }
+    if (!window.localStorage['help']) {
+        window.localStorage['help'] = "true";
+        $scope.help = true;
+    } else {
+        $scope.help = Boolean(window.localStorage['help']);
+    }
     
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
