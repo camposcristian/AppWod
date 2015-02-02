@@ -46,7 +46,7 @@
                             <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
                                 <option value="" selected><center>Pais</center></option>
                                 <option value="arg"><center>Argentina</center></option>
-                                <option value="usa"><center>Estados Unidos</center></option>
+                                <!--<option value="usa"><center>Estados Unidos</center></option>-->
                             </select>
                             <span ng-class="usuario.flag"></span>
                         </label>
@@ -95,8 +95,6 @@
                     </ion-item>
                 </ion-list>
             </div>
-        </div>
-        <div class="footer-profile">
             <label ng-click="show('/statistics')" class="green-button-background">
                 <span class="statistics-font">{{'showStadistics' | translate}}</span>
                 <div class="statistics-green-background"></div>

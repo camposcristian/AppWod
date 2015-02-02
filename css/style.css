@@ -81,7 +81,7 @@
 .grey-rectangle {
     border: 1px solid #434343;
     text-align: center;
-    width: 100%;
+    width: 99%;
     display: inline-block;
     padding: 8px;
     margin-top: 11px;
@@ -95,6 +95,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 4%;
+    margin-bottom: 4%;
     padding: 0 12px;
     color: #FFFFFF;
 }
@@ -469,6 +470,7 @@ ion-item.item-menu.background-img.item:active {
 
 ul {
     display: inline;
+    letter-spacing: -2px;
 }
 
 input {
