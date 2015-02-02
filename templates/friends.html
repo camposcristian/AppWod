@@ -1,21 +1,15 @@
 <div ng-controller="friendsController" class="background-img full-space">
 	<div class="full-space">
 		<div class="header">
-			<div class="bar bar-header menu-title-page">
-				<div class="content-title-bar">
-					<div class="icon-top icon-top-menu-pesa left-alignment" ng-click="show('/freeWOD')"></div>
-					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-					<div class="icon-top icon-top-menu-training" ng-click="show('/training')"></div>
-					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-					<div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
-					<div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-					<div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
-				</div>
-			</div>
+            <div class="bar bar-header menu-title-page">
+                <div class="right-alignment" style="position: absolute; right: 8%; margin-top: -5px;">
+                    <i class="red-back-arrow right-alignment" ng-click="show('/profile')"></i>
+                </div>
+            </div>
 			<div class="bar background-title">
 				<div class="margin-alignment-subheader">
 				  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
-				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 5%;">
+				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 8%; top: 0;">
 						<div class="font-secondary">
 							<span style="margin-right: 12px;">{{beginAngularBracket}}{{'contacts' | translate}}</span>
 							<div ng-class="iconHeader"></div>{{endAngularBracket}}
