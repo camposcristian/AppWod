@@ -25,53 +25,55 @@
             </div>
         </div>
         <div class="content-page">
-            <div class="left-alignment picture-space" ng-click="getPicture()">
-                <img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />
-            </div>
-            <div class="user-information">
-                <div style="height: 20px;">
-                    <label class="item-input item-input-size">
-                        <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 23px;" placeholder="{{'name' | translate}}" />
-                    </label>
+            <div class="profile-container">
+                <div class="left-alignment picture-space" ng-click="getPicture()">
+                    <img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />
                 </div>
-                <div style="height: 28px;">
-                    <label class="item-input item-input-size">
-                        <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 23px;" placeholder="{{'lastname' | translate}}" />
-                    </label>
-                </div>
-                <div class="display-flex" style="height: 15%; margin-left: -4px;">
-                    <label class="item-input item-input-size">
-                        <!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
-                        <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
-                            <option value="" selected><center>Pais</center></option>
-                            <option value="arg"><center>Argentina</center></option>
-                            <option value="usa"><center>Estados Unidos</center></option>
-                        </select>
-                        <span ng-class="usuario.flag"></span>
-                    </label>
-                </div>
-                <div style="border-width:1px;" class="horizontal-red-line"></div>
-                <div style="margin-left: -4px;">
-                    <label class="item-input item-input-size">
-                        <!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
-                        <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
-                            <option value=""><center>Nivel</center></option>
-                            <option value="beg"><center>Crossfitter Nivel Principiante</center></option>
-                            <option value="int"><center>Crossfitter Nivel Intermedio</center></option>
-                            <option value="adv"><center>Crossfitter Nivel Avanzado</center></option>
-                            <option value="pro"><center>Crossfitter Nivel Pro</center></option>
-                        </select>
-                    </label>
-                </div>
-                <div class="circle-row" ng-click="show('/friends')">
-                    <label class="red-font-wod">wods</label>
-                    <ul>
-                        <li class="red-full-circle"></li>
-                        <li class="red-full-circle"></li>
-                        <li class="red-full-circle"></li>
-                        <li class="red-empty-circle"></li>
-                        <li class="red-empty-circle"></li>
-                    </ul>
+                <div class="user-information">
+                    <div class="input-names">
+                        <label class="item-input item-input-size">
+                            <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 20px;" placeholder="{{'name' | translate}}" />
+                        </label>
+                    </div>
+                    <div class="input-names">
+                        <label class="item-input item-input-size">
+                            <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 20px;" placeholder="{{'lastname' | translate}}" />
+                        </label>
+                    </div>
+                    <div class="display-flex" style="height: 15%; margin-left: -4px;">
+                        <label class="item-input item-input-size">
+                            <!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
+                            <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
+                                <option value="" selected><center>Pais</center></option>
+                                <option value="arg"><center>Argentina</center></option>
+                                <option value="usa"><center>Estados Unidos</center></option>
+                            </select>
+                            <span ng-class="usuario.flag"></span>
+                        </label>
+                    </div>
+                    <div style="border-width:1px;" class="horizontal-red-line"></div>
+                    <div style="margin-left: -4px;">
+                        <label class="item-input item-input-size">
+                            <!--<input type="text" class="display-flex" ng-model="usuario.pais" style="font-size: 23px;" placeholder="{{'country' | translate}}"/>-->
+                            <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
+                                <option value=""><center>Nivel</center></option>
+                                <option value="beg"><center>Crossfitter Nivel Principiante</center></option>
+                                <option value="int"><center>Crossfitter Nivel Intermedio</center></option>
+                                <option value="adv"><center>Crossfitter Nivel Avanzado</center></option>
+                                <option value="pro"><center>Crossfitter Nivel Pro</center></option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="circle-row" ng-click="show('/friends')">
+                        <label class="red-font-wod">wods</label>
+                        <ul>
+                            <li class="red-full-circle"></li>
+                            <li class="red-full-circle"></li>
+                            <li class="red-full-circle"></li>
+                            <li class="red-empty-circle"></li>
+                            <li class="red-empty-circle"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="grey-rectangle">

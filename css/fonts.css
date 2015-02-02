@@ -98,7 +98,7 @@
 .red-font-club {
     font-family: Roboto-medium;
     text-align: left;
-    font-size: 1.7em;
+    font-size: 18px;
     color: rgb(230, 0, 0);
     white-space: nowrap;
     line-height: inherit;
@@ -110,7 +110,7 @@
 .club-location-font {
     font-family: Roboto-light;
     text-align: right;
-    font-size: 1.7em;
+    font-size: 18px;
     color: rgb(67, 67, 67);
     white-space: nowrap;
     line-height: inherit;

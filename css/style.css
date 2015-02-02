@@ -83,6 +83,8 @@
     text-align: center;
     width: 100%;
     display: inline-block;
+    padding: 8px;
+    margin-top: 11px;
 }
 
 .green-button-background {
@@ -252,10 +254,6 @@
 }
 
 .footer-profile {
-    position: absolute;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 2%;
@@ -345,8 +343,9 @@
 }
 
 .picture-space {
-    width: 50%;
+    width: 45%;
     height: 138px;
+    margin-right: 5%;
 }
 
 .contacts-picture-space {
@@ -358,14 +357,13 @@
     width: 50%;
     float: right;
     height: 26.19%;
-    margin-bottom: 35px;
 }
 
 .circle-row {
     background-color: rgb(230,0,0);
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
 }
 
 .sports-list-profile {
@@ -443,13 +441,14 @@ ion-item.item-menu.background-img.item:active {
 .country-select {
     border: none;
     -webkit-appearance: none;
-    font-size: 23px;
+    font-size: 20px;
     height: 100%;
     width: 100%;
     background-color: transparent;
     white-space: nowrap;
     padding-bottom: 5px;
     line-height: 1;
+    margin-top: 10px;
 }
 
 .level-select {
@@ -470,4 +469,13 @@ ion-item.item-menu.background-img.item:active {
 
 ul {
     display: inline;
+}
+
+input {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input-names {
+    height: 20px;
 }
