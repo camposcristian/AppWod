@@ -35,7 +35,7 @@
 
 .font-principal {
     color: #FFFFFF;
-    font-size: 1.8em;
+    font-size: 19px;
     font-family: Roboto-bold;
     margin-left: 2%;
     text-transform: uppercase;
@@ -47,7 +47,7 @@
 .font-secondary {
     color: #FFFFFF;
     margin-top: 3%;
-    font-size: 2em !important;
+    font-size: 20px !important;
     font-family: Roboto-regular !important;
     text-transform: lowercase;
     text-align: center;
@@ -92,7 +92,8 @@
     text-align: left;
     width: 100%;
     margin-left: 2%;
-margin-right: 3px;
+    margin-right: 3px;
+    vertical-align: text-bottom;
 }
 
 .red-font-club {
@@ -378,6 +379,6 @@ margin-right: 3px;
 }
 
 .item-input ::-webkit-input-placeholder {
-   color: #434343 !important;
-   font-weight: bold;
+    color: #434343 !important;
+    font-weight: bold;
 }

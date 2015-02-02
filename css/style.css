@@ -136,9 +136,13 @@
     border-color: rgb(67,67,67) !important;
 }
 /*-----------------------------------------------------------Para Iphone------------------------------------------------------------------------*/
-@media screen and (max-height: 570px) {
+@media screen and (max-height: 570px) and (max-width: 320px) {
     .item-menu {
         padding: 0 0 0 0;
+    }
+
+    ul {
+        letter-spacing: -2px;
     }
 }
 
@@ -468,9 +472,9 @@ ion-item.item-menu.background-img.item:active {
     border-bottom: 1px solid rgb(1, 84, 30);
 }
 
+
 ul {
     display: inline;
-    letter-spacing: -2px;
 }
 
 input {
@@ -480,4 +484,17 @@ input {
 
 .input-names {
     height: 20px;
+}
+
+.fc-bg {
+    height: 30px;
+}
+
+.fc-basic-view tbody .fc-row {
+    height: 30px !important;
+    min-height: 30px !important;
+}
+
+.calendar-down {
+    margin-top: 10px !important;
 }

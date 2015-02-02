@@ -34,10 +34,10 @@ var translations = {
 	    "sunday": "Sunday",
 	    "argentina": "Argentina",
 	    "usa": "United States",
-	    "crossfitterBeginner": "Crossfitter Beginner Level",
-        "crossfitterIntermediate": "Crossfitter Intermediate Level",
-        "crossfitterAdvanced": "Crossfitter Advanced Level",
-        "crossfitterPro": "Crossfitter Pro Level"
+	    "crossfitterBeginner": "Crossfitter Beginner &nbsp; Level",
+        "crossfitterIntermediate": "Crossfitter Intermediate &nbsp; Level",
+        "crossfitterAdvanced": "Crossfitter Advanced &nbsp; Level",
+        "crossfitterPro": "Crossfitter Pro &nbsp; Level"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -74,9 +74,9 @@ var translations = {
 	    "sunday": "Domingo",
 	    "argentina": "Argentina",
 	    "usa": "Estados Unidos",
-	    "crossfitterBeginner": "Crossfitter Nivel Principiante",
-        "crossfitterIntermediate": "Crossfitter Nivel Intermedio",
-        "crossfitterAdvanced": "Crossfitter Nivel Avanzado",
-        "crossfitterPro": "Crossfitter Nivel Pro"
+	    "crossfitterBeginner": "Crossfitter Nivel &nbsp; Principiante",
+        "crossfitterIntermediate": "Crossfitter Nivel &nbsp; Intermedio",
+        "crossfitterAdvanced": "Crossfitter Nivel &nbsp; Avanzado",
+        "crossfitterPro": "Crossfitter Nivel &nbsp; Pro"
 	}
 }

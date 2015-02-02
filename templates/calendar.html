@@ -1,98 +1,93 @@
 <div ng-controller="calendarController">
-<div class="header">	
-		<div class="bar bar-header menu-title-page">
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-pesa center-img" ng-click="show('/freeWOD')"></button>
-			</div>
-			<div class="col">
-				<div class="vertical-red-line center-img"></div>
-			</div>
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-training center-img" ng-click="show('/training')"></button>
-			</div>
-			<div class="col">
-				<div class="vertical-red-line center-img"></div>
-			</div>
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-calendar center-img" ng-click="show('/calendar')"></button>
-			</div>
-		</div>
-		<div class="bar bar-subheader background-title row">
-		  	<div class="col font-title font-principal">{{pageTitle}}</div>
-		  	<div class="col">
-  				<div class="row no-row">
-	  				<div class="col col-70">
-	  					<div class="font-title font-secondary">{{user}}</div>
-	  				</div>
-	  				<div class="col col-20">
-		  				<button ng-class="iconHeader"></button>
-	  				</div>
-	  				<div class="col col-10">
-	  					<div class="font-title font-secondary">{{endAngularBracket}}</div>
-	  				</div>
-	  			</div>
-		  	</div>
-		</div>
-	</div>
-	<div class="container-margins" data-ng-init="initCalendar()">
-		<div class="row">
-			<label class="col col-offset-10 font-fields-configuration-label">{{year}}</label>
-		</div>
-		<div class="row horizontal-black-line"></div>	
-		<div class="row">
-			<div class="col col-20" ng-click="previousEntries()">
-				<div class="left-angular-bracket center-img"></div>
-			</div>
-			<div class="col col-60">
-				<center>
-					<label class="font-fields-configuration-label center-title-text">{{monthArray[month+1]}}</label>
-				</center>
-			</div>
-			<div class="col col-20" ng-click="nextEntries()">
-				<div class="right-angular-bracket center-img"></div>
-			</div>
-		</div>
-		<div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
-	</div>
-	<div class="row horizontal-red-line"></div>
-	<div class="row background-carrousel-friends">
-		<div class="col col-10 col-center">
-			<div class="left-angular-bracket"></div>
-		</div>
-		<div class="col col-top">
-			<label class="row red-state-wod align-text-right">21-15-9</label>
-			<div class="row horizontal-black-line"></div>
-			<div class="row">
-				<label class="font-grey-small align-text-right">Overhead squat</label>
-			</div>
-			<div class="row">
-				<label class="font-grey-small align-text-right">Ring dip</label>
-			</div>
-			<div class="row">
-				<label class="font-grey-small align-text-right">Knees to elbows</label>
-			</div>
-		</div>
-		<div class="col">
-			<div class="row">
-				<div class="col">
-					<div class="button button-icon icon green-muscle"></div>
-				</div>
-				<div class="col">
-					<div class="button button-icon icon blue-hand"></div>
-				</div>
-			</div>
-			<div class="row">
-				<button type="button" ng-click="" class="button green-button-background">
-					<label class="statistics-font">Compartido</label>
-				</button>
-			</div>
-			<div class="row">
-				<div class="clock"></div>
-				<label class="clock-label">17:02</label>
-			</div>
-		</div>
-		<div class="col col-10 col-center">
-			<div class="right-angular-bracket"></div>
-		</div>
-	</div>
-</div>
+    <div class="header">
+        <div class="bar bar-header menu-title-page">
+            <div class="content-title-bar">
+                <div class="icon-top icon-top-menu-pesa left-alignment" ng-click="show('/freeWOD')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-training" ng-click="show('/training')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
+            </div>
+        </div>
+        <div class="bar background-title">
+            <div class="margin-alignment-subheader">
+                <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
+                <div class="col">
+                    <div class="row no-row">
+                        <div class="col col-70">
+                            <div class="font-title font-secondary">{{user}}</div>
+                        </div>
+                        <div class="col col-20">
+                            <button ng-class="iconHeader"></button>
+                        </div>
+                        <div class="col col-10">
+                            <div class="font-title font-secondary">{{endAngularBracket}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-margins" data-ng-init="initCalendar()">
+            <div class="row">
+                <label class="col col-offset-10 font-fields-configuration-label">{{year}}</label>
+            </div>
+            <div class="row horizontal-black-line"></div>
+            <div class="row calendar-down">
+                <div class="col col-20" ng-click="previousEntries()">
+                    <div class="left-angular-bracket center-img"></div>
+                </div>
+                <div class="col col-60">
+                    <center>
+                        <label class="font-fields-configuration-label center-title-text">{{monthArray[month+1]}}</label>
+                    </center>
+                </div>
+                <div class="col col-20" ng-click="nextEntries()">
+                    <div class="right-angular-bracket center-img"></div>
+                </div>
+            </div>
+            <div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="myCalendar"></div>
+        </div>
+        <div class="row horizontal-red-line"></div>
+        <div class="row background-carrousel-friends">
+            <div class="col col-10 col-center">
+                <div class="left-angular-bracket"></div>
+            </div>
+            <div class="col col-top">
+                <label class="row red-state-wod align-text-right">21-15-9</label>
+                <div class="row horizontal-black-line"></div>
+                <div class="row">
+                    <label class="font-grey-small align-text-right">Overhead squat</label>
+                </div>
+                <div class="row">
+                    <label class="font-grey-small align-text-right">Ring dip</label>
+                </div>
+                <div class="row">
+                    <label class="font-grey-small align-text-right">Knees to elbows</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="button button-icon icon green-muscle"></div>
+                    </div>
+                    <div class="col">
+                        <div class="button button-icon icon blue-hand"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" ng-click="" class="button green-button-background">
+                        <label class="statistics-font">Compartido</label>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="clock"></div>
+                    <label class="clock-label">17:02</label>
+                </div>
+            </div>
+            <div class="col col-10 col-center">
+                <div class="right-angular-bracket"></div>
+            </div>
+        </div>
+    </div>
