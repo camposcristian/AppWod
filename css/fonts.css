@@ -100,12 +100,9 @@
     font-family: Roboto-medium;
     text-align: left;
     font-size: 18px;
-    color: rgb(230, 0, 0);
+    color: rgb(230, 0, 0) !important;
     white-space: nowrap;
-    line-height: inherit;
     margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .club-location-font {

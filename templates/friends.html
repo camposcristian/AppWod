@@ -28,12 +28,13 @@
 						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 23px;" placeholder="{{'nameAndSurname' | translate}}"/>
 					</label>
 				</div>
-				<div class="display-flex" style="height: 15%;" >
-					<label class="item-input item-input-size">
-						<label class="red-font-club">{{usuario.club}}</label>
-						<div class="country-flag" ng-class="usuario.flag"></div>
-					</label>
-				</div>
+				
+				<div class="display-flex" style="height: 15%;">
+                    <label class="item-input item-input-size">
+                        <input type="text" class="red-font-club" ng-model="usuario.club" ng-click="usuario.club = null" style="font-size: 20px; max-width: 75%;" placeholder="{{'club' | translate}}" />
+                        <span class="country-flag" ng-class="usuario.flag"></span>
+                    </label>
+                </div>
 				<div class="horizontal-red-line"></div>
 				<div style="height: 35%;">
 					<label class="align-text-left red-font-bold">{{usuario.nivel}}</label>
