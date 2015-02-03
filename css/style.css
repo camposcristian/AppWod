@@ -83,7 +83,7 @@
     text-align: center;
     width: 99%;
     display: inline-block;
-    padding: 8px;
+    padding: 5px;
     margin-top: 11px;
 }
 
@@ -329,14 +329,11 @@
     overflow-y: scroll;
 }
 
-.content-page-friends {
-    height: 83%;
+.content-page-share-profile {
     width: 84%;
     margin-right: 8%;
     margin-left: 8%;
     margin-top: 2%;
-    margin-bottom: 0%;
-    overflow-y: scroll;
 }
 
 .content-page-wod {
@@ -354,14 +351,20 @@
 }
 
 .contacts-picture-space {
-    width: 28.9%;
+    width: 25%;
     height: 128.5px;
+    margin-top: -8%;
 }
 
 .user-information {
     width: 50%;
     float: right;
     height: 26.19%;
+}
+
+.user-information-share-profile {
+    width: 70%;
+    float: right;
 }
 
 .circle-row {

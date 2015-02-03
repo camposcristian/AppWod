@@ -314,7 +314,7 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
     }
 }]);
 
-app.controller('friendsController', ['$scope', '$location', function($scope, $location) {
+app.controller('shareProfileController', ['$scope', '$location', function($scope, $location) {
     $scope.pageTitle = 'profile'; 
     $scope.beginAngularBracket = '> ';
     $scope.endAngularBracket = ' <';

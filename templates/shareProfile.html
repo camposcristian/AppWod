@@ -1,4 +1,4 @@
-<div ng-controller="friendsController" class="background-img full-space">
+<div ng-controller="shareProfileController" class="background-img full-space">
 	<div class="full-space">
 		<div class="header">
             <div class="bar bar-header menu-title-page">
@@ -18,29 +18,31 @@
 			  	</div>
 			</div>
 		</div>
-		<div class="content-page-friends">
+		<div class="content-page-share-profile">
 			<div class="left-alignment contacts-picture-space" ng-click="getPicture()">
 				<img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />	
 			</div>
-			<div class="user-information">
+			<div class="user-information-share-profile">
 				<div style="height: 20%;">
 					<label class="item-input item-input-size">
-						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 23px;" placeholder="{{'nameAndSurname' | translate}}"/>
+						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 1.4em;" placeholder="{{'nameAndSurname' | translate}}"/>
 					</label>
 				</div>
-				
-				<div class="display-flex" style="height: 15%;">
+				<div class="display-flex" style="margin-top: -8%;">
                     <label class="item-input item-input-size">
-                        <input type="text" class="red-font-club" ng-model="usuario.club" ng-click="usuario.club = null" style="font-size: 20px; max-width: 75%;" placeholder="{{'club' | translate}}" />
+                        <input type="text" class="red-font-club-share-profile" ng-model="usuario.club" ng-click="usuario.club = null" placeholder="{{'club' | translate}}" />
                         <span class="country-flag" ng-class="usuario.flag"></span>
                     </label>
                 </div>
-				<div class="horizontal-red-line"></div>
-				<div style="height: 35%;">
-					<label class="align-text-left red-font-bold">{{usuario.nivel}}</label>
+				<hr class="black-line" style="min-width: 100%; margin-top: -0.5%;"></hr>
+				<div style="height: 35%; margin-top: -1%;">
+					<label class="align-text-left level-font-crossfitter">{{usuario.nivel}}</label>
 				</div>
 			</div>
-	
+		</div>
+		<div>
+			<hr class="black-line" style="min-width: 100%;"></hr>
+		</div>
 			<div class="row no-row background-friends-wods">
 				<div class="row no-row">
 					<div class="col col-20 center-title-text">

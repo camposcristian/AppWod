@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 65%;
-    height: 52px;
+    height: 45px;
     margin-top: 10px;
 }
 
@@ -16,8 +16,8 @@
     background: url("../img/icons/designer-icon.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 25%;
-    height: 52px;
+    width: 21%;
+    height: 35px;
     margin-top: 10px;
 }
 
@@ -25,8 +25,8 @@
     background: url("../img/icons/facebook-icon.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     margin-right: 5%;
 }
 
@@ -52,18 +52,19 @@
     background: url("../img/icons/separator-icon.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 5px;
-    height: 60px;
+    width: 3px;
+    height: 35px;
     margin-right: 5%;
     margin-left: 5%;
+    margin-top: 3%;
 }
 
 .twitter-icon {
     background: url("../img/icons/twitter-icon.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 /* SPORTS */
@@ -609,8 +610,8 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/iconsSVG/Ayuda blanco.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     float: right;
     margin-right: 2%;
     margin-top: 1px;
@@ -620,8 +621,8 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/iconsSVG/Ayuda gris.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     float: right;
     margin-right: 2%;
     margin-top: 1px;
@@ -733,9 +734,8 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
 .country-flag {
     background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
-    width: 15%;
-    height: 35px;
-    margin-left: 5%;
+    min-width: 35px;
+    height: 25px;
     position: relative;
 }
 

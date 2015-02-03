@@ -55,12 +55,12 @@ app.config(function($stateProvider, $urlRouterProvider, $translateProvider, $sce
                 }
             }
         })
-        .state('app.friends', {
-            url: "/friends",
+        .state('app.shareProfile', {
+            url: "/shareProfile",
             views: {
                 'mainPage' :{
-                    templateUrl: "templates/friends.html",
-                    controller: 'friendsController'
+                    templateUrl: "templates/shareProfile.html",
+                    controller: 'shareProfileController'
                 }
             }
         })
