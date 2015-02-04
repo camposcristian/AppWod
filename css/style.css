@@ -17,6 +17,16 @@
     margin-right: auto;
 }
 
+.language-select {
+    width: 100%;
+    min-height: 20px;
+    margin-top: -5px;
+    float: right;
+    font-size: 1.5em;
+    font-family: Roboto-regular;
+    padding-left: 25px;
+}
+
 .left-alignment {
     float: left !important;
     text-align: left !important;
@@ -65,15 +75,16 @@
 .rectangle {
     margin-left: -1%;
     padding-left: 1%;
-    display: flex;
+    line-height: 1;
 }
 
 .grey-rectangle {
-    border: 2px solid #434343;
-    margin-top: -5.62%;
-    display: flex;
+    border: 1px solid #434343;
     text-align: center;
-    width: 100%;
+    width: 99%;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 11px;
 }
 
 .green-button-background {
@@ -478,6 +489,18 @@ a.item-menu.background-img.item:active {
     margin-left: 8%;
     text-transform: uppercase;
 }
+.country-select {
+    border: none;
+    -webkit-appearance: none;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    line-height: 1;
+    margin-top: 10px;
+}
 
 .item-training.item.active .row .bottom-line {
     margin-top: -13px;
@@ -487,6 +510,17 @@ a.item-menu.background-img.item:active {
     padding-bottom: 10px;
     font-weight: bold;
 }
+.level-select {
+    border: none;
+    -webkit-appearance: none;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding-bottom: 5px;
+    line-height: 1;
+    color: rgb(230,0,0);
+}
 
 .item-training .row .left-alignment .button {
     display: inline-block;
@@ -494,6 +528,9 @@ a.item-menu.background-img.item:active {
     height: 57px;
     background-repeat: no-repeat;
     margin: 0;
+}
+.label-space {
+    border-bottom: 1px solid rgb(1, 84, 30);
 }
 
 .overflow-right {
@@ -507,18 +544,31 @@ a.item-menu.background-img.item:active {
     margin-right: 8%;
     margin-top: -7px;
 }
+ul {
+    display: inline;
+}
 
 .item-training .icon {
     margin-left: 10px;
+}
+input {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .item-training.active .overflow-right .icon {
     position: absolute;
     right: 28px;
 }
+.input-names {
+    height: 20px;
+}
 
 .item-training.active .row {
     margin-top: 5px;
+}
+.fc-bg {
+    height: 30px;
 }
 
 .training-wod-button {
@@ -527,6 +577,10 @@ a.item-menu.background-img.item:active {
     margin-left: 8%;
     display: inline-block;
     z-index: 10;
+}
+.fc-basic-view tbody .fc-row {
+    height: 30px !important;
+    min-height: 30px !important;
 }
 
 .training-wod-font {
@@ -540,7 +594,12 @@ a.item-menu.background-img.item:active {
     width: 100%;
     white-space: nowrap;
 }
+.calendar-down {
+    margin-top: 10px !important;
+}
 
-.image-repeated {
-    display: none !important;
+.user-contacts {
+    position: absolute; 
+    right: 5%; top:0; 
+    cursor: pointer;
 }
