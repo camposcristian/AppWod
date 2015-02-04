@@ -1,135 +1,71 @@
 <div ng-controller="trainingController" class="background-img">
-	<div class="header">	
-		<div class="bar bar-header menu-title-page">
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-profile center-img" ng-click="show('/profile')"></button>
-			</div>
-			<div class="col">
-				<div class="vertical-red-line center-img"></div>
-			</div>
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-pesa center-img" ng-click="show('/freeWOD')"></button>
-			</div>
-			<div class="col">
-				<div class="vertical-red-line center-img"></div>
-			</div>
-			<div class="col">
-				<button class="button button-icon icon icon-top-menu-calendar center-img" ng-click="show('/calendar')"></button>
-			</div>
-		</div>
-		<div class="bar bar-subheader background-title row">
-			<div class="col col-67 font-title font-principal">{{pageTitle}}</div>
-			<div class="col col-33">
-				<div class="row no-row" ng-click="show('/friends')">
-					<div class="center-img" ng-class="iconHeader"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-margins">
-		<div class="row">
-			<div class="col col-50">
-				<label class="font-fields-training-label center-title-text">TIPO DE WOD</label>
-			</div>
-			<div class="col col-50">
-				<select class="center-img">
-					<option>EMOM</option>
-					<option>TABATA</option>
-					<option>POR VUELTAS</option>
-					<option>AMRAP</option>
-					<option>21-15-9</option>
-				</select>
-			</div>
-		</div> 
+    <div class="header">
+        <div class="bar bar-header menu-title-page">
+            <div class="col">
+                <button class="button button-icon icon icon-top-menu-profile center-img" ng-click="show('/profile')"></button>
+            </div>
+            <div class="col">
+                <div class="vertical-red-line center-img"></div>
+            </div>
+            <div class="col">
+                <button class="button button-icon icon icon-top-menu-pesa center-img" ng-click="show('/freeWOD')"></button>
+            </div>
+            <div class="col">
+                <div class="vertical-red-line center-img"></div>
+            </div>
+            <div class="col">
+                <button class="button button-icon icon icon-top-menu-calendar center-img" ng-click="show('/calendar')"></button>
+            </div>
+        </div>
+        <div class="bar bar-subheader background-title row">
+            <div class="col col-67 font-title font-principal">{{pageTitle}}</div>
+            <div class="col col-33">
+                <div class="row no-row" ng-click="show('/friends')">
+                    <div class="center-img" ng-class="iconHeader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-margins">
+        <ion-content style="margin-top: 80px;">
+            <ion-list>
+                <div ng-repeat="sport in training">
 
-		<div class="row">
-			<div class="col col-10">
-				<div class="button button-icon icon green-muscle center-img"></div>
-			</div>
-			<div class="col col-80 col-center">
-				<div class="barra-deporte"></div>
-			</div>
-			<div class="col col-10">
-				<div class="button button-icon icon blue-hand center-img"></div>
-			</div>
-		</div>
-		<div class="row horizontal-red-line"></div>
-		<div>
-			<ion-list>
-				<ion-item ng-repeat="sport in training.exercises" class="no-border">
-					<div class="row">
-						<div class="col-10">
-							<div class="button button-icon icon center-img" ng-class="sport.image"></div>
-						</div>
-						<div class="col-10">
-							<div class="grey-border">{{sport.count}}</div>
-						</div>
-						<div class="col">
-							<div class="row">
-								<label class="font-grey-small col align-text-right"><{{sport.name}}></label>
-							</div>
-							<div class="row horizontal-green-line"></div>
-						</div>
-						<div class="col-10">
-							<div class="whiteblue-eye center-img"></div>
-						</div>
-					</div>
-				</ion-item>
-			</ion-list>
-		</div>
-		<div class="row">
-			<div class="col col-10">
-				<div class="button button-icon icon pesa-roja-fondo-rojo"></div>
-			</diV>
-			<label class="col col-90 green-state-wod align-text-right">WOD GUARDADO</label>
-		</div>
-		<div class="row horizontal-black-line"></div>
-		<div class="footer-profile background-img">
-			<div class="row">
-				<div class="col col-20">
-					<div class="row button button-icon icon clock center-img"></div>
-					</br>
-					<div class="row button button-icon icon sound center-img"></div>
-				</div>
-				<div class="col">
-					<label id="timeChronometer" class="col clock-label-timer center-title-text">{{timeChronometer}}</label>
-				</div>
-				<div class="col col-20 col-center grey-border">
-					<div class="col col-center center-img">
-						<div class="row without-margins">
-							</br>
-							<label class="col red-font-bold-big center-title-text without-margins">{{vueltas}}</label>
-						</div>
-						</br>
-						<div class="row without-margins">
-							<label class="col red-font-bold center-title-text without-margins">vueltas</label>
-							</br>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col col-20 col-center">
-					<center>
-						<label class="angular-brackets-clock center-title-text">>></label>
-					</center>
-				</div>
-				<div id='startChronometerButton' class="col" ng-show='stopped'>
-					<button type="button" ng-click="startChronometer()" class="button button-block green-button-background without-margins">
-						<label class="statistics-font center-title-text">Iniciar cronómetro</label>
-					</button>
-				</div>
-				<div id='endChronometerButton' class="col" ng-hide='stopped'>
-					<button type="button" ng-click="stopChronometer()" class="button button-block green-button-background without-margins">
-						<label class="statistics-font center-title-text">Finalizar cronómetro</label>
-					</button>
-				</div>
-				<div class="col col-20 col-center">
-					<center>
-						<label class="angular-brackets-clock center-title-text"><<</label>
-					</center>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <ion-item class="item-training"
+                              ng-click="toggleGroup(sport)"
+                              ng-class="{active: isGroupShown(sport)}">
+                        <div class="row">
+                            {{sport.day}}
+                        </div>
+                        <div class="row">
+                            <div class="left-alignment">
+                                <div ng-repeat="exercise in sport.exercises" class="button button-icon icon center-img" ng-class="exercise.image"></div>
+                            </div>
+                            <div class="overflow-right bottom-line">
+                                {{sport.type || "Crear WOD"}}
+                                <i class="icon" ng-class="isGroupShown(sport) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <div class="accordion-training" ng-show="isGroupShown(sport)">
+                        <div class="training-wod-button">
+                            <label ng-click="show('/freeWOD')" class="red-button-background">
+                                <i class="icon ion-chevron-right" style="color:white"></i>
+                                <span class="training-wod-font">Iniciar WOD</span>
+                            </label>
+                        </div>
+
+                        <div style="margin-top: -52px;">
+                            <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
+                                <!--<span>{{exercise.count}}</span>-->
+                                <div class="training-exercises">
+                                    {{exercise.name}}
+                                </div>
+                            </ion-item>
+                        </div>
+                    </div>
+            </ion-list>
+        </ion-content>
+    </div>
 </div>

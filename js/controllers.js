@@ -93,6 +93,59 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
     };
+
+    var hour = 0, minute = 0, second = 0, tenthSecond = 0;
+    $scope.timeChronometer = '00:00';
+    $scope.stopped = true;
+    $scope.vueltas = 0;
+    var stop;
+
+    $scope.startChronometer = function () {
+        if (angular.isDefined(stop)) return;
+        stop = $interval(chronometer, 10);
+        $scope.stopped = false;
+    }
+
+    var chronometer = function () {
+        if ($scope.stopped == false) {
+            tenthSecond++;
+            if (tenthSecond > 99) {
+                tenthSecond = 0;
+                second++;
+            }
+            if (second > 59) {
+                second = 0;
+                minute++;
+            }
+            if (minute > 59) {
+                minute = 0;
+                hour++;
+            }
+            $scope.showChronometer();
+        }
+    }
+
+    $scope.showChronometer = function () {
+        timeChronometerView = ((minute < 10) ? "0" + minute : minute) + ':';
+        timeChronometerView += ((second < 10) ? "0" + second : second) + ':';
+        timeChronometerView += (tenthSecond < 10) ? "0" + tenthSecond : tenthSecond;
+        $scope.timeChronometer = timeChronometerView;
+    }
+
+    $scope.stopChronometer = function () {
+        if (angular.isDefined(stop)) {
+            $interval.cancel(stop);
+            stop = undefined;
+            $scope.stopped = true;
+            $scope.vueltas++;
+            $scope.cleanChronometer();
+        }
+    }
+
+    $scope.cleanChronometer = function () {
+        hour = minute = second = tenthSecond = 0;
+        $scope.showChronometer();
+    }
 }]);
 
 app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
@@ -260,58 +313,32 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         $location.path( '/app' + path );
     };
 
-    var hour = 0, minute = 0, second = 0, tenthSecond = 0;
-    $scope.timeChronometer = '00:00';
-    $scope.stopped = true;
-    $scope.vueltas = 0;
-    var stop;
-    
-    $scope.startChronometer = function () {
-        if(angular.isDefined(stop)) return;
-        stop = $interval(chronometer, 10);
-        $scope.stopped = false;
-    }
-
-    var chronometer = function() {
-        if($scope.stopped == false) {
-            tenthSecond++;
-            if(tenthSecond > 99) {
-                tenthSecond = 0;
-                second++;
-            }
-            if(second > 59) {
-                second = 0;
-                minute++;
-            }
-            if(minute > 59) {
-                minute = 0;
-                hour++;
-            }
-            $scope.showChronometer();
+    $scope.groups = [];
+    for (var i = 0; i < 10; i++) {
+        $scope.groups[i] = {
+            name: i,
+            items: []
+        };
+        for (var j = 0; j < 3; j++) {
+            $scope.groups[i].items.push(i + '-' + j);
         }
     }
 
-    $scope.showChronometer = function () {
-        timeChronometerView = ((minute < 10) ? "0" + minute : minute) + ':';
-        timeChronometerView += ((second < 10) ? "0" + second : second) + ':';
-        timeChronometerView += (tenthSecond < 10) ? "0" + tenthSecond : tenthSecond;
-        $scope.timeChronometer = timeChronometerView;
-    }
-
-    $scope.stopChronometer = function () {
-        if(angular.isDefined(stop)) {
-            $interval.cancel(stop);
-            stop = undefined;
-            $scope.stopped = true;
-            $scope.vueltas++;
-            $scope.cleanChronometer();
+    /*
+     * if given group is the selected group, deselect it
+     * else, select the given group
+     */
+    $scope.toggleGroup = function (group) {
+        if ($scope.isGroupShown(group)) {
+            $scope.shownGroup = null;
+        } else {
+            $scope.shownGroup = group;
         }
-    }
+    };
+    $scope.isGroupShown = function (group) {
+        return $scope.shownGroup === group;
+    };
 
-    $scope.cleanChronometer = function () {
-        hour = minute = second = tenthSecond = 0;
-        $scope.showChronometer();
-    }
 }]);
 
 app.controller('shareProfileController', ['$scope', '$location', function($scope, $location) {

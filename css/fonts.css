@@ -33,6 +33,15 @@
     vertical-align: middle;
 }
 
+.language-select {
+    width: 100%;
+    text-align: center;
+}
+
+.language-options {
+    text-align: center;
+}
+
 .font-principal {
     color: #FFFFFF;
     font-size: 19px;

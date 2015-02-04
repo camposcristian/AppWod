@@ -98,6 +98,19 @@
     color: #FFFFFF;
 }
 
+.red-button-background {
+    background-color: rgb(230,0,0);
+    border-color: rgb(230,0,0);
+    bottom: 0;
+    border-radius: 5px;
+    width: 100% !important;
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 36px;
+    padding: 0 12px;
+}
+
 .grey-button-background {
     background-color: rgb(210,208,208);
     border-color: rgb(210,208,208);
@@ -137,6 +150,14 @@
 @media screen and (max-height: 570px) and (max-width: 320px) {
     .item-menu {
         padding: 0 0 0 0;
+    }
+
+    .home-img {
+        background: url("../img/photos/Home.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
     }
 
     ul {
@@ -236,7 +257,7 @@
 
 .red-line-home {
     border: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-color: #E60000;
     margin: 0;
     width: 100%;
@@ -251,9 +272,9 @@
 
 .footer-menu {
     width: 100%;
+    height: 36%;
     bottom: 0;
     position: absolute;
-    margin-bottom: 3%;
 }
 
 .footer-profile {
@@ -431,17 +452,72 @@
     line-height: 1;
 }
 
-ion-item.item-menu.background-img.item:active {
+a.item-menu.background-img.item:active {
     background: rgb(230,0,0);
 }
 
-    ion-item.item-menu.background-img.item:active .font-menu .item-menu-name {
+    a.item-menu.background-img.item:active .font-menu .item-menu-name {
         color: white !important;
     }
 
-#language {
+
+.list .item.item-accordion {
+    line-height: 29px;
+    padding: 0;
+    transition: 0.09s all linear;
+    border: none;
+    background-color: rgb(210,210,210);
+    text-align: right;
 }
 
+    .list .item.item-accordion.ng-hide {
+        line-height: 0px;
+    }
+
+    .list .item.item-accordion.ng-hide-add,
+    .list .item.item-accordion.ng-hide-remove {
+        display: block !important;
+    }
+
+.item-training {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: none;
+    margin-bottom: 5px;
+}
+
+.accordion-training {
+    /*width: 50%;
+    float: right;
+    margin-top: -45px;*/
+}
+
+
+.item-training.item.active {
+    color: #E60000;
+    background-color: rgb(210,210,210);
+    border-color: rgb(210,210,210);
+    margin: 0;
+}
+
+.item-training.item.activated {
+    background-color: rgb(210,210,210);
+    border-color: rgb(210,210,210);
+    color: rgb(230,0,0);
+}
+
+.bottom-line {
+    border-bottom: 1px solid black;
+}
+
+.item-training .row {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 8%;
+    text-transform: uppercase;
+}
 
 .country-select {
     border: none;
@@ -456,6 +532,15 @@ ion-item.item-menu.background-img.item:active {
     margin-top: 10px;
 }
 
+.item-training.item.active .row .bottom-line {
+    margin-top: -13px;
+    margin-right: 23%;
+    float: right;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
 .level-select {
     border: none;
     -webkit-appearance: none;
@@ -468,13 +553,36 @@ ion-item.item-menu.background-img.item:active {
     color: rgb(230,0,0);
 }
 
+.item-training .row .left-alignment .button {
+    display: inline-block;
+    width: 46px;
+    height: 57px;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
 .label-space {
     border-bottom: 1px solid rgb(1, 84, 30);
 }
 
+.overflow-right {
+    overflow: hidden;
+    text-align: right;
+    margin-right: 16%;
+    padding-bottom: 17px;
+}
+
+.training-exercises {
+    margin-right: 8%;
+    margin-top: -7px;
+}
 
 ul {
     display: inline;
+}
+
+.item-training .icon {
+    margin-left: 10px;
 }
 
 input {
@@ -482,12 +590,29 @@ input {
     font-size: 20px;
 }
 
+.item-training.active .overflow-right .icon {
+    position: absolute;
+    right: 28px;
+}
+
 .input-names {
     height: 20px;
 }
 
+.item-training.active .row {
+    margin-top: 5px;
+}
+
 .fc-bg {
     height: 30px;
+}
+
+.training-wod-button {
+    position: relative;
+    width: 42%;
+    margin-left: 8%;
+    display: inline-block;
+    z-index: 10;
 }
 
 .fc-basic-view tbody .fc-row {
@@ -495,12 +620,25 @@ input {
     min-height: 30px !important;
 }
 
+.training-wod-font {
+    text-transform: uppercase;
+    font-family: Roboto-medium;
+    text-align: left;
+    font-size: 17px;
+    color: #FFFFFF;
+    float: left;
+    margin-left: 2%;
+    width: 100%;
+    white-space: nowrap;
+}
+
 .calendar-down {
     margin-top: 10px !important;
 }
 
 .user-contacts {
-    position: absolute; 
-    right: 5%; top:0; 
+    position: absolute;
+    right: 5%;
+    top: 0;
     cursor: pointer;
 }

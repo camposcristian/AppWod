@@ -21,6 +21,38 @@
     margin-top: 10px;
 }
 
+.app-wod-img {
+    background: url("../img/photos/Logo AppWod.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 84%;
+    height: 10.41%;
+    position: absolute;
+    top: 2%;
+    margin-right: 8%;
+    margin-left: 8%;
+    z-index: 1500;
+}
+
+.home-img {
+    background: url("../img/photos/Home.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 380px) {
+
+    .home-img {
+        background: url("../img/photos/Home.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .facebook-icon {
     background: url("../img/icons/facebook-icon.png");
     background-repeat: no-repeat;
@@ -28,6 +60,19 @@
     width: 25px;
     height: 25px;
     margin-right: 5%;
+}
+
+.app-wod-img {
+    background: url("../img/photos/Logo AppWod.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 84%;
+    height: 10.41%;
+    position: absolute;
+    top: 2%;
+    margin-right: 8%;
+    margin-left: 8%;
+    z-index: 1500;
 }
 
 .left-angular-bracket {
@@ -399,6 +444,8 @@
     width: 20px;
     height: 20px;
     border: 0;
+    background-repeat: no-repeat;
+    min-width: 52px;
 }
 
 .red-sprint {
@@ -408,6 +455,8 @@
     width: 20px;
     height: 20px;
     border: 0;
+    min-width: 52px;
+    background-repeat: no-repeat;
 }
 
 /* PHOTOS */
@@ -418,6 +467,7 @@
     width: 100%;
     height: 150px;
 }
+
 
 .app-wod-img {
     background: url("../img/photos/Logo AppWod.svg");
@@ -448,14 +498,6 @@
     width: 100%;
     height: 20px;
     border: 0;
-}
-
-.home-img {
-    background: url("../img/photos/Home.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
 }
 
 /* Iconos SVG */
@@ -523,7 +565,7 @@
     background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
     width: 7%;
-    height: 100%;
+    height: 32px;
     float: right;
     margin-right: 8%;
     vertical-align: middle;
@@ -533,7 +575,7 @@
     background: url("../img/iconsSVG/Perfil.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-profile {
+a.item-menu.background-img.item:active .font-menu .icon-menu-profile {
     background: url("../img/iconsSVG/Perfil Blanco.svg");
 }
 
@@ -541,7 +583,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-profile {
     background: url("../img/iconsSVG/Wod libre.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-free-wod {
+a.item-menu.background-img.item:active .font-menu .icon-menu-free-wod {
     background: url("../img/iconsSVG/Wod libre blanco.svg");
 }
 
@@ -549,7 +591,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-free-wod {
     background: url("../img/iconsSVG/Wod de viaje.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-travel-wod {
+a.item-menu.background-img.item:active .font-menu .icon-menu-travel-wod {
     background: url("../img/iconsSVG/Wod viaje blanco.svg");
 }
 
@@ -557,7 +599,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-travel-wod {
     background: url("../img/iconsSVG/Entrenamiento.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-training {
+a.item-menu.background-img.item:active .font-menu .icon-menu-training {
     background: url("../img/iconsSVG/Entrenamiento blanco.svg");
 }
 
@@ -565,7 +607,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-training {
     background: url("../img/iconsSVG/Calendario.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar {
+a.item-menu.background-img.item:active .font-menu .icon-menu-calendar {
     background: url("../img/iconsSVG/Calendario blanco.svg");
 }
 
@@ -573,7 +615,7 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-calendar {
     background: url("../img/iconsSVG/Configuracion.svg");
 }
 
-ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
+a.item-menu.background-img.item:active .font-menu .icon-menu-config {
     background: url("../img/iconsSVG/Configuracion blanco.svg");
 }
 
@@ -1027,4 +1069,24 @@ hr .black-line {
     width: 30px;
     height: 30px;
     background-size: 100% 100%;
+}
+
+.icon-training-red {
+    background: url("../img/Ejercicios/Entrenamiento/Cardio.svg");
+}
+
+.icon-training-green {
+    background: url("../img/Ejercicios/Entrenamiento/Fuerza.svg");
+}
+
+.icon-training-orange-free {
+    background: url("../img/Ejercicios/Entrenamiento/Dia libre.svg");
+}
+
+.icon-training-orange {
+    background: url("../img/Ejercicios/Entrenamiento/Funcional.svg");
+}
+
+.icon-training-blue {
+    background: url("../img/Ejercicios/Entrenamiento/Gimnasia.svg");
 }
