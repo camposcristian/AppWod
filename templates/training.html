@@ -33,9 +33,12 @@
 
                     <ion-item class="item-training"
                               ng-click="toggleGroup(sport)"
-                              ng-class="{active: isGroupShown(sport)}">
-                        <div class="row">
+                              ng-class="{active: isGroupShown(sport) || isActiveDay(sport.day)}">
+                        <div class="row" ng-hide="isActiveDay(sport.day)">
                             {{sport.day}}
+                        </div>
+                        <div class="row" ng-show="isActiveDay(sport.day)">
+                            {{'today' | translate}}
                         </div>
                         <div class="row">
                             <div class="left-alignment">

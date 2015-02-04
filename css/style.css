@@ -499,7 +499,6 @@ a.item-menu.background-img.item:active {
     margin-top: -45px;*/
 }
 
-
 .item-training.item.active {
     color: #E60000;
     background-color: rgb(210,210,210);
@@ -562,7 +561,7 @@ a.item-menu.background-img.item:active {
 .item-training .row .left-alignment .button {
     display: inline-block;
     width: 46px;
-    height: 57px;
+    height: 47px;
     background-repeat: no-repeat;
     margin: 0;
 }

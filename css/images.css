@@ -1081,6 +1081,10 @@ hr .black-line {
 
 .icon-training-orange-free {
     background: url("../img/Ejercicios/Entrenamiento/Dia libre.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 40px !important;
+    height: 40px !important;
 }
 
 .icon-training-orange {

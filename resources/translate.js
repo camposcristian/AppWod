@@ -38,7 +38,8 @@ var translations = {
         "crossfitterIntermediate": "Crossfitter Intermediate &nbsp; Level",
         "crossfitterAdvanced": "Crossfitter Advanced &nbsp; Level",
         "crossfitterPro": "Crossfitter Pro &nbsp; Level",
-        "club": "Club"
+        "club": "Club",
+        "today": "Today"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -79,6 +80,7 @@ var translations = {
         "crossfitterIntermediate": "Crossfitter Nivel &nbsp; Intermedio",
         "crossfitterAdvanced": "Crossfitter Nivel &nbsp; Avanzado",
         "crossfitterPro": "Crossfitter Nivel &nbsp; Pro",
-        "club": "Club"
+        "club": "Club",
+        "today": "Hoy"
 	}
 }

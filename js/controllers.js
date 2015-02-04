@@ -4,6 +4,12 @@ var app = angular.module('starter.controllers', [
     'ngCordova'
 ]);
 
+
+Date.prototype.getDayName = function() {
+    var d = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+    return d[this.getDay()];
+}
+
 app.controller('homeController', ['$scope', function($scope) {
     $scope.mainmenu = [
         {
@@ -306,7 +312,24 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
     $scope.pageTitle = 'Entrenamiento';
     $scope.iconHeader = 'icon-top-menu-training';
     trainingExercises.fetch().then(function(data) {
-        $scope.training = data;
+        var today = new Date();
+        var todayName = today.getDayName();
+        var i = 0;
+        var j = 0;
+        var k;
+        $scope.training = [];
+        for(i; i < data.length; i++) {
+            if (data[i].day.toLowerCase() === todayName.toLowerCase() && i >= 2) {
+                k = i-2;
+                for(k; k < data.length; k++) {
+                    $scope.training.push(data[k]);
+                }
+                for(j; j < i-2; j++) {
+                    $scope.training.push(data[j]);
+                }
+                return;
+            }
+        }
     });
 
     $scope.show = function ( path ) {
@@ -339,6 +362,11 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         return $scope.shownGroup === group;
     };
 
+    $scope.isActiveDay = function (day) {
+        var today = new Date();
+        var todayName = today.getDayName();
+        return todayName.toLowerCase() === day.toLowerCase();
+    }
 }]);
 
 app.controller('shareProfileController', ['$scope', '$location', function($scope, $location) {
