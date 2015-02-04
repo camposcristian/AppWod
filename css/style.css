@@ -85,6 +85,7 @@
     display: inline-block;
     padding: 5px;
     margin-top: 11px;
+    background-color: #FFFFFF;
 }
 
 .green-button-background {
@@ -347,6 +348,12 @@
     overflow-y: scroll;
 }
 
+.footer-configuration {
+    width: 84%;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
 .content-page-share-profile {
     width: 84%;
     margin-right: 8%;
@@ -494,7 +501,6 @@ a.item-menu.background-img.item:active {
     margin-top: -45px;*/
 }
 
-
 .item-training.item.active {
     color: #E60000;
     background-color: rgb(210,210,210);
@@ -557,7 +563,7 @@ a.item-menu.background-img.item:active {
 .item-training .row .left-alignment .button {
     display: inline-block;
     width: 46px;
-    height: 57px;
+    height: 47px;
     background-repeat: no-repeat;
     margin: 0;
 }

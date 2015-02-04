@@ -18,7 +18,7 @@
 		<div class="row" style="margin-bottom: 2%;">
 			<div class="font-fields-configuration-label col col-50">{{'language' | translate}}:</div>
 			<div class="col col-50">
-				<select class="language-select" ng-model="language" ng-change="changeLanguage()" style="text-align: center">
+				<select class="language-select" ng-model="language" ng-change="changeLanguage(language)" style="text-align: center">
 					<option value="es"><center>{{'spanish' | translate}}</center></option>
 					<option value="en"><center>{{'english' | translate}}</center></option>
 					<option value="ge"><center>{{'german' | translate}}</center></option>
@@ -45,7 +45,7 @@
 		</label>
 	</ion-content>
 	<div class="footer-menu">
-		<div class="content-page">
+		<div class="footer-configuration">
 			<div class="row">
 				<div class="appWod-icon"></div>
 				<div class="separator-icon"></div>

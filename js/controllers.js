@@ -4,6 +4,12 @@ var app = angular.module('starter.controllers', [
     'ngCordova'
 ]);
 
+
+Date.prototype.getDayName = function() {
+    var d = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+    return d[this.getDay()];
+}
+
 app.controller('homeController', ['$scope', function($scope) {
     $scope.mainmenu = [
         {
@@ -38,6 +44,7 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.beginAngularBracket = '> '
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
+    $scope.editingProfile = false;
     
     if (!window.localStorage['imageURI']) {
         window.localStorage['imageURI'] = './img/iconsSVG/Perfil gris.svg';
@@ -46,8 +53,15 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
         $scope.imageURI = window.localStorage['imageURI'];
     }
     window.localStorage['measurement'] === 'true' ? $scope.measurementProfile = 'kg' : $scope.measurementProfile = 'lb'; /* True significa que es kg, false significa que es lb */
-    console.log(window.localStorage['measurement']);
     
+    $scope.saveProfile = function() {
+        window.localStorage['name'] = $scope.usuario.nombre;
+        window.localStorage['lastName'] = $scope.usuario.apellido;
+        window.localStorage['country'] = $scope.usuario.pais;
+        window.localStorage['level'] = $scope.usuario.nivel;
+        window.localStorage['club'] = $scope.usuario.club;
+        window.localStorage['locationClub'] = $scope.usuario.localizacionClub;
+    }
 
     $scope.usuario = [];
     $scope.usuario.nombre = "";
@@ -151,25 +165,10 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
 app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
-    
-    if (!window.localStorage['language']) {
-        window.localStorage['language'] = "es";  
-        $scope.language = "es";
-    } else {
-        $scope.language = window.localStorage['language'];
-    }
-    if (!window.localStorage['measurement']) {
-        window.localStorage['measurement'] = "true";
-        $scope.measurement = true; /* True significa que es kg, false significa que es lb */
-    } else {
-        $scope.measurement = Boolean(window.localStorage['measurement']); /* True significa que es kg, false significa que es lb */
-    }
-    if (!window.localStorage['help']) {
-        window.localStorage['help'] = "true";
-        $scope.help = true;
-    } else {
-        $scope.help = Boolean(window.localStorage['help']);
-    }
+    $scope.language = "en";
+    $scope.measurement = true; /* True significa que es kg, false significa que es lb */
+    window.localStorage['measurement'] = true;
+    $scope.help = true;
     
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
@@ -177,17 +176,15 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
 
     $scope.changeMeasurement = function() {
         $scope.measurement = !$scope.measurement;
-        window.localStorage['measurement'] = $scope.measurement;
+        window.localStorage['measurement'] = !window.localStorage['measurement'];
     }
 
     $scope.changeHelp = function() {
         $scope.help = !$scope.help;
-        window.localStorage['help'] = $scope.help;
     }
 
-    $scope.changeLanguage = function(){
-        $translate.use($scope.language);
-        window.localStorage['language'] = $scope.language;
+    $scope.changeLanguage = function(language) {
+        $translate.use(language);
     }
 }]);
 
@@ -303,10 +300,27 @@ app.controller('calendarController', ['$scope', function($scope) {
 }]);
 
 app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function($scope, $location, $interval, trainingExercises) {
-    $scope.pageTitle = 'Entrenamiento';
-    $scope.iconHeader = 'icon-top-menu-training';
+    $scope.pageTitle = 'training';
+    $scope.iconHeader = 'training-title';
     trainingExercises.fetch().then(function(data) {
-        $scope.training = data;
+        var today = new Date();
+        var todayName = today.getDayName();
+        var i = 0;
+        var j = 0;
+        var k;
+        $scope.training = [];
+        for(i; i < data.length; i++) {
+            if (data[i].day.toLowerCase() === todayName.toLowerCase() && i >= 2) {
+                k = i-2;
+                for(k; k < data.length; k++) {
+                    $scope.training.push(data[k]);
+                }
+                for(j; j < i-2; j++) {
+                    $scope.training.push(data[j]);
+                }
+                return;
+            }
+        }
     });
 
     $scope.show = function ( path ) {
@@ -339,6 +353,11 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         return $scope.shownGroup === group;
     };
 
+    $scope.isActiveDay = function (day) {
+        var today = new Date();
+        var todayName = today.getDayName();
+        return todayName.toLowerCase() === day.toLowerCase();
+    }
 }]);
 
 app.controller('shareProfileController', ['$scope', '$location', function($scope, $location) {

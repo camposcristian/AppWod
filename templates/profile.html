@@ -31,17 +31,17 @@
             <div class="user-information">
                 <div class="input-names">
                     <label class="item-input item-input-size">
-                        <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 20px;" placeholder="{{'name' | translate}}" />
+                        <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null; editingProfile = true" style="font-size: 20px;" placeholder="{{'name' | translate}}" />
                     </label>
                 </div>
                 <div class="input-names">
                     <label class="item-input item-input-size">
-                        <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 20px;" placeholder="{{'lastname' | translate}}" />
+                        <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null; editingProfile = true" style="font-size: 20px;" placeholder="{{'lastname' | translate}}" />
                     </label>
                 </div>
                 <div class="display-flex" style="height: 15%; margin-left: -4px;">
                     <label class="item-input item-input-size">
-                        <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
+                        <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage(); editingProfile = true" style="text-align: center" ng-focus="editingProfile = true">
                             <option value="" selected><center>{{'country' | translate}}</center></option>
                             <option value="arg"><center>{{'argentina' | translate}}</center></option>
                             <option value="usa"><center>{{'usa' | translate}}</center></option>
@@ -52,7 +52,7 @@
                 <div style="border-width:1px;" class="horizontal-red-line"></div>
                 <div style="margin-left: -4px;">
                     <label class="item-input item-input-size">
-                        <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
+                        <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage(); editingProfile = true" style="text-align: center">
                             <option value=""><center>Nivel</center></option>
                             <option value="beg"><center>{{'crossfitterBeginner' | translate}}</center></option>
                             <option value="int"><center>{{'crossfitterIntermediate' | translate}}</center></option>
@@ -74,8 +74,15 @@
             </div>
         </div>
         <div class="grey-rectangle">
-            <label class="red-font-club">{{usuario.club}}</label>
-            <label class="club-location-font">- {{usuario.localizacionClub}}</label>
+            <div class="display-flex">
+                <label class="red-font-club" style="margin-top: -2%">
+                    <input type="text" class="red-font-club" ng-model="usuario.club" ng-click="editingProfile = true" />
+                </label>
+                <label style="font-size: 18px"> - </label>
+                <label class="club-location-font" style="margin-top: -2%">
+                    <input type="text" class="club-location-font" ng-model="usuario.localizacionClub" ng-click="editingProfile = true" />
+                </label>
+            </div>
         </div>
         <div class="sports-list-profile">
             <ion-list>
@@ -92,8 +99,12 @@
                 </ion-item>
             </ion-list>
         </div>
-        <label ng-click="show('/statistics')" class="green-button-background">
+        <label ng-click="show('/statistics')" class="green-button-background" ng-hide="editingProfile">
             <span class="statistics-font">{{'showStadistics' | translate}}</span>
+            <div class="statistics-green-background"></div>
+        </label>
+        <label ng-click="saveProfile(); editingProfile = false" class="green-button-background" ng-show="editingProfile">
+            <span class="statistics-font">{{'saveProfile' | translate}}</span>
             <div class="statistics-green-background"></div>
         </label>
     </ion-content>
