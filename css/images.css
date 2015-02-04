@@ -68,91 +68,177 @@
 }
 
 /* SPORTS */
-.sport-image {
-    background-repeat: no-repeat;
-    background-size: 100% 100% !important;
-    width: 12.8%;
-    height: 100%;
-    float: left;
-    margin-right: 4.76%;
-}
-
 /* GREEN */
 .green-back-squat {
     background: url("../img/ejercicios/Green/Back squat.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-bench-press {
     background: url("../img/ejercicios/Green/Bench press.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-clean-jerk {
     background: url("../img/ejercicios/Green/Clean & jerk.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-deadlift {
     background: url("../img/ejercicios/Green/Deadlift.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-front-squat {
     background: url("../img/ejercicios/Green/Front squat.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-overhead-squat {
     background: url("../img/ejercicios/Green/Overhead squat.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-power-clean {
     background: url("../img/ejercicios/Green/Power clean.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-sled-push {
     background: url("../img/ejercicios/Green/Sled push.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .green-snatch {
     background: url("../img/ejercicios/Green/Snatch.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 /* WHITEBLUE */
 .whiteblue-farmer-walk {
     background: url("../img/ejercicios/Whiteblue/Farmer walk.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-hang-clean {
     background: url("../img/ejercicios/Whiteblue/Hang clean.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-lunges {
     background: url("../img/ejercicios/Whiteblue/Lunges.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-one-arm-snatch {
     background: url("../img/ejercicios/Whiteblue/One arm snatch.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-push-press {
     background: url("../img/ejercicios/Whiteblue/Push press.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-ring-dip {
     background: url("../img/ejercicios/Whiteblue/Ring dip.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-sumo-deadlift {
     background: url("../img/ejercicios/Whiteblue/Sumo deadlift.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-swing {
     background: url("../img/ejercicios/Whiteblue/Swing.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-thrusters {
     background: url("../img/ejercicios/Whiteblue/Thrusters.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .whiteblue-turkish {
     background: url("../img/ejercicios/Whiteblue/Turkish.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 /* BLUE */
@@ -686,6 +772,11 @@ ion-item.item-menu.background-img.item:active .font-menu .icon-menu-config {
 
 .whiteblue-eye {
     background: url("../img/iconsSVG/Ojo azul.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    border: 0;
 }
 
 .pesa-roja-fondo-rojo {

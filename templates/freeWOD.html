@@ -51,7 +51,7 @@
 				<ion-list>
 					<ion-item ng-repeat="sport in training.exercises" class="without-margins item-list">
 						<div class="item-space-wod">
-							<div class="sport-image" ng-class="sport.image"></div>
+							<div ng-class="sport.image"></div>
 							<div class="count-excercise">{{sport.count}}</div>
 							<div style="margin-top: 5%;">
 								<div style="margin-bottom: 2%;">
@@ -61,7 +61,7 @@
 									<hr class="separator" ng-class="sport.separator">
 								</div>
 							</div>
-							<div class="whiteblue-eye sport-image" style="float: right !important"></div>
+							<div class="whiteblue-eye" style="float: right !important"></div>
 						</div>
 					</ion-item>
 				</ion-list>

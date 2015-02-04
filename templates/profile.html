@@ -1,102 +1,100 @@
 <div ng-controller="profileController" class="background-img full-space">
-    <div class="full-space">
-        <div class="header">
-            <div class="bar bar-header menu-title-page">
-                <div class="content-title-bar">
-                    <div class="icon-top icon-top-menu-pesa left-alignment" ng-click="show('/freeWOD')"></div>
-                    <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-                    <div class="icon-top icon-top-menu-training" ng-click="show('/training')"></div>
-                    <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-                    <div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
-                    <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
-                    <div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
-                </div>
-            </div>
-            <div class="bar background-title">
-                <div class="margin-alignment-subheader">
-                    <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
-                    <div ng-click="show('/shareProfile')" class="right-alignment user-contacts">
-                        <div class="font-secondary">
-                            <span>{{beginAngularBracket}}{{'user' | translate}}</span>
-                            <div ng-class="iconHeader"></div>{{endAngularBracket}}
-                        </div>
-                    </div>
-                </div>
+    <div class="header">
+        <div class="bar bar-header menu-title-page">
+            <div class="content-title-bar">
+                <div class="icon-top icon-top-menu-pesa left-alignment" ng-click="show('/freeWOD')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-training" ng-click="show('/training')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
             </div>
         </div>
-        <div class="content-page">
-            <div class="profile-container">
-                <div class="left-alignment picture-space" ng-click="getPicture()">
-                    <img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />
-                </div>
-                <div class="user-information">
-                    <div class="input-names">
-                        <label class="item-input item-input-size">
-                            <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 20px;" placeholder="{{'name' | translate}}" />
-                        </label>
-                    </div>
-                    <div class="input-names">
-                        <label class="item-input item-input-size">
-                            <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 20px;" placeholder="{{'lastname' | translate}}" />
-                        </label>
-                    </div>
-                    <div class="display-flex" style="height: 15%; margin-left: -4px;">
-                        <label class="item-input item-input-size">
-                            <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
-                                <option value="" selected><center>{{'country' | translate}}</center></option>
-                                <option value="arg"><center>{{'argentina' | translate}}</center></option>
-                                <option value="usa"><center>{{'usa' | translate}}</center></option>
-                            </select>
-                            <span ng-class="usuario.flag"></span>
-                        </label>
-                    </div>
-                    <div style="border-width:1px;" class="horizontal-red-line"></div>
-                    <div style="margin-left: -4px;">
-                        <label class="item-input item-input-size">
-                            <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
-                                <option value=""><center>Nivel</center></option>
-                                <option value="beg"><center>{{'crossfitterBeginner' | translate}}</center></option>
-                                <option value="int"><center>{{'crossfitterIntermediate' | translate}}</center></option>
-                                <option value="adv"><center>{{'crossfitterAdvanced' | translate}}</center></option>
-                                <option value="pro"><center>{{'crossfitterPro' | translate}}</center></option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="circle-row" ng-click="show('/friends')">
-                        <label class="red-font-wod">wods</label>
-                        <ul>
-                            <li class="red-full-circle"></li>
-                            <li class="red-full-circle"></li>
-                            <li class="red-full-circle"></li>
-                            <li class="red-empty-circle"></li>
-                            <li class="red-empty-circle"></li>
-                        </ul>
+        <div class="bar background-title">
+            <div class="margin-alignment-subheader">
+                <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
+                <div ng-click="show('/shareProfile')" class="right-alignment user-contacts">
+                    <div class="font-secondary">
+                        <span>{{beginAngularBracket}}{{'user' | translate}}</span>
+                        <div ng-class="iconHeader"></div>{{endAngularBracket}}
                     </div>
                 </div>
             </div>
-            <div class="grey-rectangle">
-                <label class="red-font-club">{{usuario.club}}</label>
-                <label class="club-location-font">- {{usuario.localizacionClub}}</label>
-            </div>
-            <div class="sports-list-profile">
-                <ion-list>
-                    <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
-                        <div class="item-space-profile" ng-click="show('/videoExplanation/' + sport.video)">
-                            <div class="sport-image" ng-class="sport.image"></div>
-                            <div class="label-space">
-                                <div class="row">
-                                    <label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
-                                    <label class="font-measure right-alignment col without-margins">{{sport.weight + measurementProfile}}</label>
-                                </div>
-                            </div>
-                        </div>
-                    </ion-item>
-                </ion-list>
-            </div>
-            <label ng-click="show('/statistics')" class="green-button-background">
-                <span class="statistics-font">{{'showStadistics' | translate}}</span>
-                <div class="statistics-green-background"></div>
-            </label>
         </div>
     </div>
+    <ion-content class="content-page">
+        <div class="profile-container">
+            <div class="left-alignment picture-space" ng-click="getPicture()">
+                <img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />
+            </div>
+            <div class="user-information">
+                <div class="input-names">
+                    <label class="item-input item-input-size">
+                        <input type="text" class="display-flex" ng-model="usuario.nombre" ng-click="usuario.nombre = null" style="font-size: 20px;" placeholder="{{'name' | translate}}" />
+                    </label>
+                </div>
+                <div class="input-names">
+                    <label class="item-input item-input-size">
+                        <input type="text" class="display-flex" ng-model="usuario.apellido" ng-click="usuario.apellido = null" style="font-size: 20px;" placeholder="{{'lastname' | translate}}" />
+                    </label>
+                </div>
+                <div class="display-flex" style="height: 15%; margin-left: -4px;">
+                    <label class="item-input item-input-size">
+                        <select class="country-select" ng-model="usuario.pais" ng-change="changeLanguage()" style="text-align: center">
+                            <option value="" selected><center>{{'country' | translate}}</center></option>
+                            <option value="arg"><center>{{'argentina' | translate}}</center></option>
+                            <option value="usa"><center>{{'usa' | translate}}</center></option>
+                        </select>
+                        <span ng-class="usuario.flag"></span>
+                    </label>
+                </div>
+                <div style="border-width:1px;" class="horizontal-red-line"></div>
+                <div style="margin-left: -4px;">
+                    <label class="item-input item-input-size">
+                        <select class="level-select" ng-model="usuario.nivel" ng-change="changeLanguage()" style="text-align: center">
+                            <option value=""><center>Nivel</center></option>
+                            <option value="beg"><center>{{'crossfitterBeginner' | translate}}</center></option>
+                            <option value="int"><center>{{'crossfitterIntermediate' | translate}}</center></option>
+                            <option value="adv"><center>{{'crossfitterAdvanced' | translate}}</center></option>
+                            <option value="pro"><center>{{'crossfitterPro' | translate}}</center></option>
+                        </select>
+                    </label>
+                </div>
+                <div class="circle-row" ng-click="show('/friends')">
+                    <label class="red-font-wod">wods</label>
+                    <ul>
+                        <li class="red-full-circle"></li>
+                        <li class="red-full-circle"></li>
+                        <li class="red-full-circle"></li>
+                        <li class="red-empty-circle"></li>
+                        <li class="red-empty-circle"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grey-rectangle">
+            <label class="red-font-club">{{usuario.club}}</label>
+            <label class="club-location-font">- {{usuario.localizacionClub}}</label>
+        </div>
+        <div class="sports-list-profile">
+            <ion-list>
+                <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
+                    <div class="item-space-profile" ng-click="show('/videoExplanation/' + sport.video)">
+                        <div ng-class="sport.image" style="margin-top: 2%; margin-right: 2%; width: 35px; height: 35px;"></div>
+                        <div class="label-space">
+                            <div class="row">
+                                <label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
+                                <label class="font-measure right-alignment col without-margins">{{sport.weight + measurementProfile}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <label ng-click="show('/statistics')" class="green-button-background">
+            <span class="statistics-font">{{'showStadistics' | translate}}</span>
+            <div class="statistics-green-background"></div>
+        </label>
+    </ion-content>
 </div>

@@ -1,51 +1,49 @@
 <div ng-controller="configurationController" class="background-img">
-	<div class="full-space">
-		<div class="header">	
-			<div class="bar bar-header menu-title-page">
-				<div class="right-alignment" style="position: absolute; right: 8%; margin-top: 1%">
-                    <i class="red-back-arrow right-alignment" ng-click="show('/home')"></i>
-			  	</div>
-			</div>
-			<div class="bar background-title">
-				<div class="margin-alignment-subheader">
-				  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
-				  	<div class="right-alignment" style="position: absolute; right: 8%;">
-						<div class="right-alignment" ng-class="iconHeader"></div>		
-				  	</div>
-			  	</div>
-			</div>
+	<div class="header">	
+		<div class="bar bar-header menu-title-page">
+			<div class="right-alignment" style="position: absolute; right: 8%; margin-top: 1%">
+                <i class="red-back-arrow right-alignment" ng-click="show('/home')"></i>
+		  	</div>
 		</div>
-		<div class="content-page">
-			<div class="row" style="margin-bottom: 2%;">
-				<div class="font-fields-configuration-label col col-50">{{'language' | translate}}:</div>
-				<div class="col col-50">
-					<select class="language-select" ng-model="language" ng-change="changeLanguage()" style="text-align: center">
-						<option value="es"><center>{{'spanish' | translate}}</center></option>
-						<option value="en"><center>{{'english' | translate}}</center></option>
-						<option value="ge"><center>{{'german' | translate}}</center></option>
-						<option value="fr"><center>{{'french' | translate}}</center></option>
-					    <option value="it"><center>{{'italian' | translate}}</center></option>
-					    <option value="po"><center>{{'portuguese' | translate}}</center></option>
-					</select>
-				</div>
-			</div>
-			<hr class="horizontal-line"></hr>
-			<div class="row" style="margin-bottom: 2%; margin-top: 2%">
-				<label class="font-fields-configuration-label col col-67">{{'unitOfMeasurement' | translate}}:</label>
-				<div class="col col-33" style="position: absolute" ng-click="changeMeasurement()">
-					<div class="kg-img right-alignment" ng-show="measurement"></div>
-					<div class="light-kg-img right-alignment" ng-hide="measurement"></div>
-					<div class="lb-img right-alignment" ng-hide="measurement"></div>
-					<div class="light-lb-img right-alignment" ng-show="measurement"></div>
-				</div>
-			</div>
-			<hr class="horizontal-line"></hr>
-			<label ng-click="changeHelp()" ng-class="help ? 'green-button-background' : 'grey-button-background'" style="margin-top: 4%;">
-				<span class="help-font">{{'helpsActivate' | translate}}</span>
-				<div ng-class="help ? 'question-green' : 'question-grey'"></div>
-			</label>
+		<div class="bar background-title">
+			<div class="margin-alignment-subheader">
+			  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
+			  	<div class="right-alignment" style="position: absolute; right: 8%;">
+					<div class="right-alignment" ng-class="iconHeader"></div>		
+			  	</div>
+		  	</div>
 		</div>
 	</div>
+	<ion-content class="content-page">
+		<div class="row" style="margin-bottom: 2%;">
+			<div class="font-fields-configuration-label col col-50">{{'language' | translate}}:</div>
+			<div class="col col-50">
+				<select class="language-select" ng-model="language" ng-change="changeLanguage()" style="text-align: center">
+					<option value="es"><center>{{'spanish' | translate}}</center></option>
+					<option value="en"><center>{{'english' | translate}}</center></option>
+					<option value="ge"><center>{{'german' | translate}}</center></option>
+					<option value="fr"><center>{{'french' | translate}}</center></option>
+				    <option value="it"><center>{{'italian' | translate}}</center></option>
+				    <option value="po"><center>{{'portuguese' | translate}}</center></option>
+				</select>
+			</div>
+		</div>
+		<hr class="horizontal-line"></hr>
+		<div class="row" style="margin-bottom: 2%; margin-top: 2%">
+			<label class="font-fields-configuration-label col col-67">{{'unitOfMeasurement' | translate}}:</label>
+			<div class="col col-33" style="position: absolute" ng-click="changeMeasurement()">
+				<div class="kg-img right-alignment" ng-show="measurement"></div>
+				<div class="light-kg-img right-alignment" ng-hide="measurement"></div>
+				<div class="lb-img right-alignment" ng-hide="measurement"></div>
+				<div class="light-lb-img right-alignment" ng-show="measurement"></div>
+			</div>
+		</div>
+		<hr class="horizontal-line"></hr>
+		<label ng-click="changeHelp()" ng-class="help ? 'green-button-background' : 'grey-button-background'" style="margin-top: 4%;">
+			<span class="help-font">{{'helpsActivate' | translate}}</span>
+			<div ng-class="help ? 'question-green' : 'question-grey'"></div>
+		</label>
+	</ion-content>
 	<div class="footer-menu">
 		<div class="content-page">
 			<div class="row">

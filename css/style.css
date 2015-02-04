@@ -94,8 +94,6 @@
     display: flex;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 4%;
-    margin-bottom: 4%;
     padding: 0 12px;
     color: #FFFFFF;
 }
@@ -320,12 +318,10 @@
 }
 
 .content-page {
-    height: 88%;
     width: 84%;
     margin-right: 8%;
     margin-left: 8%;
-    margin-top: 2%;
-    margin-bottom: 0%;
+    margin-top: 24%;
     overflow-y: scroll;
 }
 
