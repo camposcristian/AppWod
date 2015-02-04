@@ -39,9 +39,11 @@ var translations = {
         "crossfitterAdvanced": "Crossfitter Advanced &nbsp; Level",
         "crossfitterPro": "Crossfitter Pro &nbsp; Level",
         "club": "Club",
+        "localizacionClub": "Club location",
         "today": "Today",
         "startWOD": "Start WOD",
-        "createWOD": "Create WOD"
+        "createWOD": "Create WOD",
+        "saveProfile": "Save profile"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -83,8 +85,10 @@ var translations = {
         "crossfitterAdvanced": "Crossfitter Nivel &nbsp; Avanzado",
         "crossfitterPro": "Crossfitter Nivel &nbsp; Pro",
         "club": "Club",
+        "localizacionClub": "Localización del club",
         "today": "Hoy",
         "startWOD": "Inicial WOD",
-        "createWOD": "Crear WOD"
+        "createWOD": "Crear WOD",
+        "saveProfile": "Guardar perfil"
 	}
 }

@@ -52,8 +52,17 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
         $scope.imageURI = window.localStorage['imageURI'];
     }
     window.localStorage['measurement'] === 'true' ? $scope.measurementProfile = 'kg' : $scope.measurementProfile = 'lb'; /* True significa que es kg, false significa que es lb */
-    console.log(window.localStorage['measurement']);
     
+    $scope.saveProfile = function() {
+        alert('llega');
+        $scope.editingProfile = false;
+        window.localStorage['name'] = $scope.usuario.nombre;
+        window.localStorage['lastName'] = $scope.usuario.apellido;
+        window.localStorage['country'] = $scope.usuario.pais;
+        window.localStorage['level'] = $scope.usuario.nivel;
+        window.localStorage['club'] = $scope.usuario.club;
+        window.localStorage['locationClub'] = $scope.usuario.localizacionClub;
+    }
 
     $scope.usuario = [];
     $scope.usuario.nombre = "";
@@ -159,6 +168,7 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
     $scope.iconHeader = 'configuration-white';
     $scope.language = "en";
     $scope.measurement = true; /* True significa que es kg, false significa que es lb */
+    window.localStorage['measurement'] = true;
     $scope.help = true;
     
     $scope.show = function ( path ) {
@@ -167,6 +177,7 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
 
     $scope.changeMeasurement = function() {
         $scope.measurement = !$scope.measurement;
+        window.localStorage['measurement'] = !window.localStorage['measurement'];
     }
 
     $scope.changeHelp = function() {

@@ -107,11 +107,11 @@
 
 .red-font-club {
     font-family: Roboto-bold;
-    text-align: left;
-    font-size: 1.3em;
+    text-align: right;
+    font-size: 18px !important;
     color: rgb(230, 0, 0) !important;
     white-space: nowrap;
-    margin-top: 2%;
+    margin-right: 4px;
 }
 
 .red-font-club-share-profile {
@@ -134,13 +134,13 @@
 
 .club-location-font {
     font-family: Roboto-light;
-    text-align: right;
-    font-size: 18px;
+    text-align: left;
+    font-size: 18px !important;
     color: rgb(67, 67, 67);
     white-space: nowrap;
     line-height: inherit;
-    margin-top: 2%;
     margin-right: auto;
+    margin-left: 4px;
 }
 
 .red-font-normal {
