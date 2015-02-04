@@ -24,12 +24,11 @@
         <ion-content style="margin-top: 80px;">
             <ion-list>
                 <div ng-repeat="sport in training">
-
                     <ion-item class="item-training"
                               ng-click="toggleGroup(sport)"
                               ng-class="{active: isGroupShown(sport) || isActiveDay(sport.day)}">
                         <div class="row" ng-hide="isActiveDay(sport.day)">
-                            {{sport.day}}
+                            {{sport.day | translate}}
                         </div>
                         <div class="row" ng-show="isActiveDay(sport.day)">
                             {{'today' | translate}}
@@ -39,20 +38,18 @@
                                 <div ng-repeat="exercise in sport.exercises" class="button button-icon icon center-img" ng-class="exercise.image"></div>
                             </div>
                             <div class="overflow-right bottom-line">
-                                {{sport.type || "Crear WOD"}}
+                                {{sport.type || ('createWOD' | translate)}}
                                 <i class="icon" ng-class="isGroupShown(sport) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
                             </div>
                         </div>
                     </ion-item>
-
                     <div class="accordion-training" ng-show="isGroupShown(sport)">
                         <div class="training-wod-button">
                             <label ng-click="show('/freeWOD')" class="red-button-background">
                                 <i class="icon ion-chevron-right" style="color:white"></i>
-                                <span class="training-wod-font">Iniciar WOD</span>
+                                <span class="training-wod-font">{{'startWOD' | translate}}</span>
                             </label>
                         </div>
-
                         <div style="margin-top: -52px;">
                             <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
                                 <!--<span>{{exercise.count}}</span>-->

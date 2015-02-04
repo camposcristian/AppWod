@@ -39,7 +39,9 @@ var translations = {
         "crossfitterAdvanced": "Crossfitter Advanced &nbsp; Level",
         "crossfitterPro": "Crossfitter Pro &nbsp; Level",
         "club": "Club",
-        "today": "Today"
+        "today": "Today",
+        "startWOD": "Start WOD",
+        "createWOD": "Create WOD"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -81,6 +83,8 @@ var translations = {
         "crossfitterAdvanced": "Crossfitter Nivel &nbsp; Avanzado",
         "crossfitterPro": "Crossfitter Nivel &nbsp; Pro",
         "club": "Club",
-        "today": "Hoy"
+        "today": "Hoy",
+        "startWOD": "Inicial WOD",
+        "createWOD": "Crear WOD"
 	}
 }

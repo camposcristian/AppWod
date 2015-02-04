@@ -157,25 +157,9 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
 app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
-    
-    if (!window.localStorage['language']) {
-        window.localStorage['language'] = "es";  
-        $scope.language = "es";
-    } else {
-        $scope.language = window.localStorage['language'];
-    }
-    if (!window.localStorage['measurement']) {
-        window.localStorage['measurement'] = "true";
-        $scope.measurement = true; /* True significa que es kg, false significa que es lb */
-    } else {
-        $scope.measurement = Boolean(window.localStorage['measurement']); /* True significa que es kg, false significa que es lb */
-    }
-    if (!window.localStorage['help']) {
-        window.localStorage['help'] = "true";
-        $scope.help = true;
-    } else {
-        $scope.help = Boolean(window.localStorage['help']);
-    }
+    $scope.language = "en";
+    $scope.measurement = true; /* True significa que es kg, false significa que es lb */
+    $scope.help = true;
     
     $scope.show = function ( path ) {
         $location.path( '/app' + path );
@@ -183,17 +167,14 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
 
     $scope.changeMeasurement = function() {
         $scope.measurement = !$scope.measurement;
-        window.localStorage['measurement'] = $scope.measurement;
     }
 
     $scope.changeHelp = function() {
         $scope.help = !$scope.help;
-        window.localStorage['help'] = $scope.help;
     }
 
-    $scope.changeLanguage = function(){
-        $translate.use($scope.language);
-        window.localStorage['language'] = $scope.language;
+    $scope.changeLanguage = function(language) {
+        $translate.use(language);
     }
 }]);
 
@@ -310,7 +291,7 @@ app.controller('calendarController', ['$scope', function($scope) {
 
 app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function($scope, $location, $interval, trainingExercises) {
     $scope.pageTitle = 'training';
-    $scope.iconHeader = 'icon-top-menu-training';
+    $scope.iconHeader = 'training-title';
     trainingExercises.fetch().then(function(data) {
         var today = new Date();
         var todayName = today.getDayName();
