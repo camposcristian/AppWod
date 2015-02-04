@@ -119,7 +119,7 @@ app.factory('stadistics', ['$q', '$timeout', '$http', function($q, $timeout, $ht
         fetch: function() {
             var deferred = $q.defer();
             $timeout(function() {
-                $http.get('../resources/stadistics.json').success(function(data) {
+                $http.get('./resources/stadistics.json').success(function(data) {
                     deferred.resolve(data);
                 });
             }, 30);
@@ -134,7 +134,7 @@ app.factory('profileExercises', ['$q', '$timeout', '$http', function($q, $timeou
         fetch: function() {
             var deferred = $q.defer();
             $timeout(function() {
-                $http.get('../resources/exercises.json').success(function(data) {
+                $http.get('./resources/exercises.json').success(function(data) {
                     deferred.resolve(data);
                 });
             }, 30);
@@ -149,7 +149,7 @@ app.factory('trainingExercises', ['$q', '$timeout', '$http', function($q, $timeo
         fetch: function() {
             var deferred = $q.defer();
             $timeout(function() {
-                $http.get('../resources/training.json').success(function(data) {
+                $http.get('./resources/training.json').success(function(data) {
                     deferred.resolve(data);
                 });
             }, 30);
