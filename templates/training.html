@@ -1,27 +1,21 @@
 <div ng-controller="trainingController" class="background-img">
     <div class="header">
         <div class="bar bar-header menu-title-page">
-            <div class="col">
-                <button class="button button-icon icon icon-top-menu-profile center-img" ng-click="show('/profile')"></button>
-            </div>
-            <div class="col">
-                <div class="vertical-red-line center-img"></div>
-            </div>
-            <div class="col">
-                <button class="button button-icon icon icon-top-menu-pesa center-img" ng-click="show('/freeWOD')"></button>
-            </div>
-            <div class="col">
-                <div class="vertical-red-line center-img"></div>
-            </div>
-            <div class="col">
-                <button class="button button-icon icon icon-top-menu-calendar center-img" ng-click="show('/calendar')"></button>
+            <div class="content-title-bar">
+                <div class="icon-top icon-top-menu-profile" ng-click="show('/profile')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-pesa left-alignment" ng-click="show('/freeWOD')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-viaje" ng-click="show('/tripWOD')"></div>
+                <div class="header-line"><center style="height: 100%;"><div class="vertical-red-line"></div></center></div>
+                <div class="icon-top icon-top-menu-calendar right-alignment" ng-click="show('/calendar')"></div>
             </div>
         </div>
-        <div class="bar bar-subheader background-title row">
-            <div class="col col-67 font-title font-principal">{{pageTitle}}</div>
-            <div class="col col-33">
-                <div class="row no-row" ng-click="show('/friends')">
-                    <div class="center-img" ng-class="iconHeader"></div>
+        <div class="bar background-title">
+            <div class="margin-alignment-subheader">
+                <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
+                <div class="right-alignment" style="position: absolute; right: 8%;">
+                    <div class="right-alignment" ng-class="iconHeader"></div>       
                 </div>
             </div>
         </div>

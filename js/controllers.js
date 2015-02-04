@@ -309,7 +309,7 @@ app.controller('calendarController', ['$scope', function($scope) {
 }]);
 
 app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function($scope, $location, $interval, trainingExercises) {
-    $scope.pageTitle = 'Entrenamiento';
+    $scope.pageTitle = 'training';
     $scope.iconHeader = 'icon-top-menu-training';
     trainingExercises.fetch().then(function(data) {
         var today = new Date();
