@@ -1072,21 +1072,26 @@ hr .black-line {
 }
 
 .icon-training-red {
-    background: url("../img/Ejercicios/Entrenamiento/Cardio.svg");
+    background: url("../img/Ejercicios/Entrenamiento/Cardio.svg") no-repeat;
 }
 
 .icon-training-green {
-    background: url("../img/Ejercicios/Entrenamiento/Fuerza.svg");
+    background: url("../img/Ejercicios/Entrenamiento/Fuerza.svg") no-repeat;
 }
 
 .icon-training-orange-free {
-    background: url("../img/Ejercicios/Entrenamiento/Dia libre.svg");
+    background: url("../img/Ejercicios/Entrenamiento/Dia libre.svg") no-repeat;
 }
 
 .icon-training-orange {
-    background: url("../img/Ejercicios/Entrenamiento/Funcional.svg");
+    background: url("../img/Ejercicios/Entrenamiento/Funcional.svg") no-repeat;
 }
 
 .icon-training-blue {
-    background: url("../img/Ejercicios/Entrenamiento/Gimnasia.svg");
+    background: url("../img/Ejercicios/Entrenamiento/Gimnasia.svg") no-repeat;
+}
+
+.profile-circle {
+    border: none;
+    margin: 1px;
 }

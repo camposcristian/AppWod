@@ -235,6 +235,7 @@
 
 .background-carrousel-friends {
     background-color: #D2D0D1;
+    height:34%;
 }
 
 .fc-today {
@@ -641,4 +642,8 @@ input {
     right: 5%;
     top: 0;
     cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+    background-color: transparent;
 }

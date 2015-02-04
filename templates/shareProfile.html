@@ -1,166 +1,168 @@
 <div ng-controller="shareProfileController" class="background-img full-space">
-	<div class="full-space">
-		<div class="header">
+    <div class="full-space">
+        <div class="header">
             <div class="bar bar-header menu-title-page">
                 <div class="right-alignment" style="position: absolute; right: 8%; margin-top: -5px;">
                     <i class="red-back-arrow right-alignment" ng-click="show('/profile')"></i>
                 </div>
             </div>
-			<div class="bar background-title">
-				<div class="margin-alignment-subheader">
-				  	<div class="font-principal left-alignment">{{pageTitle | translate}}</div>
-				  	<div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 8%; top: 0;">
-						<div class="font-secondary">
-							<span style="margin-right: 12px;">{{beginAngularBracket}}{{'contacts' | translate}}</span>
-							<div ng-class="iconHeader"></div>{{endAngularBracket}}
-						</div> 
-				  	</div>
-			  	</div>
-			</div>
-		</div>
-		<div class="content-page-share-profile">
-			<div class="left-alignment contacts-picture-space" ng-click="getPicture()">
-				<img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />	
-			</div>
-			<div class="user-information-share-profile">
-				<div style="height: 20%;">
-					<label class="item-input item-input-size">
-						<input type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 1.4em;" placeholder="{{'nameAndSurname' | translate}}"/>
-					</label>
-				</div>
-				<div class="display-flex" style="margin-top: -8%;">
+            <div class="bar background-title">
+                <div class="margin-alignment-subheader">
+                    <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
+                    <div class="right-alignment" ng-click="show('/friends')" style="position: absolute; right: 8%; top: 0;">
+                        <div class="font-secondary">
+                            <span style="margin-right: 12px;">{{beginAngularBracket}}{{'contacts' | translate}}</span>
+                            <div ng-class="iconHeader"></div>{{endAngularBracket}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-page-share-profile">
+            <div class="left-alignment contacts-picture-space">
+                <img ng-src="{{imageURI}}" id="myImage" width="100%" height="100%" />
+            </div>
+            <div class="user-information-share-profile">
+                <div style="height: 20%;">
                     <label class="item-input item-input-size">
-                        <input type="text" class="red-font-club-share-profile" ng-model="usuario.club" ng-click="usuario.club = null" placeholder="{{'club' | translate}}" />
+                        <input disabled type="text" class="display-flex" ng-model="usuario.nombre" style="font-size: 1.4em;" placeholder="{{'nameAndSurname' | translate}}" />
+                    </label>
+                </div>
+                <div class="display-flex" style="margin-top: -8%;">
+                    <label class="item-input item-input-size">
+                        <input disabled type="text" class="red-font-club-share-profile" ng-model="usuario.club" ng-click="usuario.club = null" placeholder="{{'club' | translate}}" />
                         <span class="country-flag" ng-class="usuario.flag"></span>
                     </label>
                 </div>
-				<hr class="black-line" style="min-width: 100%; margin-top: -0.5%;"></hr>
-				<div style="height: 35%; margin-top: -1%;">
-					<label class="align-text-left level-font-crossfitter">{{usuario.nivel}}</label>
-				</div>
-			</div>
-		</div>
-		<div>
-			<hr class="black-line" style="min-width: 100%;"></hr>
-		</div>
-			<div class="row no-row background-friends-wods">
-				<div class="row no-row">
-					<div class="col col-20 center-title-text">
-						<label class="red-font-normal">wods </label>
-					</div>
-					<div class="col col-30">
-						<div class="row">
-							<div class="red-full-circle"></div>
-							<div class="red-full-circle"></div>
-							<div class="red-full-circle"></div>
-							<div class="red-full-circle"></div>
-							<div class="red-full-circle"></div>
-						</div>
-					</div>
-					<div class="col col-20 col-offset-30">
-						<label class="font-friends">{{'friends' | translate}} </label>
-					</div>
-				</div>
-			</div>
-			<hr class="red-line">
-			<div class="background-carrousel-friends row">
-				<div class="col col-10 col-center">
-					<div class="left-angular-bracket" ng-click="previous()"></div>
-				</div>
-				<ion-nav-page class="col" id="wods-friends">
-					<ion-slide-box on-slide-changed="slideChanged(index)">
-						<ion-slide>
-				        	<label class="row font-grey-small">Martes 4-1-2014</label>
-				        	<div class="row">
-				        		<div class="col col-50">
-				        			<label class="row red-state-wod"><strong>5 vueltas</strong></label>
-				        			<hr class="black-line">
-				        			<div class="row">
-				        				<label class="font-grey-small col">5</label>
-				        				<label class="font-grey-small col col-75">Clean & Jerk</label>
-				        			</div>
-				        			<div class="row">
-			        					<label class="font-grey-small col">10</label>
-			        					<label class="font-grey-small col col-75">Pull-Ups</label>
-				        			</div>
-				        			<div class="row">
-				        				<label class="font-grey-small col">20</label>
-				        				<label class="font-grey-small col col-75">Squat</label>
-				        			</div>
-				        			<div class="row">
-				        				<label class="font-grey-small col">15</label>
-				        				<label class="font-grey-small col col-75">Box Jump</label>
-				        			</div>
-				        			<div class="row">
-				        				<label class="font-grey-small col col-offset-20">Run x 400</label>
-				        			</div>
-								</div>
-								<div class="col col-50">
-									<div class="row">
-										<div class="col">
-											<div class="button button-icon icon green-muscle"></div>
-										</div>
-										<div class="col">
-											<div class="button button-icon icon blue-hand"></div>
-										</div>
-										<div class="col">
-											<div class="button button-icon icon red-muscle"></div>
-										</div>
-									</div>
-									</br>
-									</br>
-									<div class="row">
-										<div class="col button button-icon icon clock center-img"></div>
-										<label class="col clock-label">12:15</label>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="item item-text-wrap">
-		    						Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ubore.
-		  						</div>
-							</div>
-						</ion-slide>
-						<ion-slide>
-							<label class="font-grey-small">Miércoles 5-1-2014</label>
-						</ion-slide>
-					</ion-slide-box>
-				</ion-nav-page>
-				<div class="col col-10 col-center">
-					<div class="right-angular-bracket" ng-click="next()" ng-if="slideIndex != 2"></div>
-				</div>
-			</div>
-			<div class="footer">
-				<hr class="row black-line">
-				<div class="row">
-					<div class="col col-50 col-offset-10">
-						<div class="row">
-							<div class="green-clean-jerk col col-20"></div>
-							<label class="green-sport-font col">160 Kg</label>
-						</div>
-						<div class="row">
-							<div class="green-deadlift col col-20"></div>
-							<label class="green-sport-font col">250 Kg</label>
-						</div>
-					</div>
-					<div class="col col-50">
-						<div class="row">
-							<div class="green-front-squat col col-20"></div>
-							<label class="green-sport-font col">200 Kg</label>
-						</div>
-						<div class="row">
-							<div class="green-power-clean col col-20"></div>
-							<label class="green-sport-font col">70 Kg</label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                <hr class="black-line" style="min-width: 100%; margin-top: -0.5%;"></hr>
+                <div style="height: 35%; margin-top: -1%;">
+                    <label class="align-text-left level-font-crossfitter">{{usuario.nivel}}</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr class="black-line" style="min-width: 100%;margin: 0;padding: 0;border: 0;border-top: 1px solid black;" />
+        </div>
+        <div class="row no-row background-friends-wods">
+            <div class="row no-row">
+                <div class="col col-20 center-title-text" style="margin-left: 4%;">
+                    <label class="red-font-normal">wods </label>
+                </div>
+                <div class="col col-30">
+                    <div class="row">
+                        <div class="red-full-circle profile-circle"></div>
+                        <div class="red-full-circle profile-circle"></div>
+                        <div class="red-empty-circle profile-circle"></div>
+                        <div class="red-empty-circle profile-circle"></div>
+                        <div class="red-empty-circle profile-circle"></div>
+                    </div>
+                </div>
+                <div class="col col-20 col-offset-30" style="margin-right: 4%;">
+                    <label class="font-friends">{{'friends' | translate}} </label>
+                </div>
+            </div>
+        </div>
+        <hr class="red-line" style="margin: 0; border-bottom: 2px solid rgb(230,0,0);">
+        <div class="background-carrousel-friends row">
+            <div class="col col-10 col-center">
+                <div class="left-angular-bracket" ng-click="previous()"></div>
+            </div>
+            <ion-nav-page class="col" id="wods-friends">
+                <ion-slide-box on-slide-changed="slideChanged(index)">
+                    <ion-slide>
+                        <div class="row">
+                            <div class="col col-50">
+                                <label class="row red-state-wod"><strong>5 vueltas</strong></label>
+                                <hr class="black-line">
+                                <div class="row">
+                                    <label class="font-grey-small col">5</label>
+                                    <label class="font-grey-small col col-75">Clean & Jerk</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-grey-small col">10</label>
+                                    <label class="font-grey-small col col-75">Pull-Ups</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-grey-small col">20</label>
+                                    <label class="font-grey-small col col-75">Squat</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-grey-small col">15</label>
+                                    <label class="font-grey-small col col-75">Box Jump</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-grey-small col col-offset-20">Run x 400</label>
+                                </div>
+                            </div>
+                            <div class="col col-50">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="row font-grey-small">Martes 4-1-2014</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="left-alignment">
+                                        <ul>
+                                            <li class="button button-icon icon center-img icon-training-red"></li>
+                                            <li class="button button-icon icon center-img icon-training-blue"></li>
+                                            <li class="button button-icon icon center-img icon-training-orange"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </br>
+                                </br>
+                                <div class="row">
+                                    <div class="col button button-icon icon clock center-img"></div>
+                                    <label class="col clock-label">12:15</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="item item-text-wrap">
+                                Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ubore.
+                            </div>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <label class="font-grey-small">Miércoles 5-1-2014</label>
+                    </ion-slide>
+                </ion-slide-box>
+            </ion-nav-page>
+            <div class="col col-10 col-center">
+                <div class="right-angular-bracket" ng-click="next()" ng-if="slideIndex != 2"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <hr class="row black-line">
+            <div class="row">
+                <div class="col col-50 col-offset-10">
+                    <div class="row">
+                        <div class="green-clean-jerk col col-20"></div>
+                        <label class="green-sport-font col">160 Kg</label>
+                    </div>
+                    <div class="row">
+                        <div class="green-deadlift col col-20"></div>
+                        <label class="green-sport-font col">250 Kg</label>
+                    </div>
+                </div>
+                <div class="col col-50">
+                    <div class="row">
+                        <div class="green-front-squat col col-20"></div>
+                        <label class="green-sport-font col">200 Kg</label>
+                    </div>
+                    <div class="row">
+                        <div class="green-power-clean col col-20"></div>
+                        <label class="green-sport-font col">70 Kg</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<div class="button-bar">
-		  	<a class="button">Amigos</a>
-		  	<a class="button">Todos</a>
-		  	<a class="button">Buscar</a>
-		</div>
-	</div>
+    <div class="button-bar">
+        <a class="button">Amigos</a>
+        <a class="button">Todos</a>
+        <a class="button">Buscar</a>
+    </div>
+</div>
 </div>
