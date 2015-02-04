@@ -44,6 +44,7 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.beginAngularBracket = '> '
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
+    $scope.editingProfile = false;
     
     if (!window.localStorage['imageURI']) {
         window.localStorage['imageURI'] = './img/iconsSVG/Perfil gris.svg';
@@ -54,8 +55,6 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     window.localStorage['measurement'] === 'true' ? $scope.measurementProfile = 'kg' : $scope.measurementProfile = 'lb'; /* True significa que es kg, false significa que es lb */
     
     $scope.saveProfile = function() {
-        alert('llega');
-        $scope.editingProfile = false;
         window.localStorage['name'] = $scope.usuario.nombre;
         window.localStorage['lastName'] = $scope.usuario.apellido;
         window.localStorage['country'] = $scope.usuario.pais;

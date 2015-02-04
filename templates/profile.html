@@ -103,7 +103,7 @@
             <span class="statistics-font">{{'showStadistics' | translate}}</span>
             <div class="statistics-green-background"></div>
         </label>
-        <label ng-click="saveProfile()" class="green-button-background" ng-show="editingProfile">
+        <label ng-click="saveProfile(); editingProfile = false" class="green-button-background" ng-show="editingProfile">
             <span class="statistics-font">{{'saveProfile' | translate}}</span>
             <div class="statistics-green-background"></div>
         </label>
