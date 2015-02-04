@@ -346,6 +346,12 @@
     overflow-y: scroll;
 }
 
+.footer-configuration {
+    width: 84%;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
 .content-page-share-profile {
     width: 84%;
     margin-right: 8%;
