@@ -67,7 +67,7 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.usuario.nombre = "";
     $scope.usuario.pais = "arg";
     $scope.usuario.flag = "country-arg";
-    $scope.usuario.nivel = "";
+    $scope.usuario.nivel = "beg";
     $scope.usuario.club = "Crossfit Argos";
     $scope.usuario.localizacionClub = "Buenos Aires";
 

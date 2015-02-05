@@ -111,7 +111,7 @@
     font-size: 18px !important;
     color: rgb(230, 0, 0) !important;
     white-space: nowrap;
-    margin-right: 4px;
+    text-align: right;
 }
 
 .red-font-club-share-profile {
@@ -129,18 +129,16 @@
     text-align: left;
     font-size: 1.1em;
     color: rgb(67,67,67);
-    white-space: nowrap;   
+    white-space: nowrap;
 }
 
 .club-location-font {
     font-family: Roboto-light;
-    text-align: left;
     font-size: 18px !important;
     color: rgb(67, 67, 67);
     white-space: nowrap;
     line-height: inherit;
-    margin-right: auto;
-    margin-left: 4px;
+    text-align: left;
 }
 
 .red-font-normal {
@@ -251,11 +249,14 @@
 
 .clock-label {
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: Roboto-regular;
+    font-weight: 100;
+    font-family: Roboto-Light;
     text-align: left;
-    font-size: 300%;
+    font-size: 30px;
     color: #434343;
+    white-space: nowrap;
+    margin-top: -8px;
+    padding: 0;
 }
 
 .clock-label-timer {
@@ -406,5 +407,19 @@
 
 .item-input ::-webkit-input-placeholder {
     color: #434343 !important;
+    font-weight: bold;
+}
+
+.font-share-profile {
+    color: #434343;
+    font-family: Roboto-regular;
+    font-size: 90%;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.background-carrousel-friends .red-state-wod {
+    font-size: 13px;
+    text-align: right;
     font-weight: bold;
 }

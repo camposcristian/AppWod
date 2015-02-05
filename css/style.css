@@ -83,8 +83,7 @@
     text-align: center;
     width: 99%;
     display: inline-block;
-    padding: 5px;
-    margin-top: 11px;
+    padding: 0;
     background-color: #FFFFFF;
 }
 
@@ -236,7 +235,7 @@
 
 .background-carrousel-friends {
     background-color: #D2D0D1;
-    height:34%;
+    height: 34%;
 }
 
 .fc-today {
@@ -371,14 +370,15 @@
 
 .picture-space {
     width: 45%;
-    height: 138px;
-    margin-right: 5%;
+    margin-top: 5px;
 }
 
 .contacts-picture-space {
-    width: 25%;
-    height: 128.5px;
-    margin-top: -8%;
+    height: 72px;
+    width: 70px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .user-information {
@@ -396,7 +396,8 @@
     background-color: rgb(230,0,0);
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-top: -5px;
+    white-space: nowrap;
 }
 
 .sports-list-profile {
@@ -536,7 +537,7 @@ a.item-menu.background-img.item:active {
     white-space: nowrap;
     padding-bottom: 5px;
     line-height: 1;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .item-training.item.active .row .bottom-line {
@@ -554,6 +555,7 @@ a.item-menu.background-img.item:active {
     font-size: 18px;
     height: 100%;
     width: 100%;
+    white-space: pre-line;
     background-color: transparent;
     padding-bottom: 5px;
     line-height: 1;
@@ -652,4 +654,45 @@ input {
 
 button[disabled], html input[disabled] {
     background-color: transparent;
+}
+
+.red-font-club input,
+.club-location-font input {
+    height: 100%;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.black-line-share {
+    border-bottom: 1px solid black;
+}
+
+.background-carrousel-friends .row {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.share-exercises {
+    white-space: nowrap;
+}
+
+.card {
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.card-text {
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Roboto-Light;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.slider-pager {
+    display: none;
 }
