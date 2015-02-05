@@ -370,7 +370,7 @@
 
 .picture-space {
     width: 45%;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .contacts-picture-space {
@@ -533,10 +533,11 @@ a.item-menu.background-img.item:active {
     font-size: 20px;
     height: 100%;
     width: 100%;
+    font-family: "Roboto";
     background-color: transparent;
     white-space: nowrap;
     padding-bottom: 5px;
-    line-height: 1;
+    line-height: 1.1;
     margin-top: 5px;
 }
 
@@ -558,7 +559,7 @@ a.item-menu.background-img.item:active {
     white-space: pre-line;
     background-color: transparent;
     padding-bottom: 5px;
-    line-height: 1;
+    line-height: 1.2;
     color: rgb(230,0,0);
 }
 
