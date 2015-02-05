@@ -49,7 +49,7 @@
     },
     {
         "day": "thursday",
-        "type": "DIA LIBRE",
+        "type": "freeDay",
         "exercises": [
             {
                 "name": "Overhead squat",
@@ -60,7 +60,7 @@
     },
     {
         "day": "friday",
-        "type": "POR VUELTAS",
+        "type": "byRound",
         "exercises": [
             {
                 "name": "Overhead squat",
@@ -87,7 +87,7 @@
     },
     {
         "day": "sunday",
-        "type": "DIA LIBRE",
+        "type": "freeDay",
         "exercises": [
             {
                 "name": "Overhead squat",
@@ -119,7 +119,7 @@
     },
     {
         "day": "tuesday",
-        "type": "POR VUELTAS",
+        "type": "byRound",
         "exercises": [
             {
                 "name": "Ring dip",
@@ -146,7 +146,7 @@
     },
     {
         "day": "thursday",
-        "type": "DIA LIBRE",
+        "type": "freeDay",
         "exercises": [
             {
                 "name": "Overhead squat",
@@ -194,7 +194,7 @@
     },
     {
         "day": "sunday",
-        "type": "DIA LIBRE",
+        "type": "freeDay",
         "exercises": [
             {
                 "name": "Overhead squat",

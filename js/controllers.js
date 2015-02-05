@@ -71,7 +71,6 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.usuario.club = "Crossfit Argos";
     $scope.usuario.localizacionClub = "Buenos Aires";
 
-
     $scope.isNombreApellidoCompleted = function() {
         return angular.isDefined($scope.usuario.nombre) && $scope.usuario.nombre !== "";
     };
@@ -308,15 +307,67 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         var i = 0;
         var j = 0;
         var k;
+        var trainingDay = [];
         $scope.training = [];
         for(i; i < data.length; i++) {
             if (data[i].day.toLowerCase() === todayName.toLowerCase() && i >= 2) {
                 k = i-2;
+                trainingDay = data[k];
                 for(k; k < data.length; k++) {
-                    $scope.training.push(data[k]);
+                    trainingDay = data[k];
+                    if(trainingDay.type === "" && k < i) {
+                        trainingDay.type = 'withoutWod';
+                    } else if (trainingDay.type === "" && k >= i) {
+                        trainingDay.type = 'createWod';
+                    }
+                    $scope.training.push(trainingDay);
                 }
                 for(j; j < i-2; j++) {
-                    $scope.training.push(data[j]);
+                    trainingDay = data[j];
+                    if(trainingDay.type === "") {
+                        trainingDay.type = 'withoutWod';
+                    }
+                    $scope.training.push(trainingDay);
+                }
+                return;
+            } else if (data[i].day.toLowerCase() === todayName.toLowerCase() && i === 1) {
+                k = i-1;
+                trainingDay = data[k];
+                for(k; k < data.length-1; k++) {
+                    trainingDay = data[k];
+                    if(trainingDay.type === "" && k < i) {
+                        trainingDay.type = 'withoutWod';
+                    } else if (trainingDay.type === "" && k >= i) {
+                        trainingDay.type = 'createWod';
+                    }
+                    $scope.training.push(trainingDay);
+                }
+                for(j; j < i-1; j++) {
+                    trainingDay = data[j];
+                    if(trainingDay.type === "") {
+                        trainingDay.type = 'withoutWod';
+                    }
+                    $scope.training.push(trainingDay);
+                }
+                return;
+            } else {
+                k = 0;
+                trainingDay = data[k];
+                for(k; k < data.length-2; k++) {
+                    trainingDay = data[k];
+                    if(trainingDay.type === "" && k < i) {
+                        trainingDay.type = 'withoutWod';
+                    } else if (trainingDay.type === "" && k >= i) {
+                        trainingDay.type = 'createWod';
+                    }
+                    $scope.training.push(trainingDay);
+                }
+                for(j; j < i; j++) {
+                    trainingDay = data[j];
+                    if(trainingDay.type === "") {
+                        trainingDay.type = 'withoutWod';
+                    }
+                    $scope.training.push(trainingDay);
                 }
                 return;
             }

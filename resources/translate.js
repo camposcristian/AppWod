@@ -43,7 +43,14 @@ var translations = {
         "today": "Today",
         "startWOD": "Start WOD",
         "createWOD": "Create WOD",
-        "saveProfile": "Save profile"
+        "saveProfile": "Save profile",
+        "createWod": "Create WOD",
+        "withoutWod": "Without WOD",
+        "21-15-9": "21-15-9",
+        "EMOM": "EMOM",
+        "freeDay": "Free day",
+        "byRound": "By round",
+        "AMRAP": "AMRAP"
 	},
 	"es": {
 		"profile": "Perfil",
@@ -89,6 +96,13 @@ var translations = {
         "today": "Hoy",
         "startWOD": "Inicial WOD",
         "createWOD": "Crear WOD",
-        "saveProfile": "Guardar perfil"
+        "saveProfile": "Guardar perfil",
+        "createWod": "Crear WOD",
+        "withoutWod": "Sin WOD",
+        "21-15-9": "21-15-9",
+        "EMOM": "EMOM",
+        "freeDay": "Día libre",
+        "byRound": "Por vueltas",
+        "AMRAP": "AMRAP"
 	}
 }
