@@ -235,7 +235,8 @@
 
 .background-carrousel-friends {
     background-color: #D2D0D1;
-    height: 34%;
+    height: 28%;
+    border-bottom: 2px solid rgb(230,0,0);
 }
 
 .fc-today {
@@ -674,6 +675,10 @@ button[disabled], html input[disabled] {
     margin: 0;
 }
 
+    .background-carrousel-friends .row .col {
+        padding-top: 0;
+    }
+
 .share-exercises {
     white-space: nowrap;
 }
@@ -681,7 +686,7 @@ button[disabled], html input[disabled] {
 .card {
     padding: 0;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0;
 }
 
@@ -690,10 +695,27 @@ button[disabled], html input[disabled] {
     margin-left: 10px;
     margin-right: 10px;
     font-family: Roboto-Light;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.2;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .slider-pager {
     display: none;
+}
+
+.background-carrousel-friends button {
+    font-family: Roboto-Light;
+    font-size: 11px;
+    width: 100%;
+    color: white !important;
+    background-color: rgb(91,128,33);
+    border-radius: 5px;
+    text-transform: uppercase;
+    min-height: 30px;
+    padding: 0;
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }

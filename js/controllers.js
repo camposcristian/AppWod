@@ -411,7 +411,7 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
     }
 }]);
 
-app.controller('shareProfileController', ['$scope', '$location', function($scope, $location) {
+app.controller('shareProfileController', ['$scope', '$location', 'profileExercises', function ($scope, $location, profileExercises) {
     $scope.pageTitle = 'profile'; 
     $scope.beginAngularBracket = '> ';
     $scope.endAngularBracket = ' <';
@@ -435,4 +435,8 @@ app.controller('shareProfileController', ['$scope', '$location', function($scope
     $scope.previous = function() {
         $scope.$broadcast('slideBox.prevSlide');
     };
+
+    profileExercises.fetch().then(function (data) {
+        $scope.exercises = data;
+    });
 }]);

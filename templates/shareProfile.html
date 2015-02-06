@@ -45,11 +45,11 @@
         </div>
         <div class="row no-row background-friends-wods">
             <div class="row no-row">
-                <div class="col col-20 center-title-text" style="margin-left: 4%;">
+                <div class="col col-20 center-title-text" style="margin-left: 10%;">
                     <label class="red-font-normal">wods </label>
                 </div>
                 <div class="col col-30">
-                    <div class="row">
+                    <div class="row" style="margin-left: -10px;">
                         <div class="red-full-circle profile-circle"></div>
                         <div class="red-full-circle profile-circle"></div>
                         <div class="red-empty-circle profile-circle"></div>
@@ -57,7 +57,7 @@
                         <div class="red-empty-circle profile-circle"></div>
                     </div>
                 </div>
-                <div class="col col-20 col-offset-30" style="margin-right: 4%;">
+                <div class="col col-20 col-offset-30" style="margin-right: 13%;">
                     <label class="font-friends">{{'friends' | translate}} </label>
                 </div>
             </div>
@@ -98,11 +98,11 @@
                             <div class="col col-50">
                                 <div class="row">
                                     <div class="col">
-                                        <label class="row font-share-profile">jue 12/1/2015</label>
+                                        <label class="row font-share-profile" style="padding-left: 22px;">jue 12/1/2015</label>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="left-alignment">
+                                    <div class="right-alignment" style="padding-left: 8px;">
                                         <ul class="share-exercises">
                                             <li class="button button-icon icon icon-training-red"></li>
                                             <li class="button button-icon icon icon-training-blue"></li>
@@ -111,6 +111,11 @@
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <button class="button button-small">
+                                        Compartido
+                                    </button>
+                                </div>
+                                <div class="row" style="margin-left: 5px; height: 30px;">
                                     <div class="button button-icon icon clock"></div>
                                     <label class="col clock-label">12:15</label>
                                 </div>
@@ -119,13 +124,70 @@
                         <div class="row">
                             <div class="card">
                                 <div class="card-text">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget. 
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
                                 </div>
                             </div>
                         </div>
                     </ion-slide>
                     <ion-slide>
-                        <label class="font-grey-small">Miércoles 5-1-2014</label>
+                        <div class="row">
+                            <div class="col col-50">
+                                <div class="black-line-share red-state-wod">por vueltas</div>
+                                <div class="row">
+                                    <label class="font-share-profile left-alignment col">10</label>
+                                    <label class="font-share-profile col col-75">Toes to bar</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-share-profile left-alignment col">10</label>
+                                    <label class="font-share-profile col col-75">Handstand PU</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-share-profile left-alignment col">15</label>
+                                    <label class="font-share-profile col col-75">Wall Ball</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-share-profile left-alignment col">20</label>
+                                    <label class="font-share-profile col col-75">Air Squat</label>
+                                </div>
+                                <div class="row">
+                                    <label class="font-share-profile left-alignment col">500m</label>
+                                    <label class="font-share-profile col col-75">Run</label>
+                                </div>
+
+                            </div>
+                            <div class="col col-50">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="row font-share-profile" style="padding-left: 22px;">vie 13/1/2015</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="right-alignment" style="padding-left: 8px;">
+                                        <ul class="share-exercises">
+                                            <li class="button button-icon icon icon-training-red"></li>
+                                            <li class="button button-icon icon icon-training-blue"></li>
+                                            <li class="button button-icon icon icon-training-orange"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="button button-small">
+                                        Compartido
+                                    </button>
+                                </div>
+                                <div class="row" style="margin-left: 5px; height: 30px;">
+                                    <div class="button button-icon icon clock"></div>
+                                    <label class="col clock-label">12:15</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget.
+                                </div>
+                            </div>
+                        </div>
                     </ion-slide>
                 </ion-slide-box>
             </ion-nav-page>
@@ -133,37 +195,30 @@
                 <div class="right-angular-bracket" ng-click="next()" ng-if="slideIndex != 2"></div>
             </div>
         </div>
-        <div class="footer">
-            <hr class="row black-line">
-            <div class="row">
-                <div class="col col-50 col-offset-10">
-                    <div class="row">
-                        <div class="green-clean-jerk col col-20"></div>
-                        <label class="green-sport-font col">160 Kg</label>
-                    </div>
-                    <div class="row">
-                        <div class="green-deadlift col col-20"></div>
-                        <label class="green-sport-font col">250 Kg</label>
-                    </div>
-                </div>
-                <div class="col col-50">
-                    <div class="row">
-                        <div class="green-front-squat col col-20"></div>
-                        <label class="green-sport-font col">200 Kg</label>
-                    </div>
-                    <div class="row">
-                        <div class="green-power-clean col col-20"></div>
-                        <label class="green-sport-font col">70 Kg</label>
-                    </div>
-                </div>
-            </div>
+        <div class="footer" style="margin-left: 8%; margin-right: 8%;">
+            <ion-scroll direction="y">
+                <div class="sports-list-profile">
+                    <ion-list>
+                        <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
+                            <div class="item-space-profile" ng-click="show('/videoExplanation/' + sport.video)">
+                                <div ng-class="sport.image" style="margin-top: 2%; margin-right: 2%; width: 35px; height: 35px;"></div>
+                                <div class="label-space">
+                                    <div class="row">
+                                        <label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
+                                        <label class="font-measure right-alignment col without-margins">{{sport.weight + measurementProfile}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+            </ion-scroll>
         </div>
+
     </div>
 
-    <div class="button-bar">
+    <div class="button-bar" style="position:fixed; bottom:0;">
         <a class="button">Amigos</a>
         <a class="button">Todos</a>
         <a class="button">Buscar</a>
     </div>
-</div>
 </div>
