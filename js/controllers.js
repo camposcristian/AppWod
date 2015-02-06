@@ -304,66 +304,50 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
     trainingExercises.fetch().then(function(data) {
         var today = new Date();
         var todayName = today.getDayName();
-        var i = 0;
-        var j = 0;
-        var k;
+        var posteriorQueRetorna, recorrida, finRecorrida, diaTercerPosicion;
+        var previos = 0; 
         var trainingDay = [];
         $scope.training = [];
-        for(i; i < data.length; i++) {
-            if (data[i].day.toLowerCase() === todayName.toLowerCase() && i >= 2) {
-                k = i-2;
-                trainingDay = data[k];
-                for(k; k < data.length; k++) {
-                    trainingDay = data[k];
-                    if(trainingDay.type === "" && k < i) {
-                        trainingDay.type = 'withoutWod';
-                    } else if (trainingDay.type === "" && k >= i) {
+        for(var i = 0; i < data.length; i++) {
+            if (data[i].day.toLowerCase() === todayName.toLowerCase()) {
+                switch (i) {
+                    case 0:
+                        posteriorQueRetorna = data.length - 2;
+                        finRecorrida = data.length - 2;
+                        recorrida = 0;
+                        diaTercerPosicion = 0;
+                        break;
+                    case 1:
+                        posteriorQueRetorna = data.length - 1;
+                        finRecorrida = data.length - 1;
+                        recorrida = 0;
+                        diaTercerPosicion = 0;
+                        break;
+                    default:
+                        posteriorQueRetorna = data.length;
+                        finRecorrida = data.length;
+                        recorrida = i - 2;
+                        diaTercerPosicion = i - 2;
+                        break;
+                }
+                for(posteriorQueRetorna; posteriorQueRetorna < data.length; posteriorQueRetorna++) {
+                    trainingDay = data[posteriorQueRetorna];
+                    if (trainingDay.type === "") {
                         trainingDay.type = 'createWod';
                     }
                     $scope.training.push(trainingDay);
                 }
-                for(j; j < i-2; j++) {
-                    trainingDay = data[j];
-                    if(trainingDay.type === "") {
+                for(recorrida; recorrida < finRecorrida; recorrida++) {
+                    trainingDay = data[recorrida];
+                    if(trainingDay.type === "" && recorrida < i) {
                         trainingDay.type = 'withoutWod';
-                    }
-                    $scope.training.push(trainingDay);
-                }
-                return;
-            } else if (data[i].day.toLowerCase() === todayName.toLowerCase() && i === 1) {
-                k = i-1;
-                trainingDay = data[k];
-                for(k; k < data.length-1; k++) {
-                    trainingDay = data[k];
-                    if(trainingDay.type === "" && k < i) {
-                        trainingDay.type = 'withoutWod';
-                    } else if (trainingDay.type === "" && k >= i) {
+                    } else if (trainingDay.type === "" && recorrida >= i) {
                         trainingDay.type = 'createWod';
                     }
                     $scope.training.push(trainingDay);
                 }
-                for(j; j < i-1; j++) {
-                    trainingDay = data[j];
-                    if(trainingDay.type === "") {
-                        trainingDay.type = 'withoutWod';
-                    }
-                    $scope.training.push(trainingDay);
-                }
-                return;
-            } else {
-                k = 0;
-                trainingDay = data[k];
-                for(k; k < data.length-2; k++) {
-                    trainingDay = data[k];
-                    if(trainingDay.type === "" && k < i) {
-                        trainingDay.type = 'withoutWod';
-                    } else if (trainingDay.type === "" && k >= i) {
-                        trainingDay.type = 'createWod';
-                    }
-                    $scope.training.push(trainingDay);
-                }
-                for(j; j < i; j++) {
-                    trainingDay = data[j];
+                for(previos; previos < diaTercerPosicion; previos++) {
+                    trainingDay = data[previos];
                     if(trainingDay.type === "") {
                         trainingDay.type = 'withoutWod';
                     }
