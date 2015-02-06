@@ -422,7 +422,7 @@ app.controller('shareProfileController', ['$scope', '$location', 'profileExercis
     
     $scope.usuario.flag = "arg-flag";
     $scope.usuario.nivel = "Crossfitter Nivel Intermedio";
-    $scope.usuario.club = "Crossfit Argos";
+    $scope.usuario.club = "CrossFit Argos";
 
     $scope.show = function ( path ) {
         $location.path( '/app' + path );

@@ -31,7 +31,7 @@
                 <div class="display-flex" style="margin-top: -8%;">
                     <label class="item-input item-input-size">
                         <input disabled type="text" class="red-font-club-share-profile" ng-model="usuario.club" ng-click="usuario.club = null" placeholder="{{'club' | translate}}" />
-                        <span class="country-flag" ng-class="usuario.flag"></span>
+                        <span class="country-flag" ng-class="usuario.flag" style="min-width: 22px;height: 25px; margin-top: 4px;"></span>
                     </label>
                 </div>
                 <hr class="black-line" style="min-width: 100%; margin-top: -0.5%;"></hr>
@@ -196,7 +196,7 @@
             </div>
         </div>
         <div class="footer" style="margin-left: 8%; margin-right: 8%;">
-            <ion-scroll direction="y">
+            <ion-scroll direction="y" style="height: 215px;">
                 <div class="sports-list-profile">
                     <ion-list>
                         <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
@@ -216,9 +216,11 @@
 
     </div>
 
-    <div class="button-bar" style="position:fixed; bottom:0;">
-        <a class="button">Amigos</a>
-        <a class="button">Todos</a>
-        <a class="button">Buscar</a>
+    <div class="btn-bar">
+        <a class="footer-btn">Amigos</a>
+        <div class="header-line"></div>
+        <a class="footer-btn">Todos</a>
+        <div class="header-line"></div>
+        <a class="footer-btn">Buscar</a>
     </div>
 </div>

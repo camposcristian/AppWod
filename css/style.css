@@ -229,7 +229,7 @@
 }
 
 .background-friends-wods {
-    background-color: #ADABAC;
+    background-color: #D2D0D1;
     height: 30px;
 }
 
@@ -534,11 +534,11 @@ a.item-menu.background-img.item:active {
     font-size: 20px;
     height: 100%;
     width: 100%;
-    font-family: "Roboto";
+    font-family: "Roboto-regular";
     background-color: transparent;
     white-space: nowrap;
     padding-bottom: 5px;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-top: 5px;
 }
 
@@ -719,3 +719,33 @@ button[disabled], html input[disabled] {
     margin-left: 10px;
     margin-bottom: 5px;
 }
+
+.btn-bar {
+    position: fixed;
+    bottom: 0;
+    height: 32px;
+    width: 100%;
+    background-color: rgb(125, 125, 125);
+}
+
+    .btn-bar .footer-btn {
+        width: 31%;
+        color: white;
+        white-space: nowrap;
+        display: inline-block;
+        font-family: "Roboto Regular";
+        text-align: center;
+        font-size: 14px;
+        vertical-align: super;
+        text-transform: uppercase;
+        padding-top: 8px;
+    }
+
+    .btn-bar .header-line {
+        display: inline-block;
+        background-color: white;
+        width: 2px;
+        height: 15px;
+        margin: 0;
+        padding: 0;
+    }

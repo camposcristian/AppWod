@@ -115,7 +115,8 @@
 }
 
 .red-font-club-share-profile {
-    font-family: Roboto-bold;
+    font-family: Roboto-regular;
+    font-weight:normal;
     text-align: left;
     font-size: 1.4em !important;
     color: rgb(230, 0, 0) !important;
@@ -128,7 +129,7 @@
     font-family: Roboto-light;
     text-align: left;
     font-size: 1.1em;
-    color: rgb(67,67,67);
+    color: black;
     white-space: nowrap;
 }
 
@@ -280,9 +281,8 @@
 .font-friends {
     color: black;
     font-family: Roboto-regular;
-    font-size: 100%;
+    font-size: 14px;
     text-transform: uppercase;
-    font-weight: bold;
     text-align: right;
 }
 
