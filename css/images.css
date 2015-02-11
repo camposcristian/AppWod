@@ -1108,11 +1108,15 @@ hr .black-line {
 .profile-circle {
     border: none;
     margin: 1px;
-    width:10px;
+    width: 10px;
     height: 10px;
 }
 
 .share-exercises li {
     background-size: 30px;
     width: 30px;
+}
+
+.no-icon {
+    display: none !important;
 }

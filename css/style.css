@@ -102,13 +102,13 @@
     background-color: rgb(230,0,0);
     border-color: rgb(230,0,0);
     bottom: 0;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 100% !important;
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
-    line-height: 36px;
-    padding: 0 12px;
+    line-height: 30px;
+    /*padding: 0 12px;*/
 }
 
 .grey-button-background {
@@ -551,7 +551,7 @@ a.item-menu.background-img.item:active {
     margin-right: 23%;
     float: right;
     padding-left: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-weight: bold;
 }
 
@@ -624,7 +624,7 @@ input {
 
 .training-wod-button {
     position: relative;
-    width: 42%;
+    width: 35%;
     margin-left: 8%;
     display: inline-block;
     z-index: 10;
@@ -639,12 +639,16 @@ input {
     text-transform: uppercase;
     font-family: Roboto-medium;
     text-align: left;
-    font-size: 17px;
+    font-size: 15px;
     color: #FFFFFF;
     float: left;
-    margin-left: 2%;
+    margin-left: 5%;
     width: 100%;
     white-space: nowrap;
+}
+
+.red-button-background i {
+    margin-left: 5px;
 }
 
 .calendar-down {

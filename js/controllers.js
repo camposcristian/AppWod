@@ -1,51 +1,51 @@
 var app = angular.module('starter.controllers', [
-    'ui.calendar', 
+    'ui.calendar',
     'ui.bootstrap',
     'ngCordova'
 ]);
 
 
-Date.prototype.getDayName = function() {
-    var d = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+Date.prototype.getDayName = function () {
+    var d = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     return d[this.getDay()];
 }
 
-app.controller('homeController', ['$scope', function($scope) {
+app.controller('homeController', ['$scope', function ($scope) {
     $scope.mainmenu = [
         {
-            id: 'profile', 
+            id: 'profile',
             icon: 'icon-menu-profile'
         },
         {
-            id: 'freeWOD', 
+            id: 'freeWOD',
             icon: 'icon-menu-free-wod'
         },
-        {   
-            id: 'training', 
+        {
+            id: 'training',
             icon: 'icon-menu-training'
         },
-        {   
-            id: 'travelWOD', 
+        {
+            id: 'travelWOD',
             icon: 'icon-menu-travel-wod'
         },
-        {   
-            id: 'calendar', 
+        {
+            id: 'calendar',
             icon: 'icon-menu-calendar'
         },
-        {   
-            id: 'configuration', 
+        {
+            id: 'configuration',
             icon: 'icon-menu-config'
         }
     ];
 }]);
 
-app.controller('profileController', ['$scope', '$location', 'profileExercises', '$cordovaCamera', function($scope, $location, profileExercises, $cordovaCamera) {
-    $scope.pageTitle = 'profile'; 
+app.controller('profileController', ['$scope', '$location', 'profileExercises', '$cordovaCamera', function ($scope, $location, profileExercises, $cordovaCamera) {
+    $scope.pageTitle = 'profile';
     $scope.beginAngularBracket = '> '
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
     $scope.editingProfile = false;
-    
+
     if (!window.localStorage['imageURI']) {
         window.localStorage['imageURI'] = './img/iconsSVG/Perfil gris.svg';
         $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
@@ -53,33 +53,41 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
         $scope.imageURI = window.localStorage['imageURI'];
     }
     window.localStorage['measurement'] === 'true' ? $scope.measurementProfile = 'kg' : $scope.measurementProfile = 'lb'; /* True significa que es kg, false significa que es lb */
-    
-    $scope.saveProfile = function() {
-        window.localStorage['name'] = $scope.usuario.nombre;
-        window.localStorage['lastName'] = $scope.usuario.apellido;
-        window.localStorage['country'] = $scope.usuario.pais;
-        window.localStorage['level'] = $scope.usuario.nivel;
-        window.localStorage['club'] = $scope.usuario.club;
-        window.localStorage['locationClub'] = $scope.usuario.localizacionClub;
+
+    $scope.saveProfile = function () {
+        var user = {
+            nombre: $scope.usuario.nombre,
+            apellido: $scope.usuario.apellido,
+            pais: $scope.usuario.pais,
+            flag: $scope.usuario.flag,
+            nivel: $scope.usuario.nivel,
+            club: $scope.usuario.club,
+            localizacionClub: $scope.usuario.localizacionClub
+        }
+        window.localStorage['user'] = JSON.stringify(user);
+    }
+    if (window.localStorage['user']) {
+        $scope.usuario = JSON.parse(window.localStorage['user']);
+    }
+    else {
+        $scope.usuario = [];
+        $scope.usuario.nombre = "";
+        $scope.usuario.pais = "arg";
+        $scope.usuario.flag = "country-arg";
+        $scope.usuario.nivel = "beg";
+        $scope.usuario.club = "Crossfit Argos";
+        $scope.usuario.localizacionClub = "Buenos Aires";
     }
 
-    $scope.usuario = [];
-    $scope.usuario.nombre = "";
-    $scope.usuario.pais = "arg";
-    $scope.usuario.flag = "country-arg";
-    $scope.usuario.nivel = "beg";
-    $scope.usuario.club = "Crossfit Argos";
-    $scope.usuario.localizacionClub = "Buenos Aires";
-
-    $scope.isNombreApellidoCompleted = function() {
+    $scope.isNombreApellidoCompleted = function () {
         return angular.isDefined($scope.usuario.nombre) && $scope.usuario.nombre !== "";
     };
 
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 
-    profileExercises.fetch().then(function(data) {
+    profileExercises.fetch().then(function (data) {
         $scope.exercises = data;
     });
 
@@ -96,15 +104,15 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     }
 }]);
 
-app.controller('freeWODController', ['$scope', '$location', 'trainingExercises', function($scope, $location, trainingExercises) {
+app.controller('freeWODController', ['$scope', '$location', 'trainingExercises', function ($scope, $location, trainingExercises) {
     $scope.pageTitle = 'WOD Libre';
     $scope.iconHeader = 'config-red';
-    trainingExercises.fetch().then(function(data) {
+    trainingExercises.fetch().then(function (data) {
         $scope.training = data;
     });
 
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 
     var hour = 0, minute = 0, second = 0, tenthSecond = 0;
@@ -161,55 +169,55 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
     }
 }]);
 
-app.controller('configurationController', ['$scope', '$location', '$translate', function($scope, $location, $translate) {
+app.controller('configurationController', ['$scope', '$location', '$translate', function ($scope, $location, $translate) {
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
     $scope.language = "en";
     $scope.measurement = true; /* True significa que es kg, false significa que es lb */
     window.localStorage['measurement'] = true;
     $scope.help = true;
-    
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 
-    $scope.changeMeasurement = function() {
+    $scope.changeMeasurement = function () {
         $scope.measurement = !$scope.measurement;
         window.localStorage['measurement'] = !window.localStorage['measurement'];
     }
 
-    $scope.changeHelp = function() {
+    $scope.changeHelp = function () {
         $scope.help = !$scope.help;
     }
 
-    $scope.changeLanguage = function(language) {
+    $scope.changeLanguage = function (language) {
         $translate.use(language);
     }
 }]);
 
-app.controller('statisticsController', ['$scope', 'stadistics', '$location', function($scope, stadistics, $location) {
+app.controller('statisticsController', ['$scope', 'stadistics', '$location', function ($scope, stadistics, $location) {
     $scope.pageTitle = 'estadísticas';
     $scope.iconHeader = 'statistics-red-background';
 
-    stadistics.fetch().then(function(data) {
+    stadistics.fetch().then(function (data) {
         $scope.sports = data;
     });
 
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 }]);
 
-app.controller('videoExplanationController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
+app.controller('videoExplanationController', ['$scope', '$http', '$stateParams', function ($scope, $http, $stateParams) {
     this.video = "http://www.youtube.com/embed/" + $stateParams.videoId + "?autoplay=true";
 }]);
 
-app.controller('calendarController', ['$scope', function($scope) {
+app.controller('calendarController', ['$scope', function ($scope) {
 
     $scope.pageTitle = 'calendario';
     $scope.iconHeader = 'calendar-white';
 
-    $scope.monthArray = {1: 'Enero',2: 'Febrero',3: 'Marzo',4: 'Abril',5: 'Mayo',6: 'Junio',7: 'Julio',8: 'Agosto',9: 'Septiembre',10: 'Octubre',11: 'Noviembre',12: 'Diciembre'};
+    $scope.monthArray = { 1: 'Enero', 2: 'Febrero', 3: 'Marzo', 4: 'Abril', 5: 'Mayo', 6: 'Junio', 7: 'Julio', 8: 'Agosto', 9: 'Septiembre', 10: 'Octubre', 11: 'Noviembre', 12: 'Diciembre' };
 
     var date = new Date();
     var d = date.getDate();
@@ -217,7 +225,7 @@ app.controller('calendarController', ['$scope', function($scope) {
     var y = date.getFullYear();
     $scope.month = m;
     $scope.year = y;
-    
+
     /*
     $scope.events = [
         {title: 'All Day Event',start: new Date(y, m, 1)},
@@ -229,27 +237,27 @@ app.controller('calendarController', ['$scope', function($scope) {
     ];
     */
 
-    $scope.previousEntries = function(){
+    $scope.previousEntries = function () {
         $scope.myCalendar.fullCalendar('prev');
-        if($scope.month === 1) {
+        if ($scope.month === 1) {
             $scope.year = $scope.year - 1;
             $scope.month = 12;
         } else {
-            $scope.month = $scope.month -1;
+            $scope.month = $scope.month - 1;
         }
     };
-  
-    $scope.nextEntries = function(){
+
+    $scope.nextEntries = function () {
         $scope.myCalendar.fullCalendar('next');
-        if($scope.month === 12) {
+        if ($scope.month === 12) {
             $scope.year = $scope.year + 1;
             $scope.month = 1;
         } else {
             $scope.month = $scope.month + 1;
         }
     };
-  
-    $scope.todayEntries = function(){
+
+    $scope.todayEntries = function () {
         $scope.myCalendar.fullCalendar('today');
         $scope.month = date.getMonth();
         $scope.year = date.getFullYear();
@@ -257,17 +265,15 @@ app.controller('calendarController', ['$scope', function($scope) {
 
     var tempVar = "";
 
-    $scope.dayClick = function(){
+    $scope.dayClick = function () {
         // change the day's background color just for fun
-        if (tempVar == "")
-        {
+        if (tempVar == "") {
             $(this).css('background-color', '#E60000 !important');
             $(this).css('color', '#FFFFFF !important');
             $(this).css('border-radius', '10px');
             tempVar = this;
         }
-        else
-        {
+        else {
             $(this).css('background-color', '#E60000 !important');
             $(this).css('color', '#FFFFFF !important');
             $(this).css('border-radius', '10px');
@@ -277,15 +283,15 @@ app.controller('calendarController', ['$scope', function($scope) {
         }
     };
 
-    $scope.events=[];
+    $scope.events = [];
 
-    $scope.initCalendar = function() {
+    $scope.initCalendar = function () {
         $scope.uiConfig = {
-            calendar:{
+            calendar: {
                 height: 450,
                 editable: false,
                 header: false,
-                events:[],
+                events: [],
                 eventClick: $scope.alertOnEventClick,
                 eventDrop: $scope.alertOnDrop,
                 eventResize: $scope.alertOnResize,
@@ -298,17 +304,18 @@ app.controller('calendarController', ['$scope', function($scope) {
     }
 }]);
 
-app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function($scope, $location, $interval, trainingExercises) {
+app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function ($scope, $location, $interval, trainingExercises) {
     $scope.pageTitle = 'training';
+    var activeDay = 0;
     $scope.iconHeader = 'training-title';
-    trainingExercises.fetch().then(function(data) {
+    trainingExercises.fetch().then(function (data) {
         var today = new Date();
         var todayName = today.getDayName();
         var posteriorQueRetorna, recorrida, finRecorrida, diaTercerPosicion;
-        var previos = 0; 
+        var previos = 0;
         var trainingDay = [];
         $scope.training = [];
-        for(var i = 0; i < data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
             if (data[i].day.toLowerCase() === todayName.toLowerCase()) {
                 switch (i) {
                     case 0:
@@ -330,25 +337,25 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
                         diaTercerPosicion = i - 2;
                         break;
                 }
-                for(posteriorQueRetorna; posteriorQueRetorna < data.length; posteriorQueRetorna++) {
+                for (posteriorQueRetorna; posteriorQueRetorna < data.length; posteriorQueRetorna++) {
                     trainingDay = data[posteriorQueRetorna];
                     if (trainingDay.type === "") {
                         trainingDay.type = 'createWod';
                     }
                     $scope.training.push(trainingDay);
                 }
-                for(recorrida; recorrida < finRecorrida; recorrida++) {
+                for (recorrida; recorrida < finRecorrida; recorrida++) {
                     trainingDay = data[recorrida];
-                    if(trainingDay.type === "" && recorrida < i) {
+                    if (trainingDay.type === "" && recorrida < i) {
                         trainingDay.type = 'withoutWod';
                     } else if (trainingDay.type === "" && recorrida >= i) {
                         trainingDay.type = 'createWod';
                     }
                     $scope.training.push(trainingDay);
                 }
-                for(previos; previos < diaTercerPosicion; previos++) {
+                for (previos; previos < diaTercerPosicion; previos++) {
                     trainingDay = data[previos];
-                    if(trainingDay.type === "") {
+                    if (trainingDay.type === "") {
                         trainingDay.type = 'withoutWod';
                     }
                     $scope.training.push(trainingDay);
@@ -358,8 +365,8 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         }
     });
 
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 
     $scope.groups = [];
@@ -378,7 +385,10 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
      * else, select the given group
      */
     $scope.toggleGroup = function (group) {
-        if ($scope.isGroupShown(group)) {
+        if (group.type == "createWod") {
+            $scope.show("/freeWOD");
+        }
+        else if ($scope.isGroupShown(group) || group.type == "freeDay" || group.type == "withoutWod") {
             $scope.shownGroup = null;
         } else {
             $scope.shownGroup = group;
@@ -388,35 +398,35 @@ app.controller('trainingController', ['$scope', '$location', '$interval', 'train
         return $scope.shownGroup === group;
     };
 
-    $scope.isActiveDay = function (day) {
+    $scope.isActiveDay = function (day, index) {
         var today = new Date();
         var todayName = today.getDayName();
-        return todayName.toLowerCase() === day.toLowerCase();
+        return ((todayName.toLowerCase() === day.toLowerCase()) && index < 4);
     }
 }]);
 
 app.controller('shareProfileController', ['$scope', '$location', 'profileExercises', function ($scope, $location, profileExercises) {
-    $scope.pageTitle = 'profile'; 
+    $scope.pageTitle = 'profile';
     $scope.beginAngularBracket = '> ';
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
     $scope.imageURI = './img/iconsSVG/Perfil gris.svg';
-    
+
     $scope.usuario = [];
-    
+
     $scope.usuario.flag = "arg-flag";
     $scope.usuario.nivel = "Crossfitter Nivel Intermedio";
     $scope.usuario.club = "CrossFit Argos";
 
-    $scope.show = function ( path ) {
-        $location.path( '/app' + path );
+    $scope.show = function (path) {
+        $location.path('/app' + path);
     };
 
-    $scope.next = function() {
+    $scope.next = function () {
         $scope.$broadcast('slideBox.nextSlide');
     };
 
-    $scope.previous = function() {
+    $scope.previous = function () {
         $scope.$broadcast('slideBox.prevSlide');
     };
 

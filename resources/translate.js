@@ -94,7 +94,7 @@ var translations = {
         "club": "Club",
         "localizacionClub": "Localización del club",
         "today": "Hoy",
-        "startWOD": "Inicial WOD",
+        "startWOD": "Iniciar WOD",
         "createWOD": "Crear WOD",
         "saveProfile": "Guardar perfil",
         "createWod": "Crear WOD",

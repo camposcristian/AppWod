@@ -26,11 +26,11 @@
                 <div ng-repeat="sport in training track by $index">
                     <ion-item class="item-training"
                               ng-click="toggleGroup(sport)"
-                              ng-class="{active: isGroupShown(sport) || isActiveDay(sport.day)}">
-                        <div class="row" ng-hide="isActiveDay(sport.day)">
+                              ng-class="{active: isGroupShown(sport) || isActiveDay(sport.day,$index)}">
+                        <div class="row" ng-hide="isActiveDay(sport.day,$index)">
                             {{sport.day | translate}}
                         </div>
-                        <div class="row" ng-show="isActiveDay(sport.day)">
+                        <div class="row" ng-show="isActiveDay(sport.day,$index)">
                             {{'today' | translate}}
                         </div>
                         <div class="row">
@@ -50,7 +50,7 @@
                                 <span class="training-wod-font">{{'startWOD' | translate}}</span>
                             </label>
                         </div>
-                        <div style="margin-top: -52px;">
+                        <div style="margin-top: -37px;">
                             <ion-item class="item-accordion" ng-repeat="exercise in sport.exercises">
                                 <!--<span>{{exercise.count}}</span>-->
                                 <div class="training-exercises">

@@ -7,6 +7,16 @@
                 "name": "Toes to bar",
                 "image": "icon-training-red",
                 "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "",
+                "count": "20"
+            },
+            {
+                "name": "Ring dip",
+                "image": "",
+                "count": "10"
             }
         ]
     },
@@ -66,6 +76,16 @@
                 "name": "Overhead squat",
                 "image": "icon-training-green",
                 "count": "10"
+            },
+            {
+                "name": "Ring dip",
+                "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "no-icon",
+                "count": "10"
             }
         ]
     },
@@ -81,6 +101,11 @@
             {
                 "name": "Ring dip",
                 "image": "icon-training-red",
+                "count": "10"
+            },
+            {
+                "name": "Toes to bar",
+                "image": "",
                 "count": "10"
             }
         ]
