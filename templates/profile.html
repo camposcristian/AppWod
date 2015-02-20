@@ -1,4 +1,14 @@
 <div ng-controller="profileController" class="background-img full-space">
+    <div class="help-popup" ng-show="help && hideclick" style="top: 25%;">
+        <div class="button-small icon ion-close right" ng-click="hideclick=!hideclick;"></div>
+        <p>
+            En esta seccion se ingresan
+            ejercicios de los cuales se
+            quiere llevar un seguimiento de
+            su progreso.
+        </p>
+        <div class="arrow-help"></div>
+    </div>
     <div class="header">
         <div class="bar bar-header menu-title-page">
             <div class="content-title-bar">

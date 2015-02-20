@@ -45,6 +45,8 @@ app.controller('profileController', ['$scope', '$location', 'profileExercises', 
     $scope.endAngularBracket = ' <';
     $scope.iconHeader = 'user-human-title';
     $scope.editingProfile = false;
+    $scope.hideclick = true;
+    $scope.help = JSON.parse(localStorage.help);
 
     if (!window.localStorage['imageURI']) {
         window.localStorage['imageURI'] = './img/iconsSVG/Perfil gris.svg';
@@ -175,7 +177,7 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
     $scope.language = "en";
     $scope.measurement = true; /* True significa que es kg, false significa que es lb */
     window.localStorage['measurement'] = true;
-    $scope.help = true;
+    $scope.help = JSON.parse(localStorage.help);
 
     $scope.show = function (path) {
         $location.path('/app' + path);
@@ -188,6 +190,7 @@ app.controller('configurationController', ['$scope', '$location', '$translate', 
 
     $scope.changeHelp = function () {
         $scope.help = !$scope.help;
+        localStorage.help = $scope.help;
     }
 
     $scope.changeLanguage = function (language) {
@@ -306,6 +309,8 @@ app.controller('calendarController', ['$scope', function ($scope) {
 
 app.controller('trainingController', ['$scope', '$location', '$interval', 'trainingExercises', function ($scope, $location, $interval, trainingExercises) {
     $scope.pageTitle = 'training';
+    $scope.hideclick = true;
+    $scope.help = JSON.parse(localStorage.help);
     var activeDay = 0;
     $scope.iconHeader = 'training-title';
     trainingExercises.fetch().then(function (data) {

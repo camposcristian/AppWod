@@ -1,4 +1,19 @@
 <div ng-controller="trainingController" class="background-img">
+    <div class="help-popup" ng-show="help && hideclick">
+        <div class="button-small icon ion-close right" ng-click="hideclick=!hideclick;"></div>
+        <p>
+            Este modo esta recomendado
+            por coaches profesionales
+            para llevar a cabo un correcto
+            entrenamiento.
+            Consiste de un entrenamiento
+            variado donde se trabaja
+            fuerza, gimnasia y ejercicios
+            cardiovasculares distanciados
+            entre diferentes dias para no
+            agotar los grupos musculares.
+        </p>
+    </div>
     <div class="header">
         <div class="bar bar-header menu-title-page">
             <div class="content-title-bar">
@@ -15,7 +30,7 @@
             <div class="margin-alignment-subheader">
                 <div class="font-principal left-alignment">{{pageTitle | translate}}</div>
                 <div class="right-alignment" style="position: absolute; right: 8%;">
-                    <div class="right-alignment" ng-class="iconHeader"></div>       
+                    <div class="right-alignment" ng-class="iconHeader"></div>
                 </div>
             </div>
         </div>
