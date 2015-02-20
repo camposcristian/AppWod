@@ -174,7 +174,7 @@ app.controller('freeWODController', ['$scope', '$location', 'trainingExercises',
 app.controller('configurationController', ['$scope', '$location', '$translate', function ($scope, $location, $translate) {
     $scope.pageTitle = 'configuration';
     $scope.iconHeader = 'configuration-white';
-    $scope.language = "en";
+    $scope.language = "es";
     $scope.measurement = true; /* True significa que es kg, false significa que es lb */
     window.localStorage['measurement'] = true;
     $scope.help = JSON.parse(localStorage.help);
