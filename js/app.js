@@ -21,6 +21,7 @@ app.config(function($stateProvider, $urlRouterProvider, $translateProvider, $sce
         $translateProvider.translations(lang, translations[lang]);
     }
     $translateProvider.preferredLanguage('es');
+    localStorage.help = localStorage.help || true;
 
     $stateProvider
         .state('app', {

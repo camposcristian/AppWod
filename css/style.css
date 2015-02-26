@@ -160,6 +160,10 @@
         height: 100%;
     }
 
+    .content-margin {
+        margin-top: 69px !important;
+    }
+
     ul {
         letter-spacing: -2px;
     }
@@ -167,6 +171,18 @@
     .background-carrousel-friends {
         height: 32% !important;
     }
+
+    .sports-list-profile {
+        height: 50.14% !important;
+    }
+
+    .scroll-exercises {
+        height: 240px !important;
+    }
+}
+
+.scroll-exercises {
+    height: 320px;
 }
 
 .without-padding {
@@ -281,6 +297,7 @@
     height: 36%;
     bottom: 0;
     position: absolute;
+    margin-bottom: 10px;
 }
 
 .footer-profile {
@@ -352,6 +369,13 @@
     overflow-y: scroll;
 }
 
+.content-page-profile {
+    width: 84%;
+    margin-right: 8%;
+    margin-left: 8%;
+    margin-top: 24%;
+}
+
 .footer-configuration {
     width: 84%;
     margin-right: 8%;
@@ -406,9 +430,14 @@
 }
 
 .sports-list-profile {
-    height: 57.14%;
+    height: 59.14%;
     width: 100%;
+    overflow: hidden;
 }
+
+    .sports-list-profile .scroll-bar-v {
+        right: 0;
+    }
 
 .sports-list-wod {
     height: 47.62%;

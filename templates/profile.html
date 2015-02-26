@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <ion-content class="content-page">
+    <ion-content scroll="false" class="content-page-profile">
         <div class="profile-container">
             <div class="left-alignment picture-space" ng-click="getPicture()">
                 <img ng-src="{{imageURI}}" id="myImage" style="height: 140px; width: 128px;" />
@@ -87,26 +87,28 @@
                 <span class="red-font-club">
                     <input type="text" class="red-font-club" ng-model="usuario.club" ng-click="editingProfile = true" />
                 </span>
-                <span style="font-size: 18px; text-align: center; margin:3px;" > - </span>
+                <span style="font-size: 18px; text-align: center; margin:3px;"> - </span>
                 <span class="club-location-font">
                     <input type="text" class="club-location-font" ng-model="usuario.localizacionClub" ng-click="editingProfile = true" />
                 </span>
             </div>
         </div>
         <div class="sports-list-profile">
-            <ion-list>
-                <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
-                    <div class="item-space-profile" ng-click="show('/videoExplanation/' + sport.video)">
-                        <div ng-class="sport.image" style="margin-top: 2%; margin-right: 2%; width: 35px; height: 35px;"></div>
-                        <div class="label-space">
-                            <div class="row">
-                                <label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
-                                <label class="font-measure right-alignment col without-margins">{{sport.weight + measurementProfile}}</label>
+            <ion-scroll direction="y" class="scroll-exercises" >
+                <ion-list>
+                    <ion-item ng-repeat="sport in exercises.exercises" class="without-margins item-list-profile">
+                        <div class="item-space-profile" ng-click="show('/videoExplanation/' + sport.video)">
+                            <div ng-class="sport.image" style="margin-top: 2%; margin-right: 2%; width: 35px; height: 35px;"></div>
+                            <div class="label-space">
+                                <div class="row">
+                                    <label class="col without-margins sport-font" ng-class="sport.font">{{sport.name}}</label>
+                                    <label class="font-measure right-alignment col without-margins">{{sport.weight + measurementProfile}}</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </ion-item>
-            </ion-list>
+                    </ion-item>
+                </ion-list>
+            </ion-scroll>
         </div>
         <label ng-click="show('/statistics')" class="green-button-background" ng-hide="editingProfile">
             <span class="statistics-font">{{'showStadistics' | translate}}</span>
